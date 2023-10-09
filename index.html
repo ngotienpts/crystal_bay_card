@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./images/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./images/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./images/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./images/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./images/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./images/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./images/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./images/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./images/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./images/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./images/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./images/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- end favicon -->
+        <title>Thẻ du lịch Crystal Bay Card</title>
+        
+        <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <script src="./lib/jquery/jquery.js"></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header id="header" class="header relative px-20 z-100 js__header">
+            <!-- pc -->
+            <div class="header-pc w-wrapper d-2xl-flex items-center justify-between">
+                <!-- navbar left -->
+                <ul class="navbar navbar-left d-2xl-flex items-center justify-between flex-1 fs-15">
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"></path></svg>
+                        </a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Giới thiệu</a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white">
+                        <div class="navbar-left__link h-46 d-2xl-flex items-center hover-green--bold uppercase p-10">Sản phẩm</div>
+                        <div class="navbar-dropdown absolute">
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10">Khu nghỉ dưỡng đang vận hành</h4>
+                                    <ul class="navbar-dropdown__parent">
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown" >
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown">
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10">Khu nghỉ dưỡng đang vận hành</h4>
+                                    <ul class="navbar-dropdown__parent">
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown" >
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown">
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            
+                        </div>
+                        
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white">
+                        <div class="navbar-left__link h-46 d-2xl-flex items-center hover-green--bold uppercase p-10">Bộ sưu tập điểm đến</div>
+                        <div class="navbar-dropdown absolute">
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10">Khu nghỉ dưỡng đang vận hành</h4>
+                                    <ul class="navbar-dropdown__parent">
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown" >
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown">
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10">Khu nghỉ dưỡng đang vận hành</h4>
+                                    <ul class="navbar-dropdown__parent">
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown" >
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown">
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            
+                        </div>
+                        
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white">
+                        <div class="navbar-left__link h-46 d-2xl-flex items-center hover-green--bold uppercase p-10">Tin tức & sự kiện</div>
+                        <div class="navbar-dropdown absolute">
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10">Khu nghỉ dưỡng đang vận hành</h4>
+                                    <ul class="navbar-dropdown__parent">
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown" >
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown">
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10">Khu nghỉ dưỡng đang vận hành</h4>
+                                    <ul class="navbar-dropdown__parent">
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown" >
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        <li class="navbar-dropdown__children lh-18 fs-14 text-white animate__animated animate__slideInDown">
+                                            <a href="#" class="navbar-dropdown__link d-2xl-block py-4">
+                                                <span class="navbar-dropdown__textPrimary d-2xl-block hover-pink">Bến Du Thuyền Quốc tế Ana Maria</span>
+                                                <span class="navbar-dropdown__textSecondary d-2xl-block text-white-80 mt-4">(Dự kiến khai trương 2023)</span>
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            
+                        </div>
+                        
+                    </li>
+                    <!-- end item -->
+                    
+                    
+                </ul>
+                <!-- end navbar left -->
+
+                <!-- navbar center -->
+                <div class="navbar-center flex-0">
+                    <h1 class="navbar-center__logo">
+                        <a href="#">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </h1>
+                </div>
+                <!-- end navbar center -->
+
+                <!-- navbar right -->
+                <ul class="navbar navbar-left d-2xl-flex items-center justify-between flex-1 fs-15">
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">CB Booking</a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Tuyển dụng</a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Đối tác</a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Liên hệ</a>
+                    </li>
+                    <!-- end item -->
+
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center">
+                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.33 13.33" width="20" height="20" class="" style=" transform: none; cursor: pointer; transition: all 0.5s ease 0s;">
+                                <path fill="currentColor" d="M13.33 12.17 9.36 8.19c.64-.88.99-1.94.98-3.03C10.33 2.32 8.02 0 5.17 0S0 2.32 0 5.17s2.32 5.17 5.17 5.17c1.09 0 2.15-.34 3.03-.98l3.98 3.97 1.15-1.15ZM5.17 8.7c-1.95 0-3.54-1.58-3.54-3.54s1.58-3.53 3.54-3.53 3.54 1.58 3.54 3.54c0 1.95-1.58 3.53-3.54 3.54Z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- end item -->
+                    
+                    <!-- item -->
+                    <li class="navbar-item navbar-left__item relative text-white">
+                        <div class="navbar-left__link h-46 d-2xl-flex items-center hover-green--bold uppercase p-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" style=" transform: none;">
+                                <path fill="currentColor" d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"></path>
+                            </svg>
+                        </div>
+                        <div class="navbar-dropdown navbar-dropdown--lang absolute">
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10 pointer">KR</h4>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            <!-- item -->
+                            <div class="navbar-dropdown__item d-2xl-flex mt-24">
+                                <!-- icon -->
+                                <div class="navbar-dropdown__icon flex-0 mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.3542" height="11.8808" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                </div>
+                                <!-- end icon -->
+
+                                <!-- content -->
+                                <div class="navbar-dropdown__content flex-1 ml-20 pb-24 border-white-50 hover-green">
+                                    <h4 class="navbar-dropdown__title fs-15 lh-22 fw-500 uppercase mb-10 pointer">EN</h4>
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end item -->
+                            
+                        </div>
+                        
+                    </li>
+                    <!-- end item -->
+                    
+                    
+                </ul>
+                <!-- end navbar right -->
+                
+            </div>
+            <!-- end pc -->
+        </header>
+        <div class="overlay"></div>
+        <!-- end header -->
+        <!-- main -->
+        <main id="main" class="main">
+            <!-- section primary -->
+            <section class="section-primary">
+                <div class="w-wrapper relative z-20">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente veniam, cum assumenda dolor provident quod maiores eum delectus magni harum impedit officia quasi fugiat officiis vel nisi voluptates! Magnam, illum.</p>
+                </div>
+            </section>
+            <!-- end section primary -->
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer" class="footer py-30">
+            
+
+            <!-- back top -->
+            <div id="back-top">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 384 512"
+                >
+                    <path
+                        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+                        fill="#fff"
+                    />
+                </svg>
+            </div>
+            <!-- end back top -->
+        </footer>
+        <!-- end footer -->
+        <script src="./lib/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

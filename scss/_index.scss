@@ -1,0 +1,18 @@
+.section-primary {
+    background-image: url("../images/bg1.62a1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.1) 50%,
+            transparent
+        );
+    }
+}
