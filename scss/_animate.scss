@@ -2085,3 +2085,69 @@
 .animate__slideOutUp {
     animation-name: slideOutUp;
 }
+
+@keyframes ButtonHandWritingHover_clockwise__HjstX {
+    0% {
+        -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 0);
+        clip-path: polygon(50% 0, 50% 50%, 100% 0);
+    }
+
+    12.5% {
+        -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 0);
+        clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 0);
+    }
+
+    25% {
+        -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 100%, 100% 0);
+        clip-path: polygon(50% 0, 50% 50%, 100% 100%, 100% 0);
+    }
+
+    37.5% {
+        -webkit-clip-path: polygon(50% 0, 50% 50%, 50% 100%, 100% 100%, 100% 0);
+        clip-path: polygon(50% 0, 50% 50%, 50% 100%, 100% 100%, 100% 0);
+    }
+
+    50% {
+        -webkit-clip-path: polygon(50% 0, 50% 50%, 0 100%, 100% 100%, 100% 0);
+        clip-path: polygon(50% 0, 50% 50%, 0 100%, 100% 100%, 100% 0);
+    }
+
+    62.5% {
+        -webkit-clip-path: polygon(
+            50% 0,
+            50% 50%,
+            0 50%,
+            0 100%,
+            100% 100%,
+            100% 0
+        );
+        clip-path: polygon(50% 0, 50% 50%, 0 50%, 0 100%, 100% 100%, 100% 0);
+    }
+
+    75% {
+        -webkit-clip-path: polygon(
+            50% 0,
+            50% 50%,
+            0 0,
+            0 100%,
+            100% 100%,
+            100% 0
+        );
+        clip-path: polygon(50% 0, 50% 50%, 0 0, 0 100%, 100% 100%, 100% 0);
+    }
+
+    87.5% {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    95% {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    to {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+}

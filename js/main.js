@@ -6,8 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var header = document.querySelector(".js__header");
 
     // slice
-    // var oneSlides = document.querySelectorAll(".js__swiperItemsContainer");
+    var oneSlidesFade = document.querySelectorAll(
+        ".js__swiperItemsContainerFade"
+    );
     // var fiveSlides = document.querySelectorAll(".js__swiperFiveItemsContainer");
+
+    // counter
+    var counters = document.querySelectorAll(".js__couterContainer");
 
     const app = {
         // su ly cac su kien
@@ -21,25 +26,54 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.documentElement.scrollTop = 0;
                 };
             }
+
+            // counter
+            if (counters) {
+                counters.forEach((counter) => {
+                    const counterSlide =
+                        counter.querySelectorAll(".swiper-slide");
+                    const counterTotal =
+                        counter.querySelector(".js__counterTotal");
+                    const counterActive =
+                        counter.querySelector(".js__counterActive");
+
+                    // for (var i = 0; i < counterSlide.length; i++) {
+                    //     if (
+                    //         counterSlide[i].classList.contains(
+                    //             "swiper-slide-active"
+                    //         )
+                    //     ) {
+                    //         console.log(123);
+                    //         // counterActive.textContent = i + 1;
+                    //     }
+                    // }
+
+                    counterTotal.textContent = "0" + counterSlide.length;
+                });
+            }
         },
         // slider one item
-        // sliderOneItems: function () {
-        //     oneSlides.forEach((item) => {
-        //         var pagi = item.querySelector(".swiper-pagination");
-        //         var slider = item.querySelector(".js__swiperItems");
-        //         new Swiper(slider, {
-        //             slidesPerView: 1,
-        //             spaceBetween: 30,
-        //             slidesPerGroup: 1,
-        //             autoHeight: true,
-        //             effect: "fade",
-        //             pagination: {
-        //                 el: pagi,
-        //                 clickable: true,
-        //             },
-        //         });
-        //     });
-        // },
+        sliderOneItemsFade: function () {
+            oneSlidesFade.forEach((item) => {
+                var pagi = item.querySelector(".swiper-pagination");
+                var slider = item.querySelector(".js__swiperOneItemsFade");
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    slidesPerGroup: 1,
+                    autoHeight: true,
+                    effect: "fade",
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: pagi,
+                        clickable: true,
+                    },
+                });
+            });
+        },
         // slider five item
         // sliderFiveItems: function () {
         //     fiveSlides.forEach((item) => {
@@ -106,6 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleEvent();
             // window scroll
             this.windowScroll();
+            // one slide fade
+            this.sliderOneItemsFade();
         },
     };
 

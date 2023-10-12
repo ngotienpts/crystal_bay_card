@@ -84,6 +84,11 @@
     --weight-light: 300;
     --animate-duration: 1s;
     --animate-delay: 0.9s;
+    --bottom-space: 80px;
+    --arrow-size: 97px;
+    --box-padding: 50px;
+    --box-padding-vertical: 30px;
+    --heading-scale: 1;
 }
 
 .x {
@@ -813,6 +818,9 @@ img {
 .w-40 {
     width: 40%;
 }
+.w-50 {
+    width: 50%;
+}
 .w-60 {
     width: 60%;
 }
@@ -821,6 +829,9 @@ img {
 }
 .w-70 {
     width: 70%;
+}
+.w-80 {
+    width: 80%;
 }
 /*=================================================================*/
 .d-2xl-none {
@@ -950,9 +961,21 @@ img {
     display: block;
     padding-bottom: 100%;
 }
+.image-wrapper-110 {
+    position: relative;
+    display: block;
+    padding-bottom: 110%;
+}
+.image-wrapper-120 {
+    position: relative;
+    display: block;
+    padding-bottom: 120%;
+}
 
 .image-wrapper img,
-.image-wrapper-full img {
+.image-wrapper-full img,
+.image-wrapper-110 img,
+.image-wrapper-120 img {
     position: absolute;
     object-fit: cover;
     width: 100%;
@@ -973,6 +996,12 @@ img {
 }
 .text-pink-ee {
     color: #ee3d96;
+}
+.text-minsk {
+    color: var(--color-minsk);
+}
+.text-green-57 {
+    color: var(--color-green);
 }
 
 /*=================================================================*/
@@ -1610,10 +1639,19 @@ img {
 .text-left {
     text-align: left;
 }
+.text-justify {
+    text-align: justify;
+}
 
 /*=================================================================*/
 .items-center {
     align-items: center;
+}
+.items-baseline {
+    align-items: baseline;
+}
+.items-end {
+    align-items: flex-end;
 }
 .justify-between {
     justify-content: space-between;
@@ -1701,6 +1739,9 @@ img {
 .tracking-04 {
     letter-spacing: 0.4px;
 }
+.tracking-324 {
+    letter-spacing: 3.24px;
+}
 
 /*=================================================================*/
 .z-10 {
@@ -1745,4 +1786,20 @@ img {
 
 .border-white-50 {
     border-bottom: 0.504px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.text-gradient-primary {
+    display: inline-block;
+    background: #af2f87;
+    background: linear-gradient(
+        90deg,
+        #af2f87 0,
+        #5f2c76 21%,
+        #362a6e 41%,
+        #382e70 68%,
+        #426b8d
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
