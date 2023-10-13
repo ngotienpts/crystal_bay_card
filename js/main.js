@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var oneSlidesFade = document.querySelectorAll(
         ".js__swiperItemsContainerFade"
     );
-    // var fiveSlides = document.querySelectorAll(".js__swiperFiveItemsContainer");
+    var oneSlides = document.querySelectorAll(".js__swiperItemsContainer");
+    var threeSlides = document.querySelectorAll(
+        ".js__swiperThreeItemsContainer"
+    );
 
-    // counter
-    var counters = document.querySelectorAll(".js__couterContainer");
+    // show des full
+    var showDesFulls = document.querySelectorAll(".js__desShowFull");
 
     const app = {
         // su ly cac su kien
@@ -27,84 +30,118 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             }
 
-            // counter
-            if (counters) {
-                counters.forEach((counter) => {
-                    const counterSlide =
-                        counter.querySelectorAll(".swiper-slide");
-                    const counterTotal =
-                        counter.querySelector(".js__counterTotal");
-                    const counterActive =
-                        counter.querySelector(".js__counterActive");
+            // show des full
+            if (showDesFulls) {
+                showDesFulls.forEach((showDesFull) => {
+                    var fullText =
+                        showDesFull.querySelector(".js__removeFixtext");
+                    var moreIcon = showDesFull.querySelector(".js__moreFull");
 
-                    // for (var i = 0; i < counterSlide.length; i++) {
-                    //     if (
-                    //         counterSlide[i].classList.contains(
-                    //             "swiper-slide-active"
-                    //         )
-                    //     ) {
-                    //         console.log(123);
-                    //         // counterActive.textContent = i + 1;
-                    //     }
-                    // }
-
-                    counterTotal.textContent = "0" + counterSlide.length;
+                    moreIcon.onclick = function () {
+                        console.log(123);
+                        fullText.classList.toggle("full");
+                        this.classList.toggle("full");
+                    };
                 });
             }
         },
         // slider one item
-        sliderOneItemsFade: function () {
-            oneSlidesFade.forEach((item) => {
-                var pagi = item.querySelector(".swiper-pagination");
-                var slider = item.querySelector(".js__swiperOneItemsFade");
+        sliderOneItems: function () {
+            oneSlides.forEach((item) => {
+                var slider = item.querySelector(".js__oneSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
                 new Swiper(slider, {
                     slidesPerView: 1,
                     spaceBetween: 30,
                     slidesPerGroup: 1,
                     autoHeight: true,
                     effect: "fade",
+                    loop: true,
+                    fadeEffect: {
+                        crossFade: true,
+                    },
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                });
+            });
+        },
+        // slider one item fade
+        sliderOneItemsFade: function () {
+            oneSlidesFade.forEach((item) => {
+                var pagi = item.querySelector(".swiper-pagination");
+                var slider = item.querySelector(".js__swiperOneItemsFade");
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    slidesPerGroup: 1,
+                    autoHeight: true,
+                    effect: "fade",
+                    allowTouchMove: false,
+                    allowSlideClick: false,
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
                     },
                     pagination: {
                         el: pagi,
-                        clickable: true,
+                        clickable: false,
+                    },
+                });
+
+                var activeCount = item.querySelector(".js__counterActive");
+                var totalCount = item.querySelector(".js__counterTotal");
+
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                var totalSlides = swiper.slides.length;
+                var activeSlideIndex = swiper.activeIndex;
+
+                activeCount.textContent = "0" + (activeSlideIndex + 1);
+                totalCount.textContent = "0" + totalSlides;
+            }
+        },
+        // slider three item
+        sliderThreeItems: function () {
+            threeSlides.forEach((item) => {
+                var slider = item.querySelector(".js__threeSlides");
+                new Swiper(slider, {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                    slidesPerGroup: 1,
+                    autoHeight: true,
+
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                        },
                     },
                 });
             });
         },
-        // slider five item
-        // sliderFiveItems: function () {
-        //     fiveSlides.forEach((item) => {
-        //         var pagi = item.querySelector(".swiper-pagination");
-        //         var slider = item.querySelector(".js__swiperItems");
-        //         new Swiper(slider, {
-        //             slidesPerView: 1.5,
-        //             spaceBetween: 20,
-        //             slidesPerGroup: 1,
-        //             autoHeight: true,
-        //             pagination: {
-        //                 el: pagi,
-        //                 clickable: true,
-        //             },
-        //             breakpoints: {
-        //                 640: {
-        //                     slidesPerView: 2,
-        //                 },
-        //                 768: {
-        //                     slidesPerView: 2,
-        //                 },
-        //                 1024: {
-        //                     slidesPerView: 4,
-        //                 },
-        //                 1200: {
-        //                     slidesPerView: 5,
-        //                 },
-        //             },
-        //         });
-        //     });
-        // },
         // scroll top
         scrollFunc: function () {
             const scrollY = window.scrollY;
@@ -140,8 +177,12 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleEvent();
             // window scroll
             this.windowScroll();
+            // slider one item
+            this.sliderOneItems();
             // one slide fade
             this.sliderOneItemsFade();
+            // slider three item
+            this.sliderThreeItems();
         },
     };
 

@@ -1551,6 +1551,9 @@ img {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    &.full {
+        -webkit-line-clamp: unset;
+    }
 }
 .fix-text2 {
     display: -webkit-box;
@@ -1558,6 +1561,9 @@ img {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    &.full {
+        -webkit-line-clamp: unset;
+    }
 }
 .fix-text3 {
     display: -webkit-box;
@@ -1565,6 +1571,9 @@ img {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    &.full {
+        -webkit-line-clamp: unset;
+    }
 }
 .fix-text4 {
     display: -webkit-box;
@@ -1572,6 +1581,9 @@ img {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    &.full {
+        -webkit-line-clamp: unset;
+    }
 }
 /*=================================================================*/
 .lh-1 {
