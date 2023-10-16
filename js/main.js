@@ -119,12 +119,23 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderThreeItems: function () {
             threeSlides.forEach((item) => {
                 var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
                 new Swiper(slider, {
                     slidesPerView: 1.5,
                     spaceBetween: 20,
                     slidesPerGroup: 1,
                     autoHeight: true,
-
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: next,
+                    },
                     breakpoints: {
                         640: {
                             slidesPerView: 2,

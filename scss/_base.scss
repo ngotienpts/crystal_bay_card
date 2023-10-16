@@ -89,6 +89,7 @@
     --box-padding: 50px;
     --box-padding-vertical: 30px;
     --heading-scale: 1;
+    --h-scale: 1;
 }
 
 .x {
@@ -971,11 +972,17 @@ img {
     display: block;
     padding-bottom: 120%;
 }
+.image-wrapper-150 {
+    position: relative;
+    display: block;
+    padding-bottom: 150%;
+}
 
 .image-wrapper img,
 .image-wrapper-full img,
 .image-wrapper-110 img,
-.image-wrapper-120 img {
+.image-wrapper-120 img,
+.image-wrapper-150 img {
     position: absolute;
     object-fit: cover;
     width: 100%;

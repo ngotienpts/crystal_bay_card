@@ -1,4 +1,77 @@
+@media screen and (max-width: 2160px) {
+  :root {
+    --heading-scale: 1.125;
+  }
+}
+@media screen and (max-width: 1950px) {
+  :root {
+    --bottom-space: 80px;
+    --arrow-size: 97px;
+    --box-padding: 50px;
+    --box-padding-vertical: 30px;
+    --heading-scale: 1;
+  }
+}
+@media screen and (max-width: 1800px) {
+  :root {
+    --bottom-space: 60px;
+    --arrow-size: 80px;
+    --heading-scale: 0.88;
+    --box-padding: 35px;
+    --box-padding-vertical: 20px;
+  }
+}
+@media screen and (max-width: 1750px) {
+  :root {
+    --h-scale: 0.88;
+  }
+}
+@media screen and (max-width: 1700px) {
+  :root {
+    --heading-scale: 0.8;
+  }
+}
+@media screen and (max-width: 1600px) {
+  :root {
+    --heading-scale: 0.8;
+    --bottom-space: 50px;
+    --arrow-size: 70px;
+    --box-padding: 30px;
+    --box-padding-vertical: 20px;
+    --h-scale: 0.83;
+  }
+}
+@media screen and (max-width: 1575px) {
+  :root {
+    --heading-scale: 0.75;
+    --bottom-space: 50px;
+    --arrow-size: 70px;
+    --box-padding: 30px;
+    --box-padding-vertical: 20px;
+  }
+}
+@media screen and (max-width: 1550px) {
+  :root {
+    --bottom-space: 60px;
+    --arrow-size: 80px;
+    --heading-scale: 0.75;
+  }
+}
+@media screen and (max-width: 1440px) {
+  :root {
+    --h-scale: 0.75;
+  }
+}
+@media screen and (max-width: 1366px) {
+  :root {
+    --h-scale: 0.71;
+  }
+}
 @media (max-width: 80em) {
+  :root {
+    --h-scale: 0.66;
+  }
+
   .d-xl-none {
     display: none;
   }
@@ -72,6 +145,10 @@
   /*------------------------------------------------------------- detail*/
 }
 @media (max-width: 40em) {
+  :root {
+    --h-scale: 0.66;
+  }
+
   .d-sm-none {
     display: none;
   }
