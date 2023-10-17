@@ -13,8 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var threeSlides = document.querySelectorAll(
         ".js__swiperThreeItemsContainer"
     );
+    var threeSlidesSecondary = document.querySelectorAll(
+        ".js__swiperThreeItemsContainerSecondary"
+    );
+    var threeSlidesQuaternary = document.querySelectorAll(
+        ".js__swiperThreeItemsContainerQuaternary"
+    );
 
     // show des full
+
     var showDesFulls = document.querySelectorAll(".js__desShowFull");
 
     const app = {
@@ -38,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     var moreIcon = showDesFull.querySelector(".js__moreFull");
 
                     moreIcon.onclick = function () {
-                        console.log(123);
                         fullText.classList.toggle("full");
                         this.classList.toggle("full");
                     };
@@ -98,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 });
 
-                var activeCount = item.querySelector(".js__counterActive");
-                var totalCount = item.querySelector(".js__counterTotal");
+                const activeCount = item.querySelector(".js__counterActive");
+                const totalCount = item.querySelector(".js__counterTotal");
 
                 updateSlideInfo(mySwiper, activeCount, totalCount);
 
@@ -108,8 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
-                var totalSlides = swiper.slides.length;
-                var activeSlideIndex = swiper.activeIndex;
+                const totalSlides = swiper.slides.length;
+                const activeSlideIndex = swiper.activeIndex;
 
                 activeCount.textContent = "0" + (activeSlideIndex + 1);
                 totalCount.textContent = "0" + totalSlides;
@@ -120,11 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
             threeSlides.forEach((item) => {
                 var slider = item.querySelector(".js__threeSlides");
                 var next = item.querySelector(".swiper-button-next");
-                new Swiper(slider, {
+                var mySwiper = new Swiper(slider, {
                     slidesPerView: 1.5,
                     spaceBetween: 20,
                     slidesPerGroup: 1,
-                    autoHeight: true,
                     loop: true,
                     autoHeight: true,
                     allowTouchMove: false,
@@ -151,7 +156,182 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                     },
                 });
+
+                const activeCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterTotal"
+                    );
+
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
             });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                const totalSlides = swiper.slides.length / 2 - 1;
+                let activeSlideIndex = swiper.realIndex;
+
+                if (swiper.params.loop) {
+                    // Nếu có thuộc tính loop: true
+                    activeSlideIndex =
+                        (activeSlideIndex + totalSlides) % totalSlides;
+                }
+
+                activeCount.textContent = String(activeSlideIndex + 1).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
+        },
+        // slider three secondary item
+        sliderThreeItemsSecondary: function () {
+            threeSlidesSecondary.forEach((item) => {
+                var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1.5,
+                    // spaceBetween: 20,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+                const activeCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterTotal"
+                    );
+
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                const totalSlides = swiper.slides.length / 2 - 1;
+                let activeSlideIndex = swiper.realIndex;
+
+                if (swiper.params.loop) {
+                    activeSlideIndex =
+                        (activeSlideIndex + totalSlides) % totalSlides;
+                }
+
+                activeCount.textContent = String(activeSlideIndex + 1).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
+        },
+        // slider three quaternary item
+        sliderThreeItemsQuaternary: function () {
+            threeSlidesQuaternary.forEach((item) => {
+                var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var mySwiper = new Swiper(slider, {
+                    grabCursor: false,
+                    slidesPerView: 3,
+                    spaceBetween: 100,
+                    centeredSlides: true,
+                    spaceBetween: 0,
+                    effect: "coverflow",
+                    freeMode: false,
+                    coverflowEffect: {
+                        rotate: 20,
+                        stretch: 0,
+                        depth: 200,
+                        modifier: 1,
+                        slideShadows: true,
+                    },
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                    mousewheel: true,
+                    keyboard: true,
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+                const activeCount =
+                    item.parentElement.querySelector(".js__counterActive");
+                const totalCount =
+                    item.parentElement.querySelector(".js__counterTotal");
+
+                console.log(activeCount);
+                console.log(totalCount);
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                const totalSlides = swiper.slides.length / 2 - 1;
+                let activeSlideIndex = swiper.realIndex;
+
+                if (swiper.params.loop) {
+                    activeSlideIndex =
+                        (activeSlideIndex + totalSlides) % totalSlides;
+                }
+
+                activeCount.textContent = String(activeSlideIndex + 1).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
         },
         // scroll top
         scrollFunc: function () {
@@ -194,6 +374,10 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderOneItemsFade();
             // slider three item
             this.sliderThreeItems();
+            // slider three secondary item
+            this.sliderThreeItemsSecondary();
+            // slider three quaternary item
+            this.sliderThreeItemsQuaternary();
         },
     };
 

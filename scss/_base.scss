@@ -90,6 +90,8 @@
     --box-padding-vertical: 30px;
     --heading-scale: 1;
     --h-scale: 1;
+    --clip-end: inset(0 0 100% 0);
+    --clip-start: inset(0 0 0 0);
 }
 
 .x {
@@ -1808,7 +1810,7 @@ img {
 }
 
 .text-gradient-primary {
-    display: inline-block;
+    // display: inline-block;
     background: #af2f87;
     background: linear-gradient(
         90deg,
@@ -1821,4 +1823,22 @@ img {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.text-gradient-secondary {
+    // display: inline-block;
+    background: #eb3f94;
+    background: linear-gradient(
+        90deg,
+        #eb3f94 0,
+        #ca3b8d 10%,
+        #9e3684 25%,
+        #79327d 40%,
+        #5d2f77 55%,
+        #492d73 70%,
+        #3d2c70 85%,
+        #392c70
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: var(--frunchy-stroke) transparent;
 }
