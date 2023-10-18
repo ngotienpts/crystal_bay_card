@@ -21,8 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     // show des full
-
     var showDesFulls = document.querySelectorAll(".js__desShowFull");
+
+    // change tab
+    var changeTabs = document.querySelectorAll(".js__changeTab");
 
     const app = {
         // su ly cac su kien
@@ -48,6 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
                         fullText.classList.toggle("full");
                         this.classList.toggle("full");
                     };
+                });
+            }
+
+            if (changeTabs) {
+                changeTabs.forEach((changeTab) => {
+                    var tabs = changeTab.querySelectorAll(".js__tab");
+                    var panes = changeTab.querySelectorAll(".js__pane");
+
+                    if (tabs && panes) {
+                        tabs.forEach((tab, index) => {
+                            var pane = panes[index];
+                            tab.onclick = function () {
+                                tab.parentElement
+                                    .querySelector(".js__tab.active")
+                                    .classList.remove("active");
+                                pane.parentElement
+                                    .querySelector(".js__pane.active")
+                                    .classList.remove("active");
+
+                                this.classList.add("active");
+                                pane.classList.add("active");
+                            };
+                        });
+                    }
                 });
             }
         },
@@ -126,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
             threeSlides.forEach((item) => {
                 var slider = item.querySelector(".js__threeSlides");
                 var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
                     slidesPerView: 1.5,
                     spaceBetween: 20,
@@ -140,6 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                     navigation: {
                         nextEl: next,
+                        prevEl: prev || null,
                     },
                     breakpoints: {
                         640: {
@@ -177,16 +205,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 let activeSlideIndex = swiper.realIndex;
 
                 if (swiper.params.loop) {
-                    // Nếu có thuộc tính loop: true
                     activeSlideIndex =
                         (activeSlideIndex + totalSlides) % totalSlides;
                 }
+                if (activeCount) {
+                    activeCount.textContent = String(
+                        activeSlideIndex + 1
+                    ).padStart(2, "0");
+                }
 
-                activeCount.textContent = String(activeSlideIndex + 1).padStart(
-                    2,
-                    "0"
-                );
-                totalCount.textContent = String(totalSlides).padStart(2, "0");
+                if (totalCount) {
+                    totalCount.textContent = String(totalSlides).padStart(
+                        2,
+                        "0"
+                    );
+                }
             }
         },
         // slider three secondary item
@@ -279,10 +312,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         slideShadows: true,
                     },
                     loop: true,
-                    autoplay: {
-                        delay: 2000,
-                        disableOnInteraction: false,
-                    },
+                    // autoplay: {
+                    //     delay: 2000,
+                    //     disableOnInteraction: false,
+                    // },
                     mousewheel: true,
                     keyboard: true,
                     navigation: {
@@ -305,21 +338,39 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 });
                 const activeCount =
-                    item.parentElement.querySelector(".js__counterActive");
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterActive"
+                    );
                 const totalCount =
-                    item.parentElement.querySelector(".js__counterTotal");
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterTotal"
+                    );
+                const setText = item.parentElement.parentElement.querySelector(
+                    ".js__setTextSeptenary"
+                );
 
-                console.log(activeCount);
-                console.log(totalCount);
-                updateSlideInfo(mySwiper, activeCount, totalCount);
+                updateSlideInfo(mySwiper, activeCount, totalCount, setText);
 
                 mySwiper.on("slideChange", function () {
-                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                    updateSlideInfo(mySwiper, activeCount, totalCount, setText);
                 });
             });
-            function updateSlideInfo(swiper, activeCount, totalCount) {
-                const totalSlides = swiper.slides.length / 2 - 1;
+            function updateSlideInfo(swiper, activeCount, totalCount, setText) {
+                const totalSlides = swiper.slides.length - 6;
+
                 let activeSlideIndex = swiper.realIndex;
+
+                // console.log(activeSlideIndex);
+                // console.log(totalSlides);
+
+                const activeSlide = swiper.slides[swiper.activeIndex];
+
+                if (activeSlide !== undefined) {
+                    var elementToGetText = activeSlide.querySelector(
+                        ".js__getTextSeptenary"
+                    );
+                    setText.innerHTML = elementToGetText.innerHTML;
+                }
 
                 if (swiper.params.loop) {
                     activeSlideIndex =
