@@ -16,8 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var threeSlidesSecondary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerSecondary"
     );
+    var threeSlidesTertiary = document.querySelectorAll(
+        ".js__swiperThreeItemsContainerTertiary"
+    );
     var threeSlidesQuaternary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerQuaternary"
+    );
+    var threeSlidesQuinary = document.querySelectorAll(
+        ".js__swiperThreeItemsContainerQuinary"
     );
 
     // show des full
@@ -290,6 +296,45 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+        // slider three tertiary item
+        sliderThreeItemsTertiary: function () {
+            threeSlidesTertiary.forEach((item) => {
+                var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                new Swiper(slider, {
+                    slidesPerView: 1.5,
+                    // spaceBetween: 20,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    // autoplay: {
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    // },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+            });
+        },
         // slider three quaternary item
         sliderThreeItemsQuaternary: function () {
             threeSlidesQuaternary.forEach((item) => {
@@ -299,7 +344,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 var mySwiper = new Swiper(slider, {
                     grabCursor: false,
                     slidesPerView: 3,
-                    spaceBetween: 100,
                     centeredSlides: true,
                     spaceBetween: 0,
                     effect: "coverflow",
@@ -384,6 +428,61 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+        // slider three quinary item
+        sliderThreeItemsQuinary: function () {
+            threeSlidesQuinary.forEach((item) => {
+                var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    loop: true,
+                    spaceBetween: 40,
+
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                });
+
+                const activeCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterTotal"
+                    );
+
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                const totalSlides = swiper.slides.length / 2 - 1;
+                let activeSlideIndex = swiper.realIndex;
+
+                if (swiper.params.loop) {
+                    activeSlideIndex =
+                        (activeSlideIndex + totalSlides) % totalSlides;
+                }
+                if (activeCount) {
+                    activeCount.textContent = String(
+                        activeSlideIndex + 1
+                    ).padStart(2, "0");
+                }
+
+                if (totalCount) {
+                    totalCount.textContent = String(totalSlides).padStart(
+                        2,
+                        "0"
+                    );
+                }
+            }
+        },
         // scroll top
         scrollFunc: function () {
             const scrollY = window.scrollY;
@@ -427,8 +526,12 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderThreeItems();
             // slider three secondary item
             this.sliderThreeItemsSecondary();
+            // slider three tertiary item
+            this.sliderThreeItemsTertiary();
             // slider three quaternary item
             this.sliderThreeItemsQuaternary();
+            // slider three quinary item
+            this.sliderThreeItemsQuinary();
         },
     };
 
