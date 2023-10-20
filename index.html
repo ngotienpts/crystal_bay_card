@@ -339,35 +339,45 @@
                 <!-- end navbar center -->
 
                 <!-- navbar right -->
-                <ul class="navbar navbar-left d-2xl-flex items-center justify-between flex-1 fs-15">
+                <ul class="navbar navbar-left search-active d-2xl-flex items-center relative justify-between flex-1 fs-15 js__navbarLeft">
                     <!-- item -->
-                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                    <li class="navbar-item navbar-left__item search-fade relative text-white hover-green--bold">
                         <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">CB Booking</a>
                     </li>
                     <!-- end item -->
                     <!-- item -->
-                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                    <li class="navbar-item navbar-left__item search-fade relative text-white hover-green--bold">
                         <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Tuyển dụng</a>
                     </li>
                     <!-- end item -->
                     <!-- item -->
-                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                    <li class="navbar-item navbar-left__item search-fade relative text-white hover-green--bold">
                         <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Đối tác</a>
                     </li>
                     <!-- end item -->
                     <!-- item -->
-                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
+                    <li class="navbar-item navbar-left__item search-fade relative text-white hover-green--bold">
                         <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center uppercase p-10">Liên hệ</a>
                     </li>
                     <!-- end item -->
 
                     <!-- item -->
-                    <li class="navbar-item navbar-left__item relative text-white hover-green--bold">
-                        <a href="#" class="navbar-left__link h-46 d-2xl-flex items-center">
+                    <li class="navbar-item navbar-left__item text-white js__showSearchPc">
+                        <form class="navbar-item__search" action="" method="">
+                            <div class="navbar-item__search-group h-full d-2xl-flex items-center">
+                                <input name="tu-khoa" autocomplete="off" value="">
+                                <!-- <div class="navbar-item__search-icon h-46 d-2xl-flex items-center px-20 pointer">
+                                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.33 13.33" width="20" height="20" class="" style=" transform: none; cursor: pointer; transition: all 0.5s ease 0s;">
+                                        <path fill="currentColor" d="M13.33 12.17 9.36 8.19c.64-.88.99-1.94.98-3.03C10.33 2.32 8.02 0 5.17 0S0 2.32 0 5.17s2.32 5.17 5.17 5.17c1.09 0 2.15-.34 3.03-.98l3.98 3.97 1.15-1.15ZM5.17 8.7c-1.95 0-3.54-1.58-3.54-3.54s1.58-3.53 3.54-3.53 3.54 1.58 3.54 3.54c0 1.95-1.58 3.53-3.54 3.54Z"></path>
+                                    </svg>
+                                </div> -->
+                            </div>
+                        </form>
+                        <div class="navbar-left__link h-46 d-2xl-flex items-center">
                             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.33 13.33" width="20" height="20" class="" style=" transform: none; cursor: pointer; transition: all 0.5s ease 0s;">
                                 <path fill="currentColor" d="M13.33 12.17 9.36 8.19c.64-.88.99-1.94.98-3.03C10.33 2.32 8.02 0 5.17 0S0 2.32 0 5.17s2.32 5.17 5.17 5.17c1.09 0 2.15-.34 3.03-.98l3.98 3.97 1.15-1.15ZM5.17 8.7c-1.95 0-3.54-1.58-3.54-3.54s1.58-3.53 3.54-3.53 3.54 1.58 3.54 3.54c0 1.95-1.58 3.53-3.54 3.54Z"></path>
                             </svg>
-                        </a>
+                        </div>
                     </li>
                     <!-- end item -->
                     
@@ -427,7 +437,7 @@
         <!-- main -->
         <main id="main" class="main">
             <!-- section primary -->
-            <section class="section-primary">
+            <section class="section-primary js__showContentFull">
                 <div class="w-wrapper relative z-20 section-primary__container">
                     <div class="section-primary__inner w-80 mx-auto js__swiperItemsContainer">
                         <div class="swiper js__oneSlides">
@@ -1249,7 +1259,156 @@
                     <!-- end heading -->
 
                     <!-- content -->
-                    <div class="section-senary__content js__swiperThreeItemsContainerTertiary">
+                    <div class="section-senary__content d-2xl-grid">
+                        <!-- large -->
+                        <div class="section-senary__large">
+                            <!-- article -->
+                            <div class="article">
+                                <!-- img -->
+                                <div class="article-img">
+                                    <a href="#" class="image-wrapper-40 overflow-hidden hover-scale">
+                                        <img src="./images/2.jpg" alt="">
+                                        <div class="coating-gradient"></div>
+                                        <div class="title-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20.86" height="30.78" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
+                                            <p>CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- end img -->
+
+                                <!-- content -->
+                                <div class="article-content">
+                                    <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
+                                    <!-- xem them -->
+                                    <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
+                                        <a href="#" class="btn-primary-link">
+                                            <div class="btn-primary-level-1">
+                                                <div class="btn-primary-level-2">
+                                                    <div class="btn-primary-level-3">
+                                                        <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
+                                                            <span class="fs-12 uppercase mr-4">Xem thêm</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
+                                                        </div>
+            
+                                                        <div class="btn-primary-level-3">
+                                                            <div class="btn-primary-level-5 btn-primary-hover">
+                                                                <div class="btn-primary-level-6 btn-primary-hoverShow">
+                                                                    <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- end xem them -->
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end article -->
+                        </div>
+                        <!-- end large -->
+                        <!-- small -->
+                        <div class="section-senary__small hover-mix-blend-2">
+                            <!-- article -->
+                            <div class="article">
+                                <!-- img -->
+                                <div class="article-img">
+                                    <a href="#" class="image-wrapper overflow-hidden hover-scale">
+                                        <img src="./images/2.jpg" alt="">
+                                        <div class="mix-blend-2"></div>
+                                    </a>
+                                </div>
+                                <!-- end img -->
+
+                                <!-- content -->
+                                <div class="article-content">
+                                    <p class="title-secondary">CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
+                                    <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
+                                    <!-- xem them -->
+                                    <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
+                                        <a href="#" class="btn-primary-link">
+                                            <div class="btn-primary-level-1">
+                                                <div class="btn-primary-level-2">
+                                                    <div class="btn-primary-level-3">
+                                                        <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
+                                                            <span class="fs-12 uppercase mr-4">Xem thêm</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
+                                                        </div>
+            
+                                                        <div class="btn-primary-level-3">
+                                                            <div class="btn-primary-level-5 btn-primary-hover">
+                                                                <div class="btn-primary-level-6 btn-primary-hoverShow">
+                                                                    <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- end xem them -->
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end article -->
+                        </div>
+                        <!-- end small -->
+                        <!-- small -->
+                        <div class="section-senary__small hover-mix-blend-2">
+                            <!-- article -->
+                            <div class="article">
+                                <!-- img -->
+                                <div class="article-img">
+                                    <a href="#" class="image-wrapper overflow-hidden hover-scale">
+                                        <img src="./images/2.jpg" alt="">
+                                        <div class="mix-blend-2"></div>
+                                    </a>
+                                </div>
+                                <!-- end img -->
+
+                                <!-- content -->
+                                <div class="article-content">
+                                    <p class="title-secondary">CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
+                                    <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
+                                    <!-- xem them -->
+                                    <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
+                                        <a href="#" class="btn-primary-link">
+                                            <div class="btn-primary-level-1">
+                                                <div class="btn-primary-level-2">
+                                                    <div class="btn-primary-level-3">
+                                                        <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
+                                                            <span class="fs-12 uppercase mr-4">Xem thêm</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
+                                                        </div>
+            
+                                                        <div class="btn-primary-level-3">
+                                                            <div class="btn-primary-level-5 btn-primary-hover">
+                                                                <div class="btn-primary-level-6 btn-primary-hoverShow">
+                                                                    <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- end xem them -->
+                                </div>
+                                <!-- end content -->
+                            </div>
+                            <!-- end article -->
+                        </div>
+                        <!-- end small -->
+                    </div>
+                    <!-- end content -->
+
+                    <!-- slide hidden -->
+                    <div class="section-senary__slides d-2xl-none js__swiperThreeItemsContainerTertiary">
                         <div class="swiper js__threeSlides">
                             <div class="swiper-wrapper">
                                 <!-- slide -->
@@ -1258,14 +1417,9 @@
                                     <div class="article">
                                         <!-- img -->
                                         <div class="article-img">
-                                            <a href="#" class="image-wrapper">
+                                            <div class="image-wrapper">
                                                 <img src="./images/2.jpg" alt="">
-                                                <div class="coating-gradient"></div>
-                                                <div class="title-primary">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20.86" height="30.78" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
-                                                    <p>CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
-                                                </div>
-                                            </a>
+                                            </div>
                                         </div>
                                         <!-- end img -->
 
@@ -1273,30 +1427,6 @@
                                         <div class="article-content">
                                             <p class="title-secondary">CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
                                             <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
-                                            <!-- xem them -->
-                                            <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
-                                                <a href="#" class="btn-primary-link">
-                                                    <div class="btn-primary-level-1">
-                                                        <div class="btn-primary-level-2">
-                                                            <div class="btn-primary-level-3">
-                                                                <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
-                                                                    <span class="fs-12 uppercase mr-4">Xem thêm</span>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
-                                                                </div>
-                    
-                                                                <div class="btn-primary-level-3">
-                                                                    <div class="btn-primary-level-5 btn-primary-hover">
-                                                                        <div class="btn-primary-level-6 btn-primary-hoverShow">
-                                                                            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- end xem them -->
                                         </div>
                                         <!-- end content -->
                                     </div>
@@ -1309,14 +1439,9 @@
                                     <div class="article">
                                         <!-- img -->
                                         <div class="article-img">
-                                            <a href="#" class="image-wrapper">
-                                                <img src="./images/3.jpg" alt="">
-                                                <div class="coating-gradient"></div>
-                                                <div class="title-primary">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20.86" height="30.78" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
-                                                    <p>CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
-                                                </div>
-                                            </a>
+                                            <div class="image-wrapper">
+                                                <img src="./images/2.jpg" alt="">
+                                            </div>
                                         </div>
                                         <!-- end img -->
 
@@ -1324,30 +1449,6 @@
                                         <div class="article-content">
                                             <p class="title-secondary">CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
                                             <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
-                                            <!-- xem them -->
-                                            <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
-                                                <a href="#" class="btn-primary-link">
-                                                    <div class="btn-primary-level-1">
-                                                        <div class="btn-primary-level-2">
-                                                            <div class="btn-primary-level-3">
-                                                                <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
-                                                                    <span class="fs-12 uppercase mr-4">Xem thêm</span>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
-                                                                </div>
-                    
-                                                                <div class="btn-primary-level-3">
-                                                                    <div class="btn-primary-level-5 btn-primary-hover">
-                                                                        <div class="btn-primary-level-6 btn-primary-hoverShow">
-                                                                            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- end xem them -->
                                         </div>
                                         <!-- end content -->
                                     </div>
@@ -1360,14 +1461,9 @@
                                     <div class="article">
                                         <!-- img -->
                                         <div class="article-img">
-                                            <a href="#" class="image-wrapper">
-                                                <img src="./images/4.jpg" alt="">
-                                                <div class="coating-gradient"></div>
-                                                <div class="title-primary">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20.86" height="30.78" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
-                                                    <p>CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
-                                                </div>
-                                            </a>
+                                            <div class="image-wrapper">
+                                                <img src="./images/2.jpg" alt="">
+                                            </div>
                                         </div>
                                         <!-- end img -->
 
@@ -1375,30 +1471,6 @@
                                         <div class="article-content">
                                             <p class="title-secondary">CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
                                             <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
-                                            <!-- xem them -->
-                                            <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
-                                                <a href="#" class="btn-primary-link">
-                                                    <div class="btn-primary-level-1">
-                                                        <div class="btn-primary-level-2">
-                                                            <div class="btn-primary-level-3">
-                                                                <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
-                                                                    <span class="fs-12 uppercase mr-4">Xem thêm</span>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
-                                                                </div>
-                    
-                                                                <div class="btn-primary-level-3">
-                                                                    <div class="btn-primary-level-5 btn-primary-hover">
-                                                                        <div class="btn-primary-level-6 btn-primary-hoverShow">
-                                                                            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- end xem them -->
                                         </div>
                                         <!-- end content -->
                                     </div>
@@ -1411,14 +1483,9 @@
                                     <div class="article">
                                         <!-- img -->
                                         <div class="article-img">
-                                            <a href="#" class="image-wrapper">
-                                                <img src="./images/3-2.jpg" alt="">
-                                                <div class="coating-gradient"></div>
-                                                <div class="title-primary">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20.86" height="30.78" viewBox="0 0 15.473 22.828" fill="white"><path data-name="Path 45" d="M7.829 0A21.878 21.878 0 0 1 0 11.277a22.924 22.924 0 0 1 7.829 11.551c1.176-4.338 4.7-9.816 7.644-11.551A21.466 21.466 0 0 1 7.829 0Z" fill="white"></path></svg>
-                                                    <p>CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
-                                                </div>
-                                            </a>
+                                            <div class="image-wrapper">
+                                                <img src="./images/2.jpg" alt="">
+                                            </div>
                                         </div>
                                         <!-- end img -->
 
@@ -1426,42 +1493,20 @@
                                         <div class="article-content">
                                             <p class="title-secondary">CÁCH SỬ DỤNG THẺ DU LỊCH: ĐẶT PHÒNG NGHỈ DƯỠNG VÀ BẢO LƯU</p>
                                             <p class="desription">Thẻ du lịch Crystal Bay Card được ví như “tấm hộ chiếu quyền năng” dành cho những du khách có niềm đam mê với du lịch và trải nghiệm vẻ đẹp của mọi vùng đất mà họ đặt chân đến. Bên cạnh những giá trị vượt trội dành cho khách hàng, quyền lợi khác của chiếc thẻ này chính là có thể bán lại, nhượng lại cho khách hàng khác có nhu cầu sử dụng.</p>
-                                            <!-- xem them -->
-                                            <div class="btn-primary mb-20 mt-10 d-2xl-flex items-center justify-end">
-                                                <a href="#" class="btn-primary-link">
-                                                    <div class="btn-primary-level-1">
-                                                        <div class="btn-primary-level-2">
-                                                            <div class="btn-primary-level-3">
-                                                                <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-green-57">
-                                                                    <span class="fs-12 uppercase mr-4">Xem thêm</span>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="42.77" height="15.94" viewBox="0 0 56.183 24.851" fill="#58BCB6"><g data-name="Group 70" fill="none" stroke="#58BCB6" stroke-miterlimit="10"><path data-name="Line 15" stroke-width="0.709" d="M0 12.425h54.282"></path><g data-name="Group 69" stroke-width="1.701"><path data-name="Path 60" d="M44.314 24.695s2.045-10.992 11.758-12.27"></path><path data-name="Path 61" d="M44.314.155s2.045 10.992 11.758 12.27"></path></g></g></svg>
-                                                                </div>
-                    
-                                                                <div class="btn-primary-level-3">
-                                                                    <div class="btn-primary-level-5 btn-primary-hover">
-                                                                        <div class="btn-primary-level-6 btn-primary-hoverShow">
-                                                                            <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24"><path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="fill:#3e336a" data-name="Layer 1"></path></svg>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- end xem them -->
                                         </div>
                                         <!-- end content -->
                                     </div>
                                     <!-- end article -->
                                 </div>
                                 <!-- end slide -->
+                                
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <!-- end content -->
+                    <!-- end slide hidden -->
                 </div>
 
                 <div class="w-wrapper relative z-20 section-quinary__more">

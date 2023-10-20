@@ -66,6 +66,34 @@
                 left: auto;
             }
         }
+
+        &__search {
+            position: absolute;
+            top: -4px;
+            left: 0;
+            bottom: -4px;
+            border-radius: 24px;
+            opacity: 0;
+            visibility: hidden;
+            width: calc(100% - max(67px, 3vw));
+            height: 46px;
+            transition: all 0.3s;
+            // &.active {
+            //     border: 1px solid currentColor;
+            //     width: calc(100% - max(67px, 3vw));
+            //     opacity: 1;
+            //     visibility: visible;
+            // }
+            input {
+                color: currentColor;
+                width: calc(100% - 45px);
+                height: 100%;
+                padding: 5px 0 5px 25px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+        }
     }
     &-dropdown {
         z-index: 100;
@@ -121,6 +149,27 @@
         }
     }
 }
+
+.search-active {
+    .search-fade {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s;
+    }
+    &.active {
+        .search-fade {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .navbar-item__search {
+            border: 1px solid currentColor;
+            width: calc(100% - max(67px, 3vw));
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
 .hover-green {
     transition: all 0.2s ease;
     &:hover {

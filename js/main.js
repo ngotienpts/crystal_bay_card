@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // header
     var header = document.querySelector(".js__header");
 
+    // search
+    var navbarLeft = document.querySelector(".js__navbarLeft");
+    var search = navbarLeft.querySelector(".js__showSearchPc");
+
     // slice
     var oneSlidesFade = document.querySelectorAll(
         ".js__swiperItemsContainerFade"
@@ -45,6 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             }
 
+            // search
+            if (search) {
+                search.onclick = function () {
+                    navbarLeft.classList.add("active");
+                };
+            }
+
             // show des full
             if (showDesFulls) {
                 showDesFulls.forEach((showDesFull) => {
@@ -82,6 +93,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             }
+
+            // hide cac element khi click ra ngoai
+            document.addEventListener("click", function (e) {
+                if (search) {
+                    if (
+                        !search.contains(e.target) &&
+                        !e.target.matches(".js__showSearchPc")
+                    ) {
+                        navbarLeft.classList.remove("active");
+                    }
+                }
+            });
         },
         // slider one item
         sliderOneItems: function () {
@@ -302,8 +325,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 var slider = item.querySelector(".js__threeSlides");
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
                 new Swiper(slider, {
-                    slidesPerView: 1.5,
+                    slidesPerView: 3,
                     // spaceBetween: 20,
                     slidesPerGroup: 1,
                     loop: true,
@@ -318,19 +342,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         nextEl: next,
                         prevEl: prev,
                     },
-                    breakpoints: {
-                        640: {
-                            slidesPerView: 2,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                        },
+                    pagination: {
+                        el: pagi,
+                        type: "fraction",
                     },
                 });
             });
@@ -483,6 +497,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         },
+
         // scroll top
         scrollFunc: function () {
             const scrollY = window.scrollY;
