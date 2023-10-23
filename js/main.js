@@ -10,28 +10,34 @@ document.addEventListener("DOMContentLoaded", function () {
     var search = navbarLeft.querySelector(".js__showSearchPc");
 
     // slice
+    var oneSlides = document.querySelectorAll(".js__swiperItemsContainer");
+
     var oneSlidesFade = document.querySelectorAll(
         ".js__swiperItemsContainerFade"
     );
-    var oneSlides = document.querySelectorAll(".js__swiperItemsContainer");
+
     var threeSlides = document.querySelectorAll(
         ".js__swiperThreeItemsContainer"
     );
+
     var threeSlidesSecondary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerSecondary"
     );
+
     var threeSlidesTertiary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerTertiary"
     );
+
     var threeSlidesQuaternary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerQuaternary"
     );
+
     var threeSlidesQuinary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerQuinary"
     );
-
-    // show des full
-    var showDesFulls = document.querySelectorAll(".js__desShowFull");
+    var threeSlidesOctonary = document.querySelectorAll(
+        ".js__swiperThreeItemsContainerOctonary"
+    );
 
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
@@ -56,20 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             }
 
-            // show des full
-            if (showDesFulls) {
-                showDesFulls.forEach((showDesFull) => {
-                    var fullText =
-                        showDesFull.querySelector(".js__removeFixtext");
-                    var moreIcon = showDesFull.querySelector(".js__moreFull");
-
-                    moreIcon.onclick = function () {
-                        fullText.classList.toggle("full");
-                        this.classList.toggle("full");
-                    };
-                });
-            }
-
             if (changeTabs) {
                 changeTabs.forEach((changeTab) => {
                     var tabs = changeTab.querySelectorAll(".js__tab");
@@ -88,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                 this.classList.add("active");
                                 pane.classList.add("active");
+
+                                _this.sliderThreeItemsQuaternary();
                             };
                         });
                     }
@@ -117,22 +111,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 30,
                     slidesPerGroup: 1,
                     autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
                     effect: "fade",
                     loop: true,
                     fadeEffect: {
                         crossFade: true,
                     },
-                    allowTouchMove: false,
-                    allowSlideClick: false,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
+                    // autoplay: {
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    //     pauseOnMouseEnter: true,
+                    // },
                     navigation: {
                         nextEl: next,
                         prevEl: prev,
                     },
+                });
+
+                slider.addEventListener("click", function (event) {
+                    if (event.target.classList.contains("js__moreFull")) {
+                        var fullText = event.target
+                            .closest(".swiper-slide")
+                            .querySelector(".js__removeFixtext");
+                        if (fullText) {
+                            fullText.classList.toggle("full");
+                            event.target.parentElement.classList.toggle("full");
+                        }
+                    }
                 });
             });
         },
@@ -259,7 +265,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
                     slidesPerView: 1.5,
-                    // spaceBetween: 20,
                     slidesPerGroup: 1,
                     loop: true,
                     autoHeight: true,
@@ -304,15 +309,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
-                const totalSlides = swiper.slides.length / 2 - 1;
-                let activeSlideIndex = swiper.realIndex;
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
 
                 if (swiper.params.loop) {
+                    totalSlides -= 2;
+
+                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
                     activeSlideIndex =
-                        (activeSlideIndex + totalSlides) % totalSlides;
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
                 }
 
-                activeCount.textContent = String(activeSlideIndex + 1).padStart(
+                activeCount.textContent = String(activeSlideIndex).padStart(
                     2,
                     "0"
                 );
@@ -351,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         // slider three quaternary item
         sliderThreeItemsQuaternary: function () {
-            threeSlidesQuaternary.forEach((item) => {
+            threeSlidesQuaternary.forEach((item, index) => {
                 var slider = item.querySelector(".js__threeSlides");
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
@@ -413,13 +424,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     updateSlideInfo(mySwiper, activeCount, totalCount, setText);
                 });
             });
+
             function updateSlideInfo(swiper, activeCount, totalCount, setText) {
-                const totalSlides = swiper.slides.length - 6;
-
-                let activeSlideIndex = swiper.realIndex;
-
-                // console.log(activeSlideIndex);
-                // console.log(totalSlides);
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
 
                 const activeSlide = swiper.slides[swiper.activeIndex];
 
@@ -431,11 +439,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 if (swiper.params.loop) {
+                    totalSlides -= 2;
+
+                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
                     activeSlideIndex =
-                        (activeSlideIndex + totalSlides) % totalSlides;
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
                 }
 
-                activeCount.textContent = String(activeSlideIndex + 1).padStart(
+                activeCount.textContent = String(activeSlideIndex).padStart(
                     2,
                     "0"
                 );
@@ -460,14 +474,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 });
 
-                const activeCount =
-                    item.parentElement.parentElement.querySelector(
-                        ".js__counterActive"
-                    );
-                const totalCount =
-                    item.parentElement.parentElement.querySelector(
-                        ".js__counterTotal"
-                    );
+                const activeCount = item.querySelector(".js__counterActive");
+                const totalCount = item.querySelector(".js__counterTotal");
 
                 updateSlideInfo(mySwiper, activeCount, totalCount);
 
@@ -476,28 +484,94 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
-                const totalSlides = swiper.slides.length / 2 - 1;
-                let activeSlideIndex = swiper.realIndex;
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 6;
 
                 if (swiper.params.loop) {
+                    totalSlides -= 2;
+
+                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
                     activeSlideIndex =
-                        (activeSlideIndex + totalSlides) % totalSlides;
-                }
-                if (activeCount) {
-                    activeCount.textContent = String(
-                        activeSlideIndex + 1
-                    ).padStart(2, "0");
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
                 }
 
-                if (totalCount) {
-                    totalCount.textContent = String(totalSlides).padStart(
-                        2,
-                        "0"
-                    );
-                }
+                activeCount.textContent = String(activeSlideIndex).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+        // slide three octonary
+        sliderThreeItemsOctonary: function () {
+            threeSlidesOctonary.forEach((item) => {
+                var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1.5,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+                const activeCount = item.querySelector(".js__counterActive");
+                const totalCount = item.querySelector(".js__counterTotal");
 
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
+
+                if (swiper.params.loop) {
+                    totalSlides -= 2;
+
+                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
+                    activeSlideIndex =
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
+                }
+
+                activeCount.textContent = String(activeSlideIndex).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
+        },
         // scroll top
         scrollFunc: function () {
             const scrollY = window.scrollY;
@@ -547,6 +621,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderThreeItemsQuaternary();
             // slider three quinary item
             this.sliderThreeItemsQuinary();
+            // slide three octonary
+            this.sliderThreeItemsOctonary();
         },
     };
 
