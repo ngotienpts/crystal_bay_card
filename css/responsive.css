@@ -226,6 +226,12 @@
     justify-content: end;
   }
 
+  .header:hover ~ .overlay {
+    background-color: transparent;
+    visibility: hidden;
+    opacity: 0;
+  }
+
   /*------------------------------------------------------------- index*/
   .section-primary {
     min-height: 50vh;

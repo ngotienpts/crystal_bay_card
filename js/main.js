@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var navbarLeft = document.querySelector(".js__navbarLeft");
     var search = navbarLeft.querySelector(".js__showSearchPc");
 
+    // sub menu
+
+    var subMenus = document.querySelectorAll(".js__subMenuWrapper");
+
     // slice
     var oneSlides = document.querySelectorAll(".js__swiperItemsContainer");
 
@@ -62,6 +66,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             }
 
+            // sub menu
+            if (subMenus) {
+                subMenus.forEach((subMenu) => {
+                    var showSubMenu = subMenu.querySelector(".js__showSubmenu");
+                    var subMenuContent = subMenu.querySelector(
+                        ".js__subMenuContent"
+                    );
+                    var closeSubMenu =
+                        subMenu.querySelector(".js__closeSubMenu");
+                    var dropdowns =
+                        subMenu.querySelectorAll(".js__showDropdown");
+
+                    showSubMenu.onclick = function () {
+                        subMenuContent.classList.add("active");
+                    };
+                    closeSubMenu.onclick = function () {
+                        subMenuContent.classList.remove("active");
+                    };
+
+                    if (dropdowns) {
+                        dropdowns.forEach((dropdown) => {
+                            dropdown.onclick = function () {
+                                this.classList.toggle("active");
+                            };
+                        });
+                    }
+                });
+            }
+
             if (changeTabs) {
                 changeTabs.forEach((changeTab) => {
                     var tabs = changeTab.querySelectorAll(".js__tab");
@@ -81,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 this.classList.add("active");
                                 pane.classList.add("active");
 
-                                _this.sliderThreeItemsQuaternary();
+                                // _this.sliderThreeItemsQuaternary();
                             };
                         });
                     }
@@ -366,20 +399,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 var slider = item.querySelector(".js__threeSlides");
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
                 var mySwiper = new Swiper(slider, {
-                    grabCursor: false,
+                    // grabCursor: false,
                     slidesPerView: 3,
+                    spaceBetween: 50,
                     centeredSlides: true,
-                    spaceBetween: 0,
-                    effect: "coverflow",
-                    freeMode: false,
-                    coverflowEffect: {
-                        rotate: 20,
-                        stretch: 0,
-                        depth: 200,
-                        modifier: 1,
-                        slideShadows: true,
-                    },
+                    // autoHeight: true,
+                    // effect: "coverflow",
+                    // freeMode: false,
+                    // coverflowEffect: {
+                    //     rotate: 20,
+                    //     stretch: 0,
+                    //     depth: 200,
+                    //     modifier: 1,
+                    //     slideShadows: true,
+                    // },
                     loop: true,
                     // autoplay: {
                     //     delay: 2000,
@@ -390,6 +425,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     navigation: {
                         nextEl: next,
                         prevEl: prev,
+                    },
+                    pagination: {
+                        el: pagi,
+                        type: "fraction",
                     },
                     breakpoints: {
                         640: {
@@ -406,23 +445,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                     },
                 });
-                const activeCount =
-                    item.parentElement.parentElement.querySelector(
-                        ".js__counterActive"
-                    );
-                const totalCount =
-                    item.parentElement.parentElement.querySelector(
-                        ".js__counterTotal"
-                    );
-                const setText = item.parentElement.parentElement.querySelector(
-                    ".js__setTextSeptenary"
-                );
+                // const activeCount =
+                //     item.parentElement.parentElement.querySelector(
+                //         ".js__counterActive"
+                //     );
+                // const totalCount =
+                //     item.parentElement.parentElement.querySelector(
+                //         ".js__counterTotal"
+                //     );
+                // const setText = item.parentElement.parentElement.querySelector(
+                //     ".js__setTextSeptenary"
+                // );
 
-                updateSlideInfo(mySwiper, activeCount, totalCount, setText);
+                // updateSlideInfo(mySwiper, activeCount, totalCount, setText);
 
-                mySwiper.on("slideChange", function () {
-                    updateSlideInfo(mySwiper, activeCount, totalCount, setText);
-                });
+                // mySwiper.on("slideChange", function () {
+                //     updateSlideInfo(mySwiper, activeCount, totalCount, setText);
+                // });
             });
 
             function updateSlideInfo(swiper, activeCount, totalCount, setText) {

@@ -959,6 +959,11 @@ img {
     display: block;
     padding-bottom: 40%;
 }
+.image-wrapper-50 {
+    position: relative;
+    display: block;
+    padding-bottom: 50%;
+}
 .image-wrapper {
     position: relative;
     display: block;
@@ -985,6 +990,7 @@ img {
     padding-bottom: 150%;
 }
 .image-wrapper-40 img,
+.image-wrapper-50 img,
 .image-wrapper img,
 .image-wrapper-full img,
 .image-wrapper-110 img,

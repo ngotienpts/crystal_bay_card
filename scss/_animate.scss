@@ -2217,3 +2217,16 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
     }
 }
+
+@keyframes fragmentletter-68f08bc7-1ee2-4fa2-bdfe-6e5ecc9d535d {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(0px) translateY(-20px) scale(1);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+}
