@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ".js__swiperItemsContainerFade"
     );
 
+    var twoSlides = document.querySelectorAll(".js__swiperTwoItemsContainer");
+
     var threeSlides = document.querySelectorAll(
         ".js__swiperThreeItemsContainer"
     );
@@ -151,11 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     fadeEffect: {
                         crossFade: true,
                     },
-                    // autoplay: {
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    //     pauseOnMouseEnter: true,
-                    // },
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
                     navigation: {
                         nextEl: next,
                         prevEl: prev,
@@ -214,6 +216,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 activeCount.textContent = "0" + (activeSlideIndex + 1);
                 totalCount.textContent = "0" + totalSlides;
             }
+        },
+        // slider two item
+        sliderTwoItems: function () {
+            twoSlides.forEach((item) => {
+                var slider = item.querySelector(".js__twoSlides");
+                new Swiper(slider, {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                    slidesPerGroup: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                });
+            });
         },
         // slider three item
         sliderThreeItems: function () {
@@ -297,12 +316,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
-                    slidesPerView: 3,
+                    slidesPerView: 1.5,
                     slidesPerGroup: 1,
+                    centeredSlides: true,
+                    spaceBetween: 30,
                     loop: true,
                     autoHeight: true,
-                    allowTouchMove: false,
-                    allowSlideClick: false,
+                    allowTouchMove: true,
+                    allowSlideClick: true,
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
@@ -314,6 +335,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     breakpoints: {
                         640: {
                             slidesPerView: 3,
+                            centeredSlides: true,
+                            spaceBetween: 30,
                         },
                         768: {
                             slidesPerView: 3,
@@ -327,6 +350,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                         1200: {
                             slidesPerView: 3,
+                            allowTouchMove: false,
+                            allowSlideClick: false,
                         },
                     },
                 });
@@ -594,10 +619,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
-                    slidesPerView: 3,
+                    slidesPerView: 1.5,
                     centeredSlides: true,
                     loop: true,
-                    spaceBetween: 40,
+                    spaceBetween: 10,
 
                     navigation: {
                         nextEl: next,
@@ -606,13 +631,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     breakpoints: {
                         640: {
                             slidesPerView: 3,
+                            spaceBetween: 40,
                         },
                         768: {
                             slidesPerView: 3,
+                            spaceBetween: 40,
                         },
                         1024: {
                             slidesPerView: 3,
                             spaceBetween: 20,
+                            spaceBetween: 40,
                         },
                         1200: {
                             slidesPerView: "auto",
@@ -659,7 +687,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
-                    slidesPerView: 1.5,
+                    slidesPerView: 3,
                     slidesPerGroup: 1,
                     loop: true,
                     autoHeight: true,
@@ -675,10 +703,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                     breakpoints: {
                         640: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                         },
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                         },
                         1024: {
                             slidesPerView: 3,
@@ -758,6 +786,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderOneItems();
             // one slide fade
             this.sliderOneItemsFade();
+            // slider two item
+            this.sliderTwoItems();
             // slider three item
             this.sliderThreeItems();
             // slider three secondary item

@@ -203,10 +203,12 @@
     padding: 30px;
     opacity: 0;
     visibility: hidden;
+    display: none;
     transition: all 0.2s;
     &.active {
         opacity: 1;
         visibility: visible;
+        display: block;
     }
 
     &__heading {
