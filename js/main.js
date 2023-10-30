@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // header
     var header = document.querySelector(".js__header");
 
+    // modal
+    var modal = document.querySelector(".js__modal");
+
     // search
     var navbarLeft = document.querySelector(".js__navbarLeft");
     var search = navbarLeft.querySelector(".js__showSearchPc");
@@ -41,6 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var threeSlidesQuinary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerQuinary"
     );
+
+    var threeSlidesSenary = document.querySelectorAll(
+        ".js__swiperThreeItemsContainerSenary"
+    );
     var threeSlidesOctonary = document.querySelectorAll(
         ".js__swiperThreeItemsContainerOctonary"
     );
@@ -58,6 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 backTop.onclick = function () {
                     document.body.scrollTop = 0;
                     document.documentElement.scrollTop = 0;
+                };
+            }
+
+            // modal
+            if (modal) {
+                var closeModal = modal.querySelector(".js__closeModal");
+                closeModal.onclick = function () {
+                    if (modal.classList.contains("show")) {
+                        modal.classList.remove("show");
+                    }
                 };
             }
 
@@ -101,14 +118,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 changeTabs.forEach((changeTab) => {
                     var tabs = changeTab.querySelectorAll(".js__tab");
                     var panes = changeTab.querySelectorAll(".js__pane");
-
                     if (tabs && panes) {
                         tabs.forEach((tab, index) => {
                             var pane = panes[index];
+
                             tab.onclick = function () {
                                 tab.parentElement
                                     .querySelector(".js__tab.active")
                                     .classList.remove("active");
+
                                 pane.parentElement
                                     .querySelector(".js__pane.active")
                                     .classList.remove("active");
@@ -117,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 pane.classList.add("active");
 
                                 _this.sliderThreeItemsQuaternary();
+                                _this.sliderThreeItemsSenary();
                             };
                         });
                     }
@@ -193,6 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                     pagination: {
                         el: pagi,
@@ -230,6 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                 });
             });
@@ -241,9 +262,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
-                    slidesPerView: 1.5,
+                    slidesPerView: 2,
                     spaceBetween: 20,
                     slidesPerGroup: 1,
+                    centeredSlides: true,
                     loop: true,
                     autoHeight: true,
                     allowTouchMove: false,
@@ -251,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                     navigation: {
                         nextEl: next,
@@ -259,25 +282,29 @@ document.addEventListener("DOMContentLoaded", function () {
                     breakpoints: {
                         640: {
                             slidesPerView: 2,
+                            centeredSlides: true,
                         },
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
+                            centeredSlides: false,
                         },
                         1024: {
                             slidesPerView: 3,
+                            centeredSlides: false,
                         },
                         1200: {
                             slidesPerView: 3,
+                            centeredSlides: false,
                         },
                     },
                 });
 
                 const activeCount =
-                    item.parentElement.parentElement.querySelector(
+                    item.parentElement.parentElement.parentElement.parentElement.querySelector(
                         ".js__counterActive"
                     );
                 const totalCount =
-                    item.parentElement.parentElement.querySelector(
+                    item.parentElement.parentElement.parentElement.parentElement.querySelector(
                         ".js__counterTotal"
                     );
 
@@ -327,6 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                     navigation: {
                         nextEl: next,
@@ -409,6 +437,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     autoplay: {
                         delay: 5000,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                     navigation: {
                         nextEl: next,
@@ -521,24 +550,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var mySwiper = new Swiper(slider, {
-                    // grabCursor: false,
-                    slidesPerView: 3,
-                    spaceBetween: 50,
+                    slidesPerView: 2,
+                    spaceBetween: 20,
                     centeredSlides: true,
-                    // autoHeight: true,
-                    // effect: "coverflow",
-                    // freeMode: false,
-                    // coverflowEffect: {
-                    //     rotate: 20,
-                    //     stretch: 0,
-                    //     depth: 200,
-                    //     modifier: 1,
-                    //     slideShadows: true,
-                    // },
                     loop: true,
                     autoplay: {
                         delay: 4000,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                     mousewheel: true,
                     keyboard: true,
@@ -554,10 +573,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             slidesPerView: 2,
                         },
                         1024: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
+                            spaceBetween: 30,
                         },
                         1200: {
                             slidesPerView: 3,
+                            spaceBetween: 50,
                         },
                     },
                 });
@@ -570,34 +591,19 @@ document.addEventListener("DOMContentLoaded", function () {
                         ".js__counterTotal"
                     );
 
-                const setText = item.parentElement.parentElement.querySelector(
-                    ".js__setTextSeptenary"
-                );
-
-                updateSlideInfo(mySwiper, activeCount, totalCount, setText);
+                updateSlideInfo(mySwiper, activeCount, totalCount);
 
                 mySwiper.on("slideChange", function () {
-                    updateSlideInfo(mySwiper, activeCount, totalCount, setText);
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
                 });
             });
 
-            function updateSlideInfo(swiper, activeCount, totalCount, setText) {
+            function updateSlideInfo(swiper, activeCount, totalCount) {
                 let activeSlideIndex = swiper.realIndex + 1;
                 let totalSlides = swiper.slides.length - 4;
 
-                const activeSlide = swiper.slides[swiper.activeIndex];
-
-                if (activeSlide !== undefined) {
-                    var elementToGetText = activeSlide.querySelector(
-                        ".js__getTextSeptenary"
-                    );
-                    setText.innerHTML = elementToGetText.innerHTML;
-                }
-
                 if (swiper.params.loop) {
                     totalSlides -= 2;
-
-                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
                     activeSlideIndex =
                         ((activeSlideIndex % totalSlides) + totalSlides) %
                         totalSlides;
@@ -680,6 +686,90 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+        // slider three senary item
+        sliderThreeItemsSenary: function () {
+            threeSlidesSenary.forEach((item, index) => {
+                var slider = item.querySelector(".js__threeSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var mySwiper = new Swiper(slider, {
+                    grabCursor: false,
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                    centeredSlides: true,
+                    autoHeight: true,
+                    effect: "coverflow",
+                    freeMode: false,
+                    coverflowEffect: {
+                        rotate: 20,
+                        stretch: 0,
+                        depth: 200,
+                        modifier: 1,
+                        slideShadows: true,
+                    },
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    mousewheel: true,
+                    keyboard: true,
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 1,
+                        },
+                        1024: {
+                            slidesPerView: 1,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+                const activeCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterTotal"
+                    );
+
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
+
+                if (swiper.params.loop) {
+                    totalSlides -= 2;
+                    activeSlideIndex =
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
+                }
+
+                activeCount.textContent = String(activeSlideIndex).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
+        },
         // slide three octonary
         sliderThreeItemsOctonary: function () {
             threeSlidesOctonary.forEach((item) => {
@@ -696,6 +786,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
                     navigation: {
                         nextEl: next,
@@ -747,6 +838,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+
         // scroll top
         scrollFunc: function () {
             const scrollY = window.scrollY;
@@ -798,6 +890,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderThreeItemsQuaternary();
             // slider three quinary item
             this.sliderThreeItemsQuinary();
+            // slider three senary item
+            this.sliderThreeItemsSenary();
             // slide three octonary
             this.sliderThreeItemsOctonary();
         },
