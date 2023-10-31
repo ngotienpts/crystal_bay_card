@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ".js__swiperThreeItemsContainerOctonary"
     );
 
+    var introOneSlidesFade = document.querySelector(".js__introOneSlidesFade");
+    var introTwoSlides = document.querySelector(".js__introTwoSlidesContainer");
+
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
 
@@ -380,6 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             slidesPerView: 3,
                             allowTouchMove: false,
                             allowSlideClick: false,
+                            spaceBetween: 0,
                         },
                     },
                 });
@@ -838,6 +842,62 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+        // intro one slide
+        sliderIntroOneFade: function () {
+            new Swiper(introOneSlidesFade, {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                loop: true,
+                effect: "fade",
+                allowTouchMove: false,
+                allowSlideClick: false,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        },
+        // intro two slide
+        sliderIntroTwo: function () {
+            var pagi = introTwoSlides.querySelector(".swiper-pagination");
+            var slider = introTwoSlides.querySelector(".js__slider");
+            var mySwiper = new Swiper(slider, {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                slidesPerGroup: 1,
+                autoHeight: true,
+                allowTouchMove: false,
+                allowSlideClick: false,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: pagi,
+                    clickable: false,
+                },
+            });
+
+            const activeCount =
+                introTwoSlides.querySelector(".js__counterActive");
+            const totalCount =
+                introTwoSlides.querySelector(".js__counterTotal");
+
+            updateSlideInfo(mySwiper, activeCount, totalCount);
+
+            mySwiper.on("slideChange", function () {
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+            });
+
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                const totalSlides = swiper.slides.length - 1;
+                const activeSlideIndex = swiper.activeIndex;
+
+                activeCount.textContent = "0" + (activeSlideIndex + 1);
+                totalCount.textContent = "0" + totalSlides;
+            }
+        },
 
         // scroll top
         scrollFunc: function () {
@@ -894,6 +954,10 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderThreeItemsSenary();
             // slide three octonary
             this.sliderThreeItemsOctonary();
+            // intro one slide
+            this.sliderIntroOneFade();
+            // intro two slide
+            this.sliderIntroTwo();
         },
     };
 

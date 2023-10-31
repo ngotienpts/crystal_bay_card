@@ -1546,6 +1546,18 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: var(--frunchy-stroke) currentColor;
     }
+    &-octonary {
+        font-size: calc(var(--heading-scale) * 6.66rem * 0.75);
+        line-height: calc(var(--heading-scale) * 6.66rem * 0.75);
+        text-transform: uppercase;
+        margin: 0;
+        font-family: Frunchy;
+        color: #fff;
+        stroke: #fff;
+        font-weight: 400;
+        stroke-width: 1px;
+        -webkit-text-stroke: var(--frunchy-stroke-2x) #fff;
+    }
     &-nonary {
         font-family: Frunchy;
         font-size: calc(5.5rem * var(--global-heading-scale) * 0.75);
@@ -1557,6 +1569,42 @@
         text-align: center;
         -webkit-text-stroke: var(--frunchy-stroke-2x) var(--color-green);
     }
+    &-intro-tertiary-rotate {
+        width: 100px;
+        position: relative;
+        height: 300px;
+        span {
+            display: block;
+            font-family: Frunchy;
+            font-size: calc(46px * var(--heading-scale));
+            line-height: calc(58.82px * var(--heading-scale));
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0;
+            -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+            position: absolute;
+            transform: rotate(270deg) translateX(-100%);
+            transform-origin: top left;
+            width: 300px;
+            top: 0;
+            left: -5px;
+        }
+    }
+
+    &-intro-quinary {
+        font-family: Frunchy;
+        text-transform: uppercase;
+        font-weight: 400;
+        overflow: hidden;
+        -webkit-text-stroke: var(--frunchy-stroke-2x) transparent;
+        transform: translateZ(0);
+        transform-style: preserve-3d;
+        font-size: 70px;
+        line-height: 60.68px;
+        letter-spacing: -2.24px;
+        margin: 0;
+    }
+
     &-hyphen {
         height: 1.42px;
         background-color: #fff;
@@ -1892,8 +1940,28 @@
     transition: clip-path 0.5s;
     transition: clip-path 0.5s, -webkit-clip-path 0.5s;
 }
+.mix-blend-3 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: color;
+    isolation: isolate;
+    background-color: rgb(62, 50, 105);
+    -webkit-clip-path: var(--clip-start);
+    clip-path: var(--clip-start);
+    transition: -webkit-clip-path 0.5s;
+    transition: clip-path 0.5s;
+    transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+}
 .hover-mix-blend-2 {
     &:hover .mix-blend-2 {
+        clip-path: var(--clip-end);
+    }
+}
+.hover-mix-blend-3 {
+    &:hover .mix-blend-3 {
         clip-path: var(--clip-end);
     }
 }
