@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     var twoSlides = document.querySelectorAll(".js__swiperTwoItemsContainer");
+    var twoSlidesSecondary = document.querySelectorAll(
+        ".js__swiperTwoItemsContainerSecondary"
+    );
 
     var threeSlides = document.querySelectorAll(
         ".js__swiperThreeItemsContainer"
@@ -57,6 +60,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
+
+    // intro page
+    // hover map location
+    const itemsLocation = document.querySelectorAll(".js__itemLocation");
+    const itemsMapLocation = document.querySelectorAll(".js__itemMapLocation");
+    const iconChildLocation = document.querySelectorAll(".js__iconChild");
 
     const app = {
         // su ly cac su kien
@@ -144,6 +153,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             }
+
+            // hover map location
+            itemsLocation.forEach((item, index) => {
+                item.addEventListener("mouseenter", () => {
+                    _this.handleHoverInItemLocation(index);
+                });
+            });
+            itemsMapLocation.forEach((item, index) => {
+                item.addEventListener("mouseenter", () => {
+                    _this.handleHoverInItemLocation(index);
+                });
+            });
 
             // hide cac element khi click ra ngoai
             document.addEventListener("click", function (e) {
@@ -257,6 +278,88 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 });
             });
+        },
+        // slider two secondary item
+        sliderTwoItemsSecondary: function () {
+            twoSlidesSecondary.forEach((item) => {
+                var slider = item.querySelector(".js__twoSlides");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: true,
+                    allowSlideClick: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            centeredSlides: true,
+                            spaceBetween: 30,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            centeredSlides: true,
+                            spaceBetween: 0,
+                        },
+                        1024: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 0,
+                        },
+                        1200: {
+                            slidesPerView: 2,
+                            allowTouchMove: false,
+                            allowSlideClick: false,
+                            spaceBetween: 0,
+                        },
+                    },
+                });
+                const activeCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    item.parentElement.parentElement.querySelector(
+                        ".js__counterTotal"
+                    );
+
+                updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                mySwiper.on("slideChange", function () {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                });
+            });
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
+
+                // if (swiper.params.loop) {
+                //     totalSlides -= 2;
+
+                //     activeSlideIndex =
+                //         ((activeSlideIndex % totalSlides) + totalSlides) %
+                //         totalSlides;
+                //     activeSlideIndex =
+                //         activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
+                // }
+
+                activeCount.textContent = String(activeSlideIndex).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
         },
         // slider three item
         sliderThreeItems: function () {
@@ -862,7 +965,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var pagi = introTwoSlides.querySelector(".swiper-pagination");
             var slider = introTwoSlides.querySelector(".js__slider");
             var mySwiper = new Swiper(slider, {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 30,
                 slidesPerGroup: 1,
                 autoHeight: true,
@@ -876,6 +979,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 pagination: {
                     el: pagi,
                     clickable: false,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 1.5,
+                    },
+                    1200: {
+                        slidesPerView: 2,
+                    },
                 },
             });
 
@@ -897,6 +1008,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 activeCount.textContent = "0" + (activeSlideIndex + 1);
                 totalCount.textContent = "0" + totalSlides;
             }
+        },
+
+        // hover in item location
+        handleHoverInItemLocation: function (index) {
+            document
+                .querySelector(".js__itemLocation .js__child.active")
+                .classList.remove("active");
+            document
+                .querySelector(".js__itemMapLocation .js__child.active")
+                .classList.remove("active");
+            document
+                .querySelector(".js__iconChild.active")
+                .classList.remove("active");
+
+            itemsLocation[index]
+                .querySelector(".js__child")
+                .classList.add("active");
+            itemsMapLocation[index]
+                .querySelector(".js__child")
+                .classList.add("active");
+            iconChildLocation[index].classList.add("active");
         },
 
         // scroll top
@@ -940,6 +1072,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderOneItemsFade();
             // slider two item
             this.sliderTwoItems();
+            // slider two secondary item
+            this.sliderTwoItemsSecondary();
             // slider three item
             this.sliderThreeItems();
             // slider three secondary item

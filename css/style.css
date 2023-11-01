@@ -3949,6 +3949,17 @@ img {
     transform: translateX(0px) translateY(0px) scale(1);
   }
 }
+@keyframes Map_zoomInfinite__E9W6q {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .overlay {
   position: fixed;
   z-index: 1;
@@ -5992,7 +6003,6 @@ img {
   right: 0;
   width: 100%;
   height: 100%;
-  color: var(--color-minsk);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6111,6 +6121,18 @@ img {
   padding-top: 0 !important;
 }
 
+.coating-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 50%, transparent);
+}
+
+.intro-primary {
+  position: relative;
+}
 .intro-primary .swiper-slide .image-wrapper {
   padding-bottom: 100vh;
 }
@@ -6176,6 +6198,9 @@ img {
 }
 .intro-tertiary__right {
   width: calc(100% - 424px);
+}
+.intro-tertiary__right .section-quinary__right-container {
+  max-width: 70%;
 }
 .intro-tertiary__right .article {
   border-left: 1px solid rgba(96, 96, 96, 0.4);
@@ -6261,6 +6286,7 @@ img {
 }
 .intro-quinary .section-tertiary__card {
   width: 80%;
+  margin: auto;
 }
 .intro-quinary .section-tertiary__card-content {
   width: 87.35%;
@@ -6281,7 +6307,7 @@ img {
 .intro-senary {
   background-image: url("../images/about_us_place_bg.fdd31381.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   position: relative;
   min-height: 100vh;
@@ -6334,8 +6360,12 @@ img {
 }
 .intro-senary__left .item-location__dropdown {
   margin-bottom: 10px;
-  transition: height 0.5s;
+  max-height: 0;
+  transition: max-height 0.5s;
   overflow: hidden;
+}
+.intro-senary__left .item-location__dropdown.active {
+  max-height: 500px;
 }
 .intro-senary__left .item-location__link:hover .item-location__textPrimary {
   color: var(--color-green);
@@ -6382,6 +6412,21 @@ img {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.Map_markerIcon___JjT9 {
+  transform-origin: bottom center;
+}
+
+.Map_activeDynamic__L42L6.active,
+.Map_active__xaA5z {
+  animation-duration: 4s;
+  animation-name: Map_zoomInfinite__E9W6q;
+  animation-iteration-count: infinite;
+}
+
+.Map_activeDynamic__L42L6 {
+  transform-origin: bottom center;
 }
 
 #back-top {
