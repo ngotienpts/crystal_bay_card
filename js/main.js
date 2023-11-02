@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    var windowWidth = window.innerWidth;
     // back top
     var backTop = document.querySelector("#back-top");
 
@@ -66,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const itemsLocation = document.querySelectorAll(".js__itemLocation");
     const itemsMapLocation = document.querySelectorAll(".js__itemMapLocation");
     const iconChildLocation = document.querySelectorAll(".js__iconChild");
+    const backMap = document.querySelector(".js__backMap");
+    const mapWrapper = document.querySelector(".js__mapWrapper");
 
     const app = {
         // su ly cac su kien
@@ -164,7 +167,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.addEventListener("mouseenter", () => {
                     _this.handleHoverInItemLocation(index);
                 });
+                if (windowWidth < 640) {
+                    item.addEventListener("click", () => {
+                        _this.handleClickItemLocation(index);
+                    });
+                }
             });
+            if (mapWrapper && backMap && windowWidth < 640) {
+                backMap.onclick = function () {
+                    this.closest(".js__listLocation").style.display = "none";
+                    mapWrapper.style.display = "block";
+                };
+            }
 
             // hide cac element khi click ra ngoai
             document.addEventListener("click", function (e) {
@@ -246,12 +260,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const activeCount = item.querySelector(".js__counterActive");
                 const totalCount = item.querySelector(".js__counterTotal");
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 const totalSlides = swiper.slides.length;
@@ -325,6 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                     },
                 });
+
                 const activeCount =
                     item.parentElement.parentElement.querySelector(
                         ".js__counterActive"
@@ -333,12 +349,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.parentElement.parentElement.querySelector(
                         ".js__counterTotal"
                     );
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 let activeSlideIndex = swiper.realIndex + 1;
@@ -413,12 +430,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.parentElement.parentElement.parentElement.parentElement.querySelector(
                         ".js__counterTotal"
                     );
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 const totalSlides = swiper.slides.length / 2 - 1;
@@ -498,12 +516,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.parentElement.parentElement.querySelector(
                         ".js__counterTotal"
                     );
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 let activeSlideIndex = swiper.realIndex + 1;
@@ -577,11 +596,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         ".js__replaceDesSmallSecondary"
                     ),
                 };
-
-                updateSlideInfo(mySwiper, elements);
-                mySwiper.on("slideChange", function () {
+                if (elements) {
                     updateSlideInfo(mySwiper, elements);
-                });
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, elements);
+                    });
+                }
             });
 
             function updateSlideInfo(swiper, elements) {
@@ -697,12 +717,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.parentElement.parentElement.querySelector(
                         ".js__counterTotal"
                     );
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
 
             function updateSlideInfo(swiper, activeCount, totalCount) {
@@ -764,12 +785,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const activeCount = item.querySelector(".js__counterActive");
                 const totalCount = item.querySelector(".js__counterTotal");
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 let activeSlideIndex = swiper.realIndex + 1;
@@ -849,12 +871,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.parentElement.parentElement.querySelector(
                         ".js__counterTotal"
                     );
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
 
             function updateSlideInfo(swiper, activeCount, totalCount) {
@@ -916,12 +939,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 const activeCount = item.querySelector(".js__counterActive");
                 const totalCount = item.querySelector(".js__counterTotal");
-
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                mySwiper.on("slideChange", function () {
+                if (activeCount && totalCount) {
                     updateSlideInfo(mySwiper, activeCount, totalCount);
-                });
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             });
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 let activeSlideIndex = swiper.realIndex + 1;
@@ -962,51 +986,53 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         // intro two slide
         sliderIntroTwo: function () {
-            var pagi = introTwoSlides.querySelector(".swiper-pagination");
-            var slider = introTwoSlides.querySelector(".js__slider");
-            var mySwiper = new Swiper(slider, {
-                slidesPerView: 1.5,
-                spaceBetween: 30,
-                slidesPerGroup: 1,
-                autoHeight: true,
-                allowTouchMove: false,
-                allowSlideClick: false,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-                pagination: {
-                    el: pagi,
-                    clickable: false,
-                },
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 1.5,
+            if (introTwoSlides) {
+                var pagi = introTwoSlides.querySelector(".swiper-pagination");
+                var slider = introTwoSlides.querySelector(".js__slider");
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                    slidesPerGroup: 1,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     },
-                    1200: {
-                        slidesPerView: 2,
+                    pagination: {
+                        el: pagi,
+                        clickable: false,
                     },
-                },
-            });
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 1.5,
+                        },
+                        1200: {
+                            slidesPerView: 2,
+                        },
+                    },
+                });
+                const activeCount =
+                    introTwoSlides.querySelector(".js__counterActive");
+                const totalCount =
+                    introTwoSlides.querySelector(".js__counterTotal");
+                if (activeCount && totalCount) {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
 
-            const activeCount =
-                introTwoSlides.querySelector(".js__counterActive");
-            const totalCount =
-                introTwoSlides.querySelector(".js__counterTotal");
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
 
-            updateSlideInfo(mySwiper, activeCount, totalCount);
+                function updateSlideInfo(swiper, activeCount, totalCount) {
+                    const totalSlides = swiper.slides.length - 1;
+                    const activeSlideIndex = swiper.activeIndex;
 
-            mySwiper.on("slideChange", function () {
-                updateSlideInfo(mySwiper, activeCount, totalCount);
-            });
-
-            function updateSlideInfo(swiper, activeCount, totalCount) {
-                const totalSlides = swiper.slides.length - 1;
-                const activeSlideIndex = swiper.activeIndex;
-
-                activeCount.textContent = "0" + (activeSlideIndex + 1);
-                totalCount.textContent = "0" + totalSlides;
+                    activeCount.textContent = "0" + (activeSlideIndex + 1);
+                    totalCount.textContent = "0" + totalSlides;
+                }
             }
         },
 
@@ -1029,6 +1055,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 .querySelector(".js__child")
                 .classList.add("active");
             iconChildLocation[index].classList.add("active");
+        },
+        handleClickItemLocation: function (index) {
+            itemsLocation[index].closest(".js__listLocation").style.display =
+                "block";
+
+            itemsMapLocation[index].closest(".js__mapWrapper").style.display =
+                "none";
         },
 
         // scroll top
