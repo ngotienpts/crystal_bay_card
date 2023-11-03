@@ -1697,6 +1697,9 @@ img {
 .justify-around {
     justify-content: space-around;
 }
+.flex-column {
+    flex-direction: column;
+}
 .flex-0 {
     flex-shrink: 0;
 }

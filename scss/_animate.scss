@@ -2244,3 +2244,17 @@
         transform: scale(1);
     }
 }
+
+@keyframes MapComponent_zoomInfinite__l8M3Z {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

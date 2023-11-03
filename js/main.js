@@ -70,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const backMap = document.querySelector(".js__backMap");
     const mapWrapper = document.querySelector(".js__mapWrapper");
 
+    // cate 1
+    const boxMaps = document.querySelectorAll(".js__boxMaps");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -178,6 +181,31 @@ document.addEventListener("DOMContentLoaded", function () {
                     this.closest(".js__listLocation").style.display = "none";
                     mapWrapper.style.display = "block";
                 };
+            }
+
+            // cate 1
+            if (boxMaps) {
+                let activeItem = document.querySelector(
+                    ".js__boxMapChildren.active"
+                );
+
+                boxMaps.forEach((boxMap) => {
+                    const items = boxMap.querySelectorAll(
+                        ".js__boxMapChildren"
+                    );
+
+                    items.forEach((item) => {
+                        item.addEventListener("mouseenter", () => {
+                            if (item !== activeItem) {
+                                activeItem.classList.remove("active");
+
+                                item.classList.add("active");
+
+                                activeItem = item;
+                            }
+                        });
+                    });
+                });
             }
 
             // hide cac element khi click ra ngoai
