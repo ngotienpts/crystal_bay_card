@@ -2258,3 +2258,45 @@
         transform: scale(1);
     }
 }
+@keyframes TheFormDangKy_rotateAround__TOnyo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+@keyframes TheFormDangKy_movingX__8kGNl {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.rotate-moving-abit {
+    animation: rotate-moving-abit 30s linear infinite;
+}
+@keyframes rotate-moving-abit {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(15px) rotate(180deg);
+    }
+
+    to {
+        transform: translateX(0) rotate(1turn);
+    }
+}
