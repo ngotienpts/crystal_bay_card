@@ -1,0 +1,76 @@
+.blog-primary {
+    min-height: 100vh;
+    position: relative;
+    padding-top: var(--header-height);
+    --heading-scale: 1;
+
+    .left {
+        .article-title {
+            font-family: Frunchy;
+            font-size: calc(var(--heading-scale) * 80px);
+            line-height: calc(var(--heading-scale) * 65px);
+            color: #000;
+            font-weight: 400;
+            margin: 0;
+            -webkit-text-stroke: var(--frunchy-stroke-2x) currentColor;
+        }
+        .article-field {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .article-descript {
+            margin-right: 40px;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1;
+            p {
+                font-size: var(--size-body);
+                line-height: var(--line-body);
+                color: #000;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                text-align: justify;
+            }
+        }
+        .article-img2 {
+            width: 20vw;
+            .image-wrapper {
+                padding-bottom: 114%;
+            }
+        }
+    }
+    .right {
+        margin-left: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .article-img {
+            margin-bottom: 40px;
+            .image-wrapper {
+                padding-bottom: 73.9065%;
+            }
+        }
+        .article-field {
+            display: flex;
+        }
+        .article-descript {
+            flex: 1 1 0%;
+            display: flex;
+            align-items: flex-end;
+            p {
+                font-size: var(--size-body);
+                line-height: var(--line-body);
+                color: #000;
+                margin-top: 15px;
+                text-align: justify;
+            }
+        }
+        .article-btn {
+            margin-left: 30px;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}
