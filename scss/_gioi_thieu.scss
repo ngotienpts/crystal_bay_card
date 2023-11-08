@@ -11,6 +11,29 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    &-bot {
+        width: 95%;
+        margin: auto;
+        margin-top: -24px;
+        z-index: 200;
+        position: relative;
+        .descript {
+            padding: 20px;
+            background-color: #30275b;
+            p {
+                font-size: 0.75rem;
+                line-height: 16px;
+                color: #fff;
+                text-align: justify;
+            }
+        }
+        .line {
+            height: 33px;
+            width: 0.2px;
+            background-color: var(--color-minsk);
+            transform: translateY(-7px);
+        }
+    }
 }
 
 .intro-secondary {

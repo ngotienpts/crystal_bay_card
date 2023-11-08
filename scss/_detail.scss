@@ -1,0 +1,172 @@
+.news-detail-primary {
+    min-height: 100vh;
+    position: relative;
+    // padding-top: var(--header-height);
+    --heading-scale: 1;
+    --content-width: 70%;
+    display: flex;
+    flex-direction: column;
+    &__bgTop {
+        padding-bottom: 50vh;
+    }
+    &__top {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        z-index: 2;
+        margin-top: -20vh;
+        position: relative;
+        &.image-right {
+            .image {
+                order: 2;
+            }
+            .content {
+                order: 1;
+                margin-right: 40px;
+                margin-left: 0;
+            }
+        }
+        .image {
+            width: 38vw;
+            flex-shrink: 0;
+            .news-detail-primary__thumb {
+                padding-bottom: 79%;
+            }
+        }
+        .content {
+            flex: 1;
+            margin-left: 40px;
+            margin-top: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .heading {
+                font-family: Frunchy;
+                font-size: calc(var(--heading-scale) * 90px);
+                line-height: calc(var(--heading-scale) * 62px);
+                letter-spacing: -0.9px;
+                font-weight: 400;
+                margin-bottom: 0;
+                -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+            }
+            .sapo {
+                padding: 40px 0 0;
+                span {
+                    font-size: calc(1.67rem * 0.75);
+                    line-height: 23px;
+                    letter-spacing: 1.2px;
+                    text-transform: uppercase;
+                    color: #000;
+                    padding: 0 20px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #000;
+                    margin-top: 15px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    &__content {
+        margin: 30px auto;
+        line-height: 27px;
+        font-size: var(--size-body);
+        width: var(--content-width);
+        & > p {
+            text-align: justify;
+            margin: 20px 0;
+        }
+        figure figcaption {
+            background: #fff;
+            text-align: center;
+            margin: 0.9375rem auto;
+            display: block;
+            max-width: 100%;
+            line-height: 27px;
+            font-size: var(--size-body);
+            color: #555;
+            em {
+                font-style: italic;
+            }
+            strong {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.news-detail-secondary {
+    position: relative;
+    overflow-x: hidden;
+    background-color: hsla(20, 76%, 82%, 0.2);
+    padding: 80px 20px 30px;
+    &__left {
+        width: 15%;
+    }
+    &__right {
+        max-width: 85%;
+        .article {
+            padding: 0 20px 20px;
+            border-left: 0.6px solid var(--color-minsk);
+        }
+        .article-content {
+            margin-top: 10px;
+        }
+        .article-title {
+            font-family: Frunchy;
+            font-size: 33px;
+            line-height: 27.11px;
+            letter-spacing: -0.33px;
+            display: block;
+            margin: 10px 0 0;
+            -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+        }
+        .article-descript {
+            line-height: var(--line-body);
+            font-size: var(--size-body);
+            font-weight: 200;
+            margin: 15px 0;
+            text-align: justify;
+        }
+        .article-time {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: calc(0.83rem * 0.75);
+            line-height: 16.36px;
+            color: #000;
+            margin-top: 20px;
+        }
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+            left: 10px;
+            right: auto;
+            top: auto;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--color-minsk);
+        }
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            top: auto;
+            left: 60px;
+            right: auto;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--color-minsk);
+        }
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 16px;
+            color: var(--color-minsk);
+        }
+    }
+}
