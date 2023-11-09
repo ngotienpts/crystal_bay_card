@@ -7784,9 +7784,19 @@ img {
 .news-detail-primary__top .image {
   width: 38vw;
   flex-shrink: 0;
+  position: relative;
+}
+.news-detail-primary__top .image .article-img {
+  position: absolute;
+  inset: 0;
 }
 .news-detail-primary__top .image .news-detail-primary__thumb {
-  padding-bottom: 79%;
+  height: 100%;
+  width: 100%;
+}
+.news-detail-primary__top .image img {
+  width: 100%;
+  height: 100%;
 }
 .news-detail-primary__top .content {
   flex: 1;
@@ -7804,17 +7814,16 @@ img {
   font-weight: 400;
   margin-bottom: 0;
   -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+  margin-top: 60px;
 }
 .news-detail-primary__top .content .sapo {
   padding: 40px 0 0;
 }
 .news-detail-primary__top .content .sapo span {
-  font-size: 1.2525rem;
-  line-height: 23px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--size-body);
+  line-height: var(--line-body);
   color: #000;
-  padding: 0 20px;
 }
 .news-detail-primary__top .content .sapo p {
   font-size: 18px;
@@ -7849,6 +7858,82 @@ img {
 .news-detail-primary__content figure figcaption strong {
   font-weight: bold;
 }
+.news-detail-primary__content em {
+  font-style: italic;
+}
+.news-detail-primary__content blockquote {
+  border: 2px solid gray;
+  border-collapse: separate;
+}
+.news-detail-primary__content blockquote .expEdit {
+  margin: 2px;
+  border: 1px solid gray;
+}
+.news-detail-primary__content > h2 {
+  display: block;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 22.5px;
+  font-weight: 700;
+}
+.news-detail-primary__content > h3 {
+  display: block;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 17.5px;
+  font-weight: 700;
+}
+.news-detail-primary__content > h4,
+.news-detail-primary__content h5,
+.news-detail-primary__content h6 {
+  display: block;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+.news-detail-primary__content a {
+  color: var(--color-green);
+}
+.news-detail-primary__content ul {
+  margin: 15px 0;
+  padding-left: 40px;
+}
+.news-detail-primary__content ul li {
+  list-style: disc;
+}
+.news-detail-primary__tabbleOfContents .title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.news-detail-primary__tabbleOfContents:not(.active) .list {
+  display: none;
+}
+.news-detail-primary__tabbleOfContents .list {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  padding-top: 20px;
+  list-style-type: none;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  display: block;
+  margin: 12px 0;
+}
+.news-detail-primary__tabbleOfContents .item {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.news-detail-primary__tabbleOfContents .item a {
+  font-size: 12px;
+  color: #3e3269;
+}
+.news-detail-primary__tabbleOfContents .item ul {
+  margin-top: 5px;
+  padding-left: 40px;
+}
+.news-detail-primary__tabbleOfContents .item ul li {
+  margin-bottom: 10px;
+  text-align: left;
+  list-style: circle;
+}
 
 .news-detail-secondary {
   position: relative;
@@ -7868,6 +7953,9 @@ img {
 }
 .news-detail-secondary__right .article-content {
   margin-top: 10px;
+}
+.news-detail-secondary__right .image-wrapper {
+  padding-bottom: 77%;
 }
 .news-detail-secondary__right .article-title {
   font-family: Frunchy;

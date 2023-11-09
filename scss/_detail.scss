@@ -1,7 +1,6 @@
 .news-detail-primary {
     min-height: 100vh;
     position: relative;
-    // padding-top: var(--header-height);
     --heading-scale: 1;
     --content-width: 70%;
     display: flex;
@@ -29,8 +28,18 @@
         .image {
             width: 38vw;
             flex-shrink: 0;
+            position: relative;
+            .article-img {
+                position: absolute;
+                inset: 0;
+            }
             .news-detail-primary__thumb {
-                padding-bottom: 79%;
+                height: 100%;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
         .content {
@@ -48,16 +57,15 @@
                 font-weight: 400;
                 margin-bottom: 0;
                 -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+                margin-top: 60px;
             }
             .sapo {
                 padding: 40px 0 0;
                 span {
-                    font-size: calc(1.67rem * 0.75);
-                    line-height: 23px;
-                    letter-spacing: 1.2px;
-                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: var(--size-body);
+                    line-height: var(--line-body);
                     color: #000;
-                    padding: 0 20px;
                 }
                 p {
                     font-size: 18px;
@@ -95,6 +103,95 @@
                 font-weight: bold;
             }
         }
+        em {
+            font-style: italic;
+        }
+        blockquote {
+            border: 2px solid gray;
+            border-collapse: separate;
+            .expEdit {
+                margin: 2px;
+                border: 1px solid gray;
+            }
+        }
+        & > h2 {
+            display: block;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+                "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 22.5px;
+            font-weight: 700;
+        }
+        & > h3 {
+            display: block;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+                "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 17.5px;
+            font-weight: 700;
+        }
+        & > h4,
+        h5,
+        h6 {
+            display: block;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+                "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        & a {
+            color: var(--color-green);
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 40px;
+            li {
+                list-style: disc;
+            }
+        }
+    }
+
+    &__tabbleOfContents {
+        .field {
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+        &:not(.active) {
+            .list {
+                display: none;
+            }
+        }
+        .list {
+            border-top: 1px solid rgba(0, 0, 0, 0.4);
+            padding-top: 20px;
+            list-style-type: none;
+            -webkit-padding-start: 0;
+            padding-inline-start: 0;
+            display: block;
+            margin: 12px 0;
+        }
+        .item {
+            margin-bottom: 10px;
+            text-align: left;
+            a {
+                font-size: 12px;
+                color: #3e3269;
+            }
+            ul {
+                margin-top: 5px;
+                padding-left: 40px;
+                li {
+                    margin-bottom: 10px;
+                    text-align: left;
+                    list-style: circle;
+                }
+            }
+        }
     }
 }
 
@@ -114,6 +211,9 @@
         }
         .article-content {
             margin-top: 10px;
+        }
+        .image-wrapper {
+            padding-bottom: 77%;
         }
         .article-title {
             font-family: Frunchy;

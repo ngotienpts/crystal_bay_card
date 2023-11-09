@@ -73,6 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // cate 1
     const boxMaps = document.querySelectorAll(".js__boxMaps");
 
+    // detail
+    const showTableOfContens = document.querySelector(
+        ".js__showTableOfContents"
+    );
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -208,6 +213,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
+            // muc luc
+            if (showTableOfContens) {
+                showTableOfContens.onclick = function () {
+                    this.parentElement.parentElement.classList.toggle("active");
+                };
+            }
             // hide cac element khi click ra ngoai
             document.addEventListener("click", function (e) {
                 if (search) {
