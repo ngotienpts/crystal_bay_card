@@ -1,3 +1,8 @@
+@media screen and (min-width: 1920px) and (max-width: 2560px) {
+    .navbar {
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 2160px) {
     :root {
         --heading-scale: 1.125;
@@ -78,6 +83,11 @@
                 line-height: 40px;
             }
         }
+    }
+    /*------------------------------------------------------------- detail*/
+    .detail-recruitment-primary {
+        --heading-scale: 0.83;
+        --bg-height: 550px;
     }
 }
 @media screen and (max-width: 1575px) {
@@ -237,6 +247,13 @@
     :root {
         --h-scale: 0.71;
     }
+    .navbar,
+    .header.sticky .navbar {
+        font-size: calc(0.83rem * 0.75);
+    }
+    .navbar-left__link {
+        padding: 5px;
+    }
 }
 // max width 1280px
 @media (max-width: 80em) {
@@ -256,6 +273,14 @@
         display: grid;
     }
     /*------------------------------------------------------------- header*/
+    .navbar,
+    .header.sticky .navbar {
+        font-size: calc(0.73rem * 0.75);
+    }
+    .navbar-center {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
     /*------------------------------------------------------------- index*/
     .modal {
         &-container {
@@ -672,6 +697,10 @@
         right: 0;
         --heading-scale: 0.55;
         --bottom-space: 30px;
+    }
+    .navbar,
+    .header.sticky .navbar {
+        font-size: calc(0.63rem * 0.75);
     }
 }
 // max width 1024px
@@ -1266,6 +1295,77 @@
                 font-size: calc(0.83rem * 0.75);
                 line-height: 16.36px;
                 color: #000;
+            }
+        }
+    }
+    .detail-recruitment-primary {
+        --heading-scale: 0.4;
+        --bg-height: 650px;
+        &__container {
+            position: relative;
+            transform: unset;
+            top: auto;
+            left: auto;
+            background-color: var(--color-purple);
+            padding: 20px 50px 30px;
+            margin-top: -60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .heading {
+            }
+            .sapo-item__text {
+                margin-left: 2px;
+                font-size: calc(1.1rem * 0.75);
+            }
+        }
+
+        &__nameCate {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .name-cate {
+                font-family: Frunchy;
+                font-size: 55px;
+                line-height: 1;
+                text-transform: uppercase;
+                color: #fff;
+                stroke: #fff;
+                font-weight: 400;
+                stroke-width: 1px;
+                -webkit-text-stroke: var(--frunchy-stroke-2x) #fff;
+                margin: 0;
+                margin-top: calc(var(--header-height) + 110px);
+                text-align: center;
+            }
+        }
+    }
+    .detail-recruitment-secondary {
+        padding-top: 30px;
+        &__container {
+            .box-heading {
+                font-size: 35px;
+            }
+            .center {
+                display: none;
+            }
+            .right {
+                margin-top: 30px;
+            }
+            .box {
+                &.box-form {
+                    .form-group {
+                        flex-direction: column;
+                    }
+                    .form-input,
+                    .form-select,
+                    .form-label-uploadFile {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -2522,6 +2622,26 @@
             }
             .article-content {
                 padding-left: 20px;
+            }
+        }
+    }
+    .detail-recruitment-primary {
+        --heading-scale: 0.32;
+        &__container {
+            padding: 20px 20px 30px;
+            .sapo {
+                padding: 20px 0;
+            }
+        }
+    }
+    .detail-recruitment-secondary {
+        &__container {
+            .box {
+                &.box-form {
+                    .form-select--type {
+                        margin-top: 15px;
+                    }
+                }
             }
         }
     }

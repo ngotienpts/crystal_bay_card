@@ -2478,6 +2478,11 @@
                         <div class="coating-2"></div>
                     </div>
                 </div>
+                <div class="w-wrapper detail-recruitment-primary__nameCate d-2xl-none d-lg-block">
+                    <h2 class="name-cate text-white">
+                        <span>Tuyển dụng</span>
+                    </h2>
+                </div>
                 <div
                     class="w-wrapper z-20 detail-recruitment-primary__container"
                 >
@@ -2514,7 +2519,7 @@
 
             <!-- recruitment primary -->
             <section class="detail-recruitment-secondary">
-                <div class="w-wrapper detail-recruitment-secondary__container">
+                <div class="w-wrapper detail-recruitment-secondary__container d-lg-block">
                     <!-- left -->
                     <div class="left">
                         <!-- box -->
@@ -2691,213 +2696,69 @@
                             <h2 class="box-heading text-gradient">
                                 Nộp đơn ứng tuyển
                             </h2>
-                            <form method="POST">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Họ và tên"
-                                    required=""
-                                    value=""
-                                />
-                                <div class="RecruitDetail_radioGroup__1ymeL">
-                                    <span>Giới tính</span
-                                    ><input
-                                        type="radio"
-                                        id="nam"
-                                        name="gender"
-                                        value="male"
-                                    /><label for="nam">Nam</label
-                                    ><input
-                                        type="radio"
-                                        id="nu"
-                                        name="gender"
-                                        value="female"
-                                    /><label for="nu">Nữ</label>
-                                </div>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email"
-                                    required=""
-                                    value=""
-                                /><input
-                                    type="text"
-                                    name="phone"
-                                    placeholder="Số điện thoại"
-                                    required=""
-                                    value=""
-                                /><input
-                                    class="RecruitDetail_inputFullWidth__hoHUl"
-                                    type="text"
-                                    name="position"
-                                    placeholder="Vị trí ứng tuyển"
-                                    value=""
-                                /><input
-                                    class="RecruitDetail_inputFullWidth__hoHUl"
-                                    type="text"
-                                    name="info"
-                                    placeholder="Anh/chị biết thông tin qua nguồn nào?"
-                                    value=""
-                                />
-                                <div
-                                    class="RecruitDetail_radioGroup__1ymeL RecruitDetail_radioGroupJob__SU0Et"
-                                >
-                                    <span>Loại hình công việc mong muốn</span>
-                                    <div>
-                                        <input
-                                            type="radio"
-                                            id="fulltime"
-                                            name="job-type"
-                                            value="full-time"
-                                        /><label for="fulltime">Fulltime</label
-                                        ><input
-                                            type="radio"
-                                            id="parttime"
-                                            name="job-type"
-                                            value="part-time"
-                                        /><label for="parttime">Parttime</label>
+                            <form class="form-flied">
+                                <div class="form-group d-2xl-flex items-center gap-24">
+                                    <input class="form-input flex-1" type="text" name="name" placeholder="Họ và tên" required="" value=""/>
+                                    <div class="form-select flex-1">
+                                        <span class="form-text1">Giới tính</span>
+                                        <input class="form-radio" type="radio" id="nam" name="gender"value="male"/>
+                                        <label class="form-label1" for="nam">Nam</label>
+                                        <input class="form-radio" type="radio" id="nu" name="gender" value="female"/>
+                                        <label class="form-label1" for="nu">Nữ</label>
                                     </div>
                                 </div>
-                                <input
-                                    type="text"
-                                    name="date"
-                                    placeholder="Ngày có thể làm việc"
-                                    value=""
-                                /><input
-                                    type="text"
-                                    name="desired_income"
-                                    placeholder="Thu nhập mong muốn"
-                                    value=""
-                                />
-                                <div
-                                    class="RecruitDetail_customFileUpload__ASx_2"
-                                >
-                                    <label for="file-upload"
-                                        ><p>Hồ sơ ứng tuyển</p>
-                                        <span
-                                            >ĐÍNH KÈM
-                                            <span
-                                                style="
-                                                    box-sizing: border-box;
-                                                    display: inline-block;
-                                                    overflow: hidden;
-                                                    width: initial;
-                                                    height: initial;
-                                                    background: none;
-                                                    opacity: 1;
-                                                    border: 0px;
-                                                    margin: 0px;
-                                                    padding: 0px;
-                                                    position: relative;
-                                                    max-width: 100%;
-                                                "
-                                                ><span
-                                                    style="
-                                                        box-sizing: border-box;
-                                                        display: block;
-                                                        width: initial;
-                                                        height: initial;
-                                                        background: none;
-                                                        opacity: 1;
-                                                        border: 0px;
-                                                        margin: 0px;
-                                                        padding: 0px;
-                                                        max-width: 100%;
-                                                    "
-                                                    ><img
-                                                        alt=""
-                                                        aria-hidden="true"
-                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2710%27%20height=%2712%27/%3e"
-                                                        style="
-                                                            display: block;
-                                                            max-width: 100%;
-                                                            width: initial;
-                                                            height: initial;
-                                                            background: none;
-                                                            opacity: 1;
-                                                            border: 0px;
-                                                            margin: 0px;
-                                                            padding: 0px;
-                                                        " /></span
-                                                ><img
-                                                    alt=""
-                                                    srcset="
-                                                        /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon-file.e93bced0.png&amp;w=16&amp;q=75 1x,
-                                                        /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon-file.e93bced0.png&amp;w=32&amp;q=75 2x
-                                                    "
-                                                    src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon-file.e93bced0.png&amp;w=32&amp;q=75"
-                                                    decoding="async"
-                                                    data-nimg="intrinsic"
-                                                    style="
-                                                        position: absolute;
-                                                        inset: 0px;
-                                                        box-sizing: border-box;
-                                                        padding: 0px;
-                                                        border: none;
-                                                        margin: auto;
-                                                        display: block;
-                                                        width: 0px;
-                                                        height: 0px;
-                                                        min-width: 100%;
-                                                        max-width: 100%;
-                                                        min-height: 100%;
-                                                        max-height: 100%;
-                                                    " /></span></span></label
-                                    ><input
-                                        required=""
-                                        id="file-upload"
-                                        type="file"
-                                        name="file"
-                                        accept=".doc,.docx,.pdf,.txt"
-                                    />
+                                <div class="form-group d-2xl-flex items-center gap-24">
+                                    <input class="form-input flex-1" type="email" name="email" placeholder="Email" required="" value=""/>
+                                    <input class="form-input flex-1" type="text" name="phone" placeholder="Số điện thoại" required="" value=""/>
                                 </div>
-                                <div class="RecruitDetail_btnSubmitForm__JLYDy">
-                                    <button>
-                                        <div
-                                            class="RatioCol_container__nCWyF"
-                                            style="width: max(10vw, 200px)"
-                                        >
-                                            <div style="padding-top: 32.1816%">
-                                                <div
-                                                    class="AbsoluteFill_container__R108E"
-                                                >
-                                                    <div
-                                                        class="AbsoluteFill_container__R108E"
-                                                    >
-                                                        <div
-                                                            class="RecruitDetail_btnSubmitFormText__uE9B8"
-                                                        >
-                                                            Nộp đơn
-                                                        </div>
+                                <div class="form-group d-2xl-flex items-center gap-24">
+                                    <input class="form-input flex-1" type="text" name="position" placeholder="Vị trí ứng tuyển" value=""/>
+                                </div>
+                                <div class="form-group d-2xl-flex items-center gap-24">
+                                    <input class="form-input flex-1" type="text" name="info" placeholder="Anh/chị biết thông tin qua nguồn nào?" value=""/>
+                                </div>
+                                <div class="form-group d-2xl-flex items-center">
+                                    <div class="d-2xl-flex d-sm-block items-center w-full">
+                                        <span class="form-text1">Loại hình công việc mong muốn</span>
+                                        <div class="form-select form-select--type flex-1">
+                                            <input class="form-radio" type="radio" id="fulltime" name="job-type"value="full-time"/>
+                                            <label class="form-label1" for="fulltime">Fulltime</label>
+                                            <input class="form-radio" type="radio" id="parttime" name="job-type" value="part-time"/>
+                                            <label class="form-label1" for="parttime">Parttime</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-2xl-flex items-center gap-24">
+                                    <input  class="form-input flex-1" type="text" name="date" placeholder="Ngày có thể làm việc" value=""/>
+                                    <input  class="form-input flex-1" type="text" name="desired_income" placeholder="Thu nhập mong muốn" value="" />
+                                </div>
+                                <div class="form-group d-2xl-flex items-center gap-24 js__uploadFile">
+                                    <label class="form-label-uploadFile flex-1" for="file-upload">
+                                        <p>Hồ sơ ứng tuyển</p>
+                                        <div>
+                                            <span class="js__uploadFileText">ĐÍNH KÈM</span>
+                                            <img alt="" aria-hidden="true" src="./images/icon-file.png">
+                                        </div>
+                                    </label>
+                                    <input class="form-input form-input-uploadFile flex-1 js__uploadFileInput" required="" id="file-upload" type="file" name="file" accept=".doc,.docx,.pdf,.txt">
+                                </div>
+                                
+                                <div class="form__btn btn-primary active flex-0 d-2xl-flex justify-center w-full mt-10 mb-20">
+                                    <a href="#" class="btn-primary-link">
+                                        <div class="btn-primary-level-1">
+                                            <div class="btn-primary-level-2">
+                                                <div class="btn-primary-level-3">
+                                                    <div class="btn-primary-level-4 d-2xl-flex items-center justify-center text-purple">
+                                                        <span class="fs-14 tracking-396 uppercase">Nộp đơn</span>
                                                     </div>
-                                                    <div
-                                                        class="AbsoluteFill_container__R108E"
-                                                    >
-                                                        <div
-                                                            class="ButtonHandWritingHover_boxContainer__VD62I"
-                                                        >
-                                                            <div
-                                                                class="ButtonHandWritingHover_boxDisable__rN5vB"
-                                                            >
-                                                                <svg
-                                                                    data-name="Layer 2"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="100%"
-                                                                    height="100%"
-                                                                    viewBox="0 0 118.08 38.24"
-                                                                    fill="#3E3269"
-                                                                >
-                                                                    <path
-                                                                        d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z"
-                                                                        data-name="Layer 1"
-                                                                        style="
-                                                                            fill: rgb(
-                                                                                62,
-                                                                                50,
-                                                                                105
-                                                                            );
-                                                                        "
-                                                                    ></path>
+
+                                                    <div class="btn-primary-level-3">
+                                                        <div class="btn-primary-level-5 btn-primary-hover">
+                                                            <div class="btn-primary-level-6 btn-primary-hoverShow">
+                                                                <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 118.08 38.24">
+                                                                    <path d="M52.7.06c16.37-.46 33 1.56 48.57 6.86 19.69 6.72 24.32 17.66 1.72 25.09-23.22 6.83-49.32 7.79-73.21 4.15-5.41-.93-10.8-2.13-16.03-4.01-3.93-1.46-7.93-3.25-11.02-6.24-3.97-3.68-3.47-8.83.62-12.21C16.17 3.45 43.16 2.07 59.19 2.46v.21c-15.78.7-41.97 2.71-54.39 12.64-11.34 10.81 18.24 17.75 25.32 18.87 21.3 3.53 43.61 4.16 64.77-.71 6.23-1.54 22.46-6.19 21.51-14.17-1.88-5.46-10.71-8.58-15.77-10.62C85.35 3.03 68.48 1.35 52.7.06Z" style="
+                                                                            fill: #3e336a;
+                                                                        " data-name="Layer 1"></path>
                                                                 </svg>
                                                             </div>
                                                         </div>
@@ -2905,7 +2766,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                             </form>
                         </div>
@@ -2913,7 +2774,7 @@
                     </div>
                     <!-- end left -->
                     <!-- center -->
-                    <div class="center">
+                    <div class="center d-lg-none">
                         <div class="line"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -2931,7 +2792,68 @@
                     </div>
                     <!-- end center -->
                     <!-- right -->
-                    <div class="right"></div>
+                    <div class="right">
+                        <div class="box box-right px-10">
+                            <h2 class="box-heading text-gradient">
+                                Thông tin khác
+                            </h2>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon-money.png" alt="">
+                                    <span class="box-descript__text1">Thu nhập</span>
+                                </div>
+                                <p class="box-descript__text2">15.000.000 -18.000.000</p>
+                            </div>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon_group.ec0cbdf5.png" alt="">
+                                    <span class="box-descript__text1">Số lượng cần tuyển</span>
+                                </div>
+                                <p class="box-descript__text2">1</p>
+                            </div>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon_clock.84bb58fc.png" alt="">
+                                    <span class="box-descript__text1">Hạn ứng tuyển</span>
+                                </div>
+                                <p class="box-descript__text2">15/03/2023</p>
+                            </div>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon_location.e39a6515.png" alt="">
+                                    <span class="box-descript__text1">Địa điểm làm việc</span>
+                                </div>
+                                <p class="box-descript__text2">Hà Nội</p>
+                            </div>
+                        </div>
+                        <div class="box box-right box-right--contact px-10">
+                            <h2 class="box-heading text-gradient">
+                                Liên hệ
+                            </h2>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon-user.png" alt="">
+                                    <span class="box-descript__text1">Người liên hệ</span>
+                                </div>
+                                <p class="box-descript__text2">Mrs.Thủy</p>
+                            </div>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon-phone.png" alt="">
+                                    <span class="box-descript__text1">Số điện thoại</span>
+                                </div>
+                                <p class="box-descript__text2">0123456789</p>
+                            </div>
+                            <div class="box-descript">
+                                <div class="box-descript__top d-2xl-flex items-center gap-10">
+                                    <img class="box-descript__img" src="./images/icon-email.png" alt="">
+                                    <span class="box-descript__text1">Email</span>
+                                </div>
+                                <p class="box-descript__text2">123@email.com</p>
+                            </div>
+                            
+                        </div>
+                    </div>
                     <!-- end right -->
                 </div>
             </section>

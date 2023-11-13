@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ".js__showTableOfContents"
     );
 
+    // upload file
+    const uploadFile = document.querySelector(".js__uploadFile");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -217,6 +220,22 @@ document.addEventListener("DOMContentLoaded", function () {
             if (showTableOfContens) {
                 showTableOfContens.onclick = function () {
                     this.parentElement.parentElement.classList.toggle("active");
+                };
+            }
+
+            // upload file
+            if (uploadFile) {
+                const text = uploadFile.querySelector(".js__uploadFileText");
+                const input = uploadFile.querySelector(".js__uploadFileInput");
+
+                input.onchange = function (e) {
+                    var selectedFiles = e.target.files;
+
+                    if (selectedFiles.length > 0) {
+                        text.innerText = selectedFiles[0].name;
+                    } else {
+                        text.innerText = "ĐÍNH KÈM";
+                    }
                 };
             }
             // hide cac element khi click ra ngoai

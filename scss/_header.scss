@@ -28,9 +28,9 @@
             inset: 77px 0 0;
         }
 
-        & .navbar {
-            font-size: 0.9375rem;
-        }
+        // & .navbar {
+        //     font-size: 0.75rem;
+        // }
         & .navbar-item {
             color: #ee3d96;
         }
@@ -44,6 +44,7 @@
     }
 }
 .navbar {
+    font-size: 0.75rem;
     &-item {
         &::before {
             content: "";
