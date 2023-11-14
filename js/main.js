@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var introOneSlidesFade = document.querySelector(".js__introOneSlidesFade");
     var introTwoSlides = document.querySelector(".js__introTwoSlidesContainer");
 
+    var colectionOneSlidesFade = document.querySelector(
+        ".js__swiperItemsColectionContainer"
+    );
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
 
@@ -1094,6 +1097,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
 
+        // colection one slide
+        sliderColectionOneFade: function () {
+            var slider = colectionOneSlidesFade.querySelector(".js__oneSlides");
+            var next = colectionOneSlidesFade.querySelector(
+                ".swiper-button-next"
+            );
+            var prev = colectionOneSlidesFade.querySelector(
+                ".swiper-button-prev"
+            );
+            new Swiper(slider, {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                loop: true,
+                effect: "fade",
+                allowTouchMove: false,
+                allowSlideClick: false,
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev,
+                },
+            });
+        },
+
         // hover in item location
         handleHoverInItemLocation: function (index) {
             document
@@ -1183,6 +1209,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderIntroOneFade();
             // intro two slide
             this.sliderIntroTwo();
+            //colection one slide
+            this.sliderColectionOneFade();
         },
     };
 

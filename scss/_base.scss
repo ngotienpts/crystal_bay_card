@@ -984,6 +984,11 @@ img {
     display: block;
     padding-bottom: 120%;
 }
+.image-wrapper-134 {
+    position: relative;
+    display: block;
+    padding-bottom: 134%;
+}
 .image-wrapper-150 {
     position: relative;
     display: block;
@@ -995,6 +1000,7 @@ img {
 .image-wrapper-full img,
 .image-wrapper-110 img,
 .image-wrapper-120 img,
+.image-wrapper-134 img,
 .image-wrapper-150 img {
     position: absolute;
     object-fit: cover;
