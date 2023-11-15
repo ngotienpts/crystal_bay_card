@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var colectionOneSlidesFade = document.querySelector(
         ".js__swiperItemsColectionContainer"
     );
+    var colectionOneSlidesFadeAuto = document.querySelector(
+        ".js__swiperItemsColectionAutoContainer"
+    );
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
 
@@ -1099,25 +1102,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // colection one slide
         sliderColectionOneFade: function () {
-            var slider = colectionOneSlidesFade.querySelector(".js__oneSlides");
-            var next = colectionOneSlidesFade.querySelector(
-                ".swiper-button-next"
-            );
-            var prev = colectionOneSlidesFade.querySelector(
-                ".swiper-button-prev"
-            );
-            new Swiper(slider, {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                loop: true,
-                effect: "fade",
-                allowTouchMove: false,
-                allowSlideClick: false,
-                navigation: {
-                    nextEl: next,
-                    prevEl: prev,
-                },
-            });
+            if (colectionOneSlidesFade) {
+                var slider =
+                    colectionOneSlidesFade.querySelector(".js__oneSlides");
+                var next = colectionOneSlidesFade.querySelector(
+                    ".swiper-button-next"
+                );
+                var prev = colectionOneSlidesFade.querySelector(
+                    ".swiper-button-prev"
+                );
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    effect: "fade",
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                });
+            }
+        },
+        // colection one slide auto
+        colectionOneSlidesFadeAuto: function () {
+            if (colectionOneSlidesFadeAuto) {
+                var slider =
+                    colectionOneSlidesFadeAuto.querySelector(".js__oneSlides");
+                var next = colectionOneSlidesFadeAuto.querySelector(
+                    ".swiper-button-next"
+                );
+                var prev = colectionOneSlidesFadeAuto.querySelector(
+                    ".swiper-button-prev"
+                );
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    loop: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                });
+                const activeCount =
+                    colectionOneSlidesFadeAuto.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    colectionOneSlidesFadeAuto.querySelector(
+                        ".js__counterTotal"
+                    );
+                if (activeCount && totalCount) {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
+                function updateSlideInfo(swiper, activeCount, totalCount) {
+                    let activeSlideIndex = swiper.realIndex - 1;
+                    let totalSlides = swiper.slides.length;
+
+                    if (swiper.params.loop) {
+                        totalSlides -= 2;
+                        activeSlideIndex =
+                            ((activeSlideIndex % totalSlides) + totalSlides) %
+                            totalSlides;
+                        activeSlideIndex =
+                            activeSlideIndex === 0
+                                ? totalSlides
+                                : activeSlideIndex;
+                    }
+
+                    activeCount.textContent = String(activeSlideIndex).padStart(
+                        2,
+                        "0"
+                    );
+                    totalCount.textContent = String(totalSlides).padStart(
+                        2,
+                        "0"
+                    );
+                }
+            }
         },
 
         // hover in item location
@@ -1211,6 +1285,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.sliderIntroTwo();
             //colection one slide
             this.sliderColectionOneFade();
+            // colection one slide auto
+            this.colectionOneSlidesFadeAuto();
         },
     };
 
