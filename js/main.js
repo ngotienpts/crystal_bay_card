@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // modal
     var modal = document.querySelector(".js__modal");
+    var modalMap = document.querySelector(".js__modalMap");
+    var showModalMap = document.querySelector(".js__showModalMap");
+
+    var modalHoliday = document.querySelector(".js__modalBookHoliday");
+    var showModalHoliday = document.querySelector(".js__showModalBookHoliday");
 
     // search
     var navbarLeft = document.querySelector(".js__navbarLeft");
@@ -62,8 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var colectionOneSlidesFade = document.querySelector(
         ".js__swiperItemsColectionContainer"
     );
-    var colectionOneSlidesFadeAuto = document.querySelector(
+    var colectionOneSlidesFadeAutos = document.querySelectorAll(
         ".js__swiperItemsColectionAutoContainer"
+    );
+    var colectionThreeSlidesNested = document.querySelector(
+        ".js__swiperItemsColectionNested"
     );
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
@@ -106,6 +114,39 @@ document.addEventListener("DOMContentLoaded", function () {
                 closeModal.onclick = function () {
                     if (modal.classList.contains("show")) {
                         modal.classList.remove("show");
+                    }
+                };
+            }
+
+            // modal map bộ sưu tập
+            if (showModalMap) {
+                showModalMap.onclick = function () {
+                    if (modalMap) {
+                        const closeModal =
+                            modalMap.querySelector(".js__closeModal");
+
+                        modalMap.classList.add("show");
+                        closeModal.onclick = function () {
+                            if (modalMap.classList.contains("show")) {
+                                modalMap.classList.remove("show");
+                            }
+                        };
+                    }
+                };
+            }
+            // modal đặt kỳ nghỉ
+            if (showModalHoliday) {
+                showModalHoliday.onclick = function () {
+                    if (modalHoliday) {
+                        const closeModal =
+                            modalHoliday.querySelector(".js__closeModal");
+
+                        modalHoliday.classList.add("show");
+                        closeModal.onclick = function () {
+                            if (modalHoliday.classList.contains("show")) {
+                                modalHoliday.classList.remove("show");
+                            }
+                        };
                     }
                 };
             }
@@ -1101,7 +1142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         // colection one slide
-        sliderColectionOneFade: function () {
+        sliderColectionOneFadeFunc: function () {
             if (colectionOneSlidesFade) {
                 var slider =
                     colectionOneSlidesFade.querySelector(".js__oneSlides");
@@ -1126,47 +1167,39 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
         // colection one slide auto
-        colectionOneSlidesFadeAuto: function () {
-            if (colectionOneSlidesFadeAuto) {
-                var slider =
-                    colectionOneSlidesFadeAuto.querySelector(".js__oneSlides");
-                var next = colectionOneSlidesFadeAuto.querySelector(
-                    ".swiper-button-next"
-                );
-                var prev = colectionOneSlidesFadeAuto.querySelector(
-                    ".swiper-button-prev"
-                );
-                var mySwiper = new Swiper(slider, {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    loop: true,
-                    allowTouchMove: false,
-                    allowSlideClick: false,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
-                    navigation: {
-                        nextEl: next,
-                        prevEl: prev,
-                    },
-                });
-                const activeCount =
-                    colectionOneSlidesFadeAuto.querySelector(
-                        ".js__counterActive"
-                    );
-                const totalCount =
-                    colectionOneSlidesFadeAuto.querySelector(
-                        ".js__counterTotal"
-                    );
-                if (activeCount && totalCount) {
-                    updateSlideInfo(mySwiper, activeCount, totalCount);
-
-                    mySwiper.on("slideChange", function () {
-                        updateSlideInfo(mySwiper, activeCount, totalCount);
+        colectionOneSlidesFadeAutoFunc: function () {
+            if (colectionOneSlidesFadeAutos) {
+                colectionOneSlidesFadeAutos.forEach((item) => {
+                    var slider = item.querySelector(".js__oneSlides");
+                    var next = item.querySelector(".swiper-button-next");
+                    var prev = item.querySelector(".swiper-button-prev");
+                    var mySwiper = new Swiper(slider, {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                        loop: true,
+                        allowTouchMove: false,
+                        allowSlideClick: false,
+                        autoplay: {
+                            delay: 2500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        },
+                        navigation: {
+                            nextEl: next,
+                            prevEl: prev,
+                        },
                     });
-                }
+                    const activeCount =
+                        item.querySelector(".js__counterActive");
+                    const totalCount = item.querySelector(".js__counterTotal");
+                    if (activeCount && totalCount) {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+
+                        mySwiper.on("slideChange", function () {
+                            updateSlideInfo(mySwiper, activeCount, totalCount);
+                        });
+                    }
+                });
                 function updateSlideInfo(swiper, activeCount, totalCount) {
                     let activeSlideIndex = swiper.realIndex - 1;
                     let totalSlides = swiper.slides.length;
@@ -1191,6 +1224,91 @@ document.addEventListener("DOMContentLoaded", function () {
                         "0"
                     );
                 }
+            }
+        },
+        // slider three nested item
+        colectionThreeSlidesNestedFunc: function () {
+            if (colectionThreeSlidesNested) {
+                // var slider = item.querySelector(".js__threeSlides");
+                // var next = item.querySelector(".swiper-button-next");
+                // var prev = item.querySelector(".swiper-button-prev");
+                // var mySwiper = new Swiper(slider, {
+                //     slidesPerView: 1.5,
+                //     slidesPerGroup: 1,
+                //     centeredSlides: true,
+                //     spaceBetween: 30,
+                //     loop: true,
+                //     autoHeight: true,
+                //     allowTouchMove: true,
+                //     allowSlideClick: true,
+                //     autoplay: {
+                //         delay: 2500,
+                //         disableOnInteraction: false,
+                //         pauseOnMouseEnter: true,
+                //     },
+                //     navigation: {
+                //         nextEl: next,
+                //         prevEl: prev,
+                //     },
+                //     breakpoints: {
+                //         640: {
+                //             slidesPerView: 3,
+                //             centeredSlides: true,
+                //             spaceBetween: 30,
+                //         },
+                //         768: {
+                //             slidesPerView: 3,
+                //             centeredSlides: true,
+                //             spaceBetween: 0,
+                //         },
+                //         1024: {
+                //             slidesPerView: 3,
+                //             centeredSlides: true,
+                //             spaceBetween: 50,
+                //         },
+                //         1200: {
+                //             slidesPerView: 3,
+                //             allowTouchMove: false,
+                //             allowSlideClick: false,
+                //             spaceBetween: 0,
+                //         },
+                //     },
+                // });
+                // const activeCount =
+                //     item.parentElement.parentElement.querySelector(
+                //         ".js__counterActive"
+                //     );
+                // const totalCount =
+                //     item.parentElement.parentElement.querySelector(
+                //         ".js__counterTotal"
+                //     );
+                // if (activeCount && totalCount) {
+                //     updateSlideInfo(mySwiper, activeCount, totalCount);
+                //     mySwiper.on("slideChange", function () {
+                //         updateSlideInfo(mySwiper, activeCount, totalCount);
+                //     });
+                // }
+            }
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
+
+                if (swiper.params.loop) {
+                    totalSlides -= 2;
+
+                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
+                    activeSlideIndex =
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
+                }
+
+                activeCount.textContent = String(activeSlideIndex).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
 
@@ -1284,9 +1402,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // intro two slide
             this.sliderIntroTwo();
             //colection one slide
-            this.sliderColectionOneFade();
+            this.sliderColectionOneFadeFunc();
             // colection one slide auto
-            this.colectionOneSlidesFadeAuto();
+            this.colectionOneSlidesFadeAutoFunc();
+            // slider three nested item
+            this.colectionThreeSlidesNestedFunc();
         },
     };
 
