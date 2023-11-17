@@ -641,6 +641,13 @@
             }
         }
     }
+    /*------------------------------------------------------------- doi tac*/
+    .partner-primary {
+        --heading-scale: 0.7;
+        .image-wrapper {
+            padding-bottom: 50vh;
+        }
+    }
     /*------------------------------------------------------------- detail*/
     .news-detail-primary {
         --heading-scale: 0.66;
@@ -1448,7 +1455,130 @@
             width: 40vw;
         }
     }
+    .colection-senary {
+        --heading-scale: 0.66;
+        --header-scale: 0.75;
+        padding-top: 30px;
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            width: 100%;
+            .article {
+                border-left: none;
+                padding: 0;
+            }
+            .swiper-slide:nth-child(odd) .article {
+                padding-top: 0;
+            }
+        }
+        &__textRotate {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: auto;
+            position: relative;
+            height: unset;
+            span {
+                font-size: 35px;
+                line-height: 37px;
+                transform: none;
+                position: relative;
+                top: unset;
+                left: unset;
+                width: 100%;
+                letter-spacing: 1.5px;
+                -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+            }
+        }
+    }
+    /*------------------------------------------------------------- doi tac*/
+    .parter-secondary {
+        --heading-scale: 0.3;
+        --h-scale: 0.46;
+        &__titleRow {
+            margin: 40px 0 20px;
+        }
+        &__contentPrimary {
+            display: block;
 
+            .left {
+                display: none;
+            }
+            .right {
+                width: 100%;
+            }
+            .swiper-slide__img {
+                margin: auto;
+            }
+        }
+
+        &__contentSecondary {
+            display: none;
+        }
+        &__contentTertiary {
+            padding-top: calc(20px * var(--heading-scale));
+            padding-bottom: calc(40px * var(--heading-scale));
+            border-bottom: 1px solid rgba(96, 96, 96, 0.4);
+        }
+        &__contentTop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .heading-secondary {
+                margin-top: 0;
+            }
+            .swiper-slide__img {
+                width: 100px;
+                height: 100px;
+                -o-object-fit: contain;
+                object-fit: contain;
+            }
+        }
+        &__contentBot {
+            .des {
+                font-size: var(--size-body);
+                line-height: var(--line-body);
+                color: #000;
+                letter-spacing: -0.5px;
+                margin: 15px 0;
+                text-align: justify;
+            }
+            .pane {
+                display: flex;
+                align-items: center;
+            }
+            .text {
+                font-size: var(--size-body);
+                line-height: var(--line-body);
+                margin: 5px 0;
+                padding-left: 10px;
+                letter-spacing: -0.5px;
+                text-align: justify;
+            }
+        }
+        &__row {
+            &:last-child {
+                .parter-secondary__contentTertiary {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    /*------------------------------------------------------------- lien he*/
+    .contact-primary {
+        --heading-scale: 0.66;
+        min-height: 50vh;
+        .article-content {
+            padding-right: 15px;
+        }
+        .article-img {
+        }
+
+        &__row {
+            padding-bottom: 0;
+        }
+    }
     /*------------------------------------------------------------- detail*/
     .news-detail-primary {
         &__tabbleOfContents {
@@ -2885,6 +3015,60 @@
         }
         .btn-quinary-text {
             font-size: 30px;
+        }
+    }
+    /*------------------------------------------------------------- doi tac*/
+    .partner-primary {
+        --heading-scale: 0.35;
+        .image-wrapper {
+            padding-bottom: 155%;
+        }
+        &__container {
+            top: 20%;
+            text-align: center;
+        }
+    }
+    /*------------------------------------------------------------- lien he*/
+    .contact-primary {
+        padding-left: 20px;
+        padding-right: 20px;
+        .article {
+            display: block;
+        }
+        .article-content {
+            width: 100%;
+        }
+        .article-img {
+            width: 100%;
+        }
+        &__row {
+            padding-bottom: 40px;
+            .btn-quaternary {
+                justify-content: center;
+            }
+        }
+    }
+    .contact-secondary {
+        &__container {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            .LienheInfo_inputRows__n_RSf {
+                input {
+                    width: 100%;
+                    margin: 12.5px 0;
+                    padding: 10px 0;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    outline: none;
+                }
+            }
+            .LienheInfo_textareaRow__eQ8_5 {
+                input {
+                    width: 100%;
+                    margin: 12.5px 0;
+                }
+            }
         }
     }
     /*------------------------------------------------------------- detail*/

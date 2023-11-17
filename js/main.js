@@ -1229,65 +1229,65 @@ document.addEventListener("DOMContentLoaded", function () {
         // slider three nested item
         colectionThreeSlidesNestedFunc: function () {
             if (colectionThreeSlidesNested) {
-                // var slider = item.querySelector(".js__threeSlides");
-                // var next = item.querySelector(".swiper-button-next");
-                // var prev = item.querySelector(".swiper-button-prev");
-                // var mySwiper = new Swiper(slider, {
-                //     slidesPerView: 1.5,
-                //     slidesPerGroup: 1,
-                //     centeredSlides: true,
-                //     spaceBetween: 30,
-                //     loop: true,
-                //     autoHeight: true,
-                //     allowTouchMove: true,
-                //     allowSlideClick: true,
-                //     autoplay: {
-                //         delay: 2500,
-                //         disableOnInteraction: false,
-                //         pauseOnMouseEnter: true,
-                //     },
-                //     navigation: {
-                //         nextEl: next,
-                //         prevEl: prev,
-                //     },
-                //     breakpoints: {
-                //         640: {
-                //             slidesPerView: 3,
-                //             centeredSlides: true,
-                //             spaceBetween: 30,
-                //         },
-                //         768: {
-                //             slidesPerView: 3,
-                //             centeredSlides: true,
-                //             spaceBetween: 0,
-                //         },
-                //         1024: {
-                //             slidesPerView: 3,
-                //             centeredSlides: true,
-                //             spaceBetween: 50,
-                //         },
-                //         1200: {
-                //             slidesPerView: 3,
-                //             allowTouchMove: false,
-                //             allowSlideClick: false,
-                //             spaceBetween: 0,
-                //         },
-                //     },
-                // });
-                // const activeCount =
-                //     item.parentElement.parentElement.querySelector(
-                //         ".js__counterActive"
-                //     );
-                // const totalCount =
-                //     item.parentElement.parentElement.querySelector(
-                //         ".js__counterTotal"
-                //     );
-                // if (activeCount && totalCount) {
-                //     updateSlideInfo(mySwiper, activeCount, totalCount);
-                //     mySwiper.on("slideChange", function () {
-                //         updateSlideInfo(mySwiper, activeCount, totalCount);
-                //     });
-                // }
+                var slider = colectionThreeSlidesNested.querySelector(
+                    ".js__slideOneParent"
+                );
+                var next = colectionThreeSlidesNested.querySelector(
+                    ".swiper-button-next"
+                );
+                var prev = colectionThreeSlidesNested.querySelector(
+                    ".swiper-button-prev"
+                );
+
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoHeight: false,
+                    allowTouchMove: true,
+                    allowSlideClick: true,
+
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                            allowTouchMove: false,
+                            allowSlideClick: false,
+                            spaceBetween: 0,
+                        },
+                    },
+                });
+
+                const activeCount =
+                    colectionThreeSlidesNested.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount =
+                    colectionThreeSlidesNested.querySelector(
+                        ".js__counterTotal"
+                    );
+                if (activeCount && totalCount) {
+                    updateSlideInfo(mySwiper, activeCount, totalCount);
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo(mySwiper, activeCount, totalCount);
+                    });
+                }
             }
             function updateSlideInfo(swiper, activeCount, totalCount) {
                 let activeSlideIndex = swiper.realIndex + 1;
