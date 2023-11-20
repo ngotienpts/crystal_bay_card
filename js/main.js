@@ -10,9 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var modal = document.querySelector(".js__modal");
     var modalMap = document.querySelector(".js__modalMap");
     var showModalMap = document.querySelector(".js__showModalMap");
+    var showModalMap2 = document.querySelector(".js__showModalMap2");
 
     var modalHoliday = document.querySelector(".js__modalBookHoliday");
     var showModalHoliday = document.querySelector(".js__showModalBookHoliday");
+
+    var modalBooking = document.querySelector(".js__modalBooking");
+    var showModalBooking = document.querySelector(".js__showModalBooking");
 
     // search
     var navbarLeft = document.querySelector(".js__navbarLeft");
@@ -134,6 +138,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 };
             }
+            // modal map bộ sưu tập
+            if (showModalMap2) {
+                showModalMap2.onclick = function () {
+                    if (modalMap) {
+                        const closeModal =
+                            modalMap.querySelector(".js__closeModal");
+
+                        modalMap.classList.add("show");
+                        closeModal.onclick = function () {
+                            if (modalMap.classList.contains("show")) {
+                                modalMap.classList.remove("show");
+                            }
+                        };
+                    }
+                };
+            }
             // modal đặt kỳ nghỉ
             if (showModalHoliday) {
                 showModalHoliday.onclick = function () {
@@ -145,6 +165,22 @@ document.addEventListener("DOMContentLoaded", function () {
                         closeModal.onclick = function () {
                             if (modalHoliday.classList.contains("show")) {
                                 modalHoliday.classList.remove("show");
+                            }
+                        };
+                    }
+                };
+            }
+            // modal cb booking
+            if (showModalBooking) {
+                showModalBooking.onclick = function () {
+                    if (modalBooking) {
+                        const closeModal =
+                            modalBooking.querySelector(".js__closeModal");
+
+                        modalBooking.classList.add("show");
+                        closeModal.onclick = function () {
+                            if (modalBooking.classList.contains("show")) {
+                                modalBooking.classList.remove("show");
                             }
                         };
                     }
