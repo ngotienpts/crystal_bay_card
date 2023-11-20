@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var colectionThreeSlidesNested = document.querySelector(
         ".js__swiperItemsColectionNested"
     );
+
+    var librarySlidesGallery = document.querySelector(
+        ".js__libraryPrimaryItemsContainer"
+    );
     // change tab
     var changeTabs = document.querySelectorAll(".js__changeTab");
 
@@ -914,7 +918,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                         1024: {
                             slidesPerView: 3,
-                            spaceBetween: 20,
                             spaceBetween: 40,
                         },
                         1200: {
@@ -1347,6 +1350,112 @@ document.addEventListener("DOMContentLoaded", function () {
                 totalCount.textContent = String(totalSlides).padStart(2, "0");
             }
         },
+        // slider library gallery
+        librarySlidesGalleryFunc: function () {
+            if (librarySlidesGallery) {
+                var sliderLeftBlock = librarySlidesGallery.querySelector(
+                    ".js__libraryPrimaryLeftItemsBlock"
+                );
+                var sliderRightBlock = librarySlidesGallery.querySelector(
+                    ".js__libraryPrimaryRightItemsBlock"
+                );
+                var sliderLeft = librarySlidesGallery.querySelector(
+                    ".js__libraryPrimaryLeftItems"
+                );
+                var sliderRight = sliderRightBlock.querySelector(
+                    ".js__libraryPrimaryRightItems"
+                );
+                var sliderRightChildrens =
+                    librarySlidesGallery.querySelectorAll(
+                        ".js__libraryPrimaryRightItemsChildren"
+                    );
+                var next = sliderLeftBlock.querySelector(".swiper-button-next");
+                var prev = sliderLeftBlock.querySelector(".swiper-button-prev");
+
+                if (sliderRightChildrens) {
+                    sliderRightChildrens.forEach((sliderRightChildren) => {
+                        new Swiper(sliderRightChildren, {
+                            slidesPerView: 1.2,
+                            slidesPerGroup: 1,
+                            loop: true,
+                            spaceBetween: 0,
+                            allowTouchMove: false,
+                            allowSlideClick: false,
+                            mousewheel: true,
+                            keyboard: true,
+                        });
+                    });
+                }
+                var galleryLeft = new Swiper(sliderLeft, {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    autoHeight: true,
+                    loop: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    direction: "vertical",
+                    freeMode: true,
+                    freeModeSticky: true,
+
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev,
+                    },
+                });
+                var galleryRight = new Swiper(sliderRight, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    direction: "horizontal",
+
+                    thumbs: {
+                        swiper: galleryLeft,
+                    },
+                });
+
+                galleryRight.on("slideChangeTransitionStart", function () {
+                    galleryLeft.slideTo(galleryRight.activeIndex);
+                });
+                galleryLeft.on("transitionStart", function () {
+                    galleryRight.slideTo(galleryLeft.activeIndex);
+                });
+
+                const activeCount =
+                    sliderLeftBlock.querySelector(".js__counterActive");
+                const totalCount =
+                    sliderLeftBlock.querySelector(".js__counterTotal");
+                if (activeCount && totalCount) {
+                    updateSlideInfo(galleryLeft, activeCount, totalCount);
+                    galleryLeft.on("slideChange", function () {
+                        updateSlideInfo(galleryLeft, activeCount, totalCount);
+                    });
+                }
+            }
+            function updateSlideInfo(swiper, activeCount, totalCount) {
+                let activeSlideIndex = swiper.realIndex + 1;
+                let totalSlides = swiper.slides.length - 4;
+
+                if (swiper.params.loop) {
+                    totalSlides -= 2;
+
+                    // Tính lại chỉ số slide hiện tại nếu sử dụng loop
+                    activeSlideIndex =
+                        ((activeSlideIndex % totalSlides) + totalSlides) %
+                        totalSlides;
+                    activeSlideIndex =
+                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
+                }
+
+                activeCount.textContent = String(activeSlideIndex).padStart(
+                    2,
+                    "0"
+                );
+                totalCount.textContent = String(totalSlides).padStart(2, "0");
+            }
+        },
 
         // hover in item location
         handleHoverInItemLocation: function (index) {
@@ -1443,6 +1552,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.colectionOneSlidesFadeAutoFunc();
             // slider three nested item
             this.colectionThreeSlidesNestedFunc();
+            // slider library gallery
+            this.librarySlidesGalleryFunc();
         },
     };
 

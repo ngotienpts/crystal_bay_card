@@ -1793,3 +1793,155 @@
         }
     }
 }
+
+// thu vien
+.library-primary {
+    overflow: hidden;
+    position: relative;
+    padding-top: calc(var(--header-height));
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-bottom: calc(var(--header-height));
+    background-image: url("../images/thuvienhinhanhbg.54757eae.jpg");
+    background-size: cover;
+    &__heading {
+        font-family: Frunchy;
+        font-size: calc(var(--global-heading-scale) * 7.33rem * 0.75);
+        line-height: calc(var(--global-heading-scale) * 5.66rem * 0.75);
+        letter-spacing: -2.91px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    &__container {
+        display: flex;
+    }
+    &__left {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 60px;
+        .swiper-slide-active .slide-item__icon {
+            opacity: 1;
+        }
+        .swiper-slide {
+            &:last-child .slide-item {
+                border-bottom: none;
+            }
+        }
+        .library-primary__heading,
+        .library-primary__control {
+            flex-shrink: 0;
+        }
+        .slide-list {
+            flex: 1;
+
+            .swiper {
+                height: 100%;
+            }
+        }
+
+        .slide-item {
+            padding-bottom: 20px;
+            padding-left: 30px;
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &__heading {
+                display: flex;
+            }
+            &__icon {
+                opacity: 0;
+            }
+            &__title {
+                font-size: calc(1.67rem * 0.75);
+                line-height: calc(1.91rem * 0.75);
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 200;
+            }
+            &__text {
+                font-size: var(--size-body);
+                line-height: var(--line-body);
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                padding: 15px 0;
+                width: 80%;
+            }
+        }
+
+        .library-primary__counterSlide {
+            text-align: right;
+        }
+
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+            left: 10px;
+            right: auto;
+            top: auto;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+        }
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            top: auto;
+            left: 60px;
+            right: auto;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+        }
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+    &__right {
+        width: 68%;
+        // margin-right: -8.335%;
+        .swiper-slide__inner {
+            .swiper-slide-active .article-text {
+                opacity: 1;
+            }
+            .swiper-slide-next {
+                transform: scale(0.85);
+            }
+            .article-text {
+                margin-top: 20px;
+                display: flex;
+                align-items: flex-end;
+                opacity: 0;
+
+                &__number {
+                    display: block;
+                    font-family: Frunchy;
+                    font-size: 102px;
+                    line-height: 63.4px;
+                    letter-spacing: -3.06px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    margin-right: 20px;
+                }
+                &__title {
+                    flex: 1 1;
+                    font-size: 0.75rem;
+                    line-height: calc(1.4rem * 0.75);
+                    color: #fff;
+                    margin: 12px 0;
+                }
+            }
+        }
+    }
+}
