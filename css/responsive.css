@@ -568,6 +568,44 @@
     padding-bottom: 50vh;
   }
 
+  /*------------------------------------------------------------- thu vien*/
+  .library-primary__left {
+    padding-right: 20px;
+  }
+  .library-primary__left .library-primary__control {
+    width: 100%;
+  }
+  .library-primary__right {
+    padding-bottom: 100px;
+  }
+
+  .library-secondary {
+    --heading-scale: 0.66;
+  }
+  .library-secondary .section-septenary__panes {
+    padding: 0 20px;
+  }
+  .library-secondary .section-septenary__panes .swiper-button-prev,
+.library-secondary .section-septenary__panes .swiper-rtl .swiper-button-next,
+.library-secondary .section-septenary__panes .swiper-button-next,
+.library-secondary .section-septenary__panes .swiper-rtl .swiper-button-prev {
+    display: flex;
+  }
+  .library-secondary .section-septenary__panes .swiper-button-next,
+.library-secondary .section-septenary__panes .swiper-rtl .swiper-button-prev {
+    right: 60px;
+    top: 0;
+  }
+  .library-secondary .section-septenary__panes .swiper-button-prev,
+.library-secondary .section-septenary__panes .swiper-rtl .swiper-button-next {
+    right: 110px;
+    top: 0;
+  }
+
+  .library-tertiary {
+    --heading-scale: 0.66;
+  }
+
   /*------------------------------------------------------------- detail*/
   .news-detail-primary {
     --heading-scale: 0.66;
@@ -2714,6 +2752,113 @@
   .contact-secondary__container .LienheInfo_textareaRow__eQ8_5 input {
     width: 100%;
     margin: 12.5px 0;
+  }
+
+  /*------------------------------------------------------------- thu vien*/
+  .library-primary__container {
+    display: block;
+  }
+  .library-primary__heading {
+    font-family: Frunchy;
+    font-size: 2.18745rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .library-primary__left {
+    width: 100%;
+    padding-right: 0;
+  }
+  .library-primary__left .library-primary__control {
+    display: none;
+  }
+  .library-primary__left .swiper-slide-active .slide-item__title {
+    opacity: 1;
+  }
+  .library-primary__left .slide-list {
+    padding-top: 20px;
+  }
+  .library-primary__left .slide-item {
+    padding-left: 0;
+  }
+  .library-primary__left .slide-item__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .library-primary__left .slide-item__icon {
+    display: none;
+  }
+  .library-primary__left .slide-item__title {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.5;
+    text-align: center;
+  }
+  .library-primary__left .slide-item__text {
+    display: none;
+  }
+  .library-primary__right {
+    width: 100%;
+    padding-bottom: 0;
+    padding: 0 0 0 20px;
+  }
+  .library-primary__right .article-sapo {
+    text-align: center;
+  }
+  .library-primary__right .article-sapo svg {
+    margin-bottom: 10px;
+  }
+  .library-primary__right .article-sapo p {
+    font-size: var(--size-body);
+    line-height: var(--line-body);
+    color: #fff;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .library-primary__right .swiper-slide__inner .article-text {
+    align-items: flex-start;
+  }
+  .library-primary__right .swiper-slide__inner .article-text__number {
+    font-family: Frunchy;
+    font-size: 80px;
+    line-height: 63.4px;
+    letter-spacing: -3.06px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  .library-tertiary__container {
+    display: block;
+    padding: 20px;
+  }
+  .library-tertiary__left {
+    width: 100%;
+  }
+  .library-tertiary__right {
+    width: 100%;
+  }
+  .library-tertiary__right-inner {
+    width: 100%;
+    padding: 20px 20px 0 0;
+  }
+  .library-tertiary__right-inner::before {
+    width: 80vw;
+    height: 280px;
+  }
+  .library-tertiary__right-inner .image-wrapper {
+    padding-bottom: 290px;
   }
 
   /*------------------------------------------------------------- detail*/

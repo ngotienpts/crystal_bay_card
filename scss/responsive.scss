@@ -648,6 +648,43 @@
             padding-bottom: 50vh;
         }
     }
+    /*------------------------------------------------------------- thu vien*/
+    .library-primary {
+        &__left {
+            padding-right: 20px;
+            .library-primary__control {
+                width: 100%;
+            }
+        }
+        &__right {
+            padding-bottom: 100px;
+        }
+    }
+    .library-secondary {
+        --heading-scale: 0.66;
+        .section-septenary__panes {
+            padding: 0 20px;
+        }
+        .section-septenary__panes .swiper-button-prev,
+        .section-septenary__panes .swiper-rtl .swiper-button-next,
+        .section-septenary__panes .swiper-button-next,
+        .section-septenary__panes .swiper-rtl .swiper-button-prev {
+            display: flex;
+        }
+        .section-septenary__panes .swiper-button-next,
+        .section-septenary__panes .swiper-rtl .swiper-button-prev {
+            right: 60px;
+            top: 0;
+        }
+        .section-septenary__panes .swiper-button-prev,
+        .section-septenary__panes .swiper-rtl .swiper-button-next {
+            right: 110px;
+            top: 0;
+        }
+    }
+    .library-tertiary {
+        --heading-scale: 0.66;
+    }
     /*------------------------------------------------------------- detail*/
     .news-detail-primary {
         --heading-scale: 0.66;
@@ -3067,6 +3104,122 @@
                 input {
                     width: 100%;
                     margin: 12.5px 0;
+                }
+            }
+        }
+    }
+    /*------------------------------------------------------------- thu vien*/
+    .library-primary {
+        &__container {
+            display: block;
+        }
+
+        &__heading {
+            font-family: Frunchy;
+            font-size: calc(2.9166rem * 0.75);
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0;
+            font-weight: 400;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        &__left {
+            width: 100%;
+            padding-right: 0;
+            .library-primary__control {
+                display: none;
+            }
+            .swiper-slide-active .slide-item__title {
+                opacity: 1;
+            }
+            .slide-list {
+                padding-top: 20px;
+            }
+            .slide-item {
+                padding-left: 0;
+            }
+            .slide-item__heading {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .slide-item__icon {
+                display: none;
+            }
+            .slide-item__title {
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.96px;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 400;
+                opacity: 0.5;
+                text-align: center;
+            }
+            .slide-item__text {
+                display: none;
+            }
+        }
+        &__right {
+            width: 100%;
+            padding-bottom: 0;
+            padding: 0 0 0 20px;
+
+            .article-sapo {
+                text-align: center;
+
+                svg {
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: var(--size-body);
+                    line-height: var(--line-body);
+                    color: #fff;
+                    font-weight: 200;
+                    margin: 0;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+            }
+            .swiper-slide__inner {
+                .article-text {
+                    align-items: flex-start;
+                }
+                .article-text__number {
+                    font-family: Frunchy;
+                    font-size: 80px;
+                    line-height: 63.4px;
+                    letter-spacing: -3.06px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .library-tertiary {
+        &__container {
+            display: block;
+            padding: 20px;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            width: 100%;
+
+            &-inner {
+                width: 100%;
+                padding: 20px 20px 0 0;
+                &::before {
+                    width: 80vw;
+                    height: 280px;
+                }
+                .image-wrapper {
+                    padding-bottom: 290px;
                 }
             }
         }
