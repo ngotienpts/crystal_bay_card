@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var modalBooking = document.querySelector(".js__modalBooking");
     var showModalBooking = document.querySelector(".js__showModalBooking");
 
+    var modalMeliday = document.querySelector(".js__modalMeliday");
+    var showModalMeliday = document.querySelector(".js__showModalMeliday");
+
     // search
     var navbarLeft = document.querySelector(".js__navbarLeft");
     var search = navbarLeft.querySelector(".js__showSearchPc");
@@ -185,6 +188,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         closeModal.onclick = function () {
                             if (modalBooking.classList.contains("show")) {
                                 modalBooking.classList.remove("show");
+                            }
+                        };
+                    }
+                };
+            }
+
+            // modal meliday
+            if (showModalMeliday) {
+                showModalMeliday.onclick = function () {
+                    if (modalMeliday) {
+                        const closeModal =
+                            modalMeliday.querySelector(".js__closeModal");
+
+                        modalMeliday.classList.add("show");
+                        closeModal.onclick = function () {
+                            if (modalMeliday.classList.contains("show")) {
+                                modalMeliday.classList.remove("show");
                             }
                         };
                     }
