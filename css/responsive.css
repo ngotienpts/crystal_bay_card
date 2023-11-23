@@ -2,6 +2,12 @@
   .navbar {
     font-size: 15px;
   }
+
+  /*------------------------------------------------------------- the meliday*/
+  .meliday-secondary__box1 .left .heading-1 {
+    font-size: calc(var(--global-heading-scale) * 5.5rem * 0.75);
+    line-height: calc(var(--global-heading-scale) * 5.5rem * 0.75);
+  }
 }
 @media screen and (max-width: 2160px) {
   :root {
@@ -39,6 +45,12 @@
 @media screen and (max-width: 1750px) {
   :root {
     --h-scale: 0.88;
+  }
+
+  /*------------------------------------------------------------- the meliday*/
+  .meliday-secondary__box1 .left .heading-1 {
+    font-size: calc(var(--global-heading-scale) * 5rem * 0.75);
+    line-height: calc(var(--global-heading-scale) * 5rem * 0.75);
   }
 }
 @media screen and (max-width: 1700px) {
@@ -1171,6 +1183,226 @@
 
   .cate-1-quinary {
     --heading-scale: 0.66;
+  }
+
+  /*------------------------------------------------------------- the meliday*/
+  .meliday-primary__heading1 {
+    width: 80%;
+  }
+
+  .meliday-secondary__globe {
+    top: 10.2847%;
+  }
+  .meliday-secondary__line1 {
+    height: 100px;
+  }
+  .meliday-secondary__box1 {
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+  .meliday-secondary__box1 .left .inner {
+    width: 90%;
+  }
+  .meliday-secondary__box1 .left .heading-1 {
+    font-size: calc(var(--global-heading-scale) * 4rem * 0.75);
+    line-height: calc(var(--global-heading-scale) * 4rem * 0.75);
+  }
+  .meliday-secondary__box1 .left .heading-2 {
+    font-size: calc(var(--global-heading-scale) * 6rem * 0.75);
+    line-height: calc(var(--global-heading-scale) * 6rem * 0.75);
+  }
+  .meliday-secondary__box1 .left .heading-3 {
+    font-size: calc(var(--global-heading-scale) * 4rem * 0.75);
+    line-height: calc(var(--global-heading-scale) * 4rem * 0.75);
+    margin-left: 15%;
+  }
+  .meliday-secondary__box1 .right .card-hong {
+    left: -32px;
+  }
+  .meliday-secondary__box1 .right .card-tim {
+    top: 72%;
+    left: -20%;
+    transform: rotate(37deg);
+  }
+  .meliday-secondary__box2 {
+    padding: 30px 0;
+  }
+  .meliday-secondary__box2 .inner {
+    margin: auto;
+  }
+  .meliday-secondary__box2 .right .heading .heading-1,
+.meliday-secondary__box2 .right .heading .heading-2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .meliday-secondary__box2 .right .heading .heading-3 {
+    font-size: 12px;
+    letter-spacing: unset;
+    line-height: unset;
+  }
+  .meliday-secondary__box2 .right .line {
+    display: none;
+  }
+  .meliday-secondary__box2 .right .des {
+    width: 130%;
+    margin-left: -15%;
+  }
+  .meliday-secondary__box3 .line {
+    height: 50px;
+  }
+  .meliday-secondary__box3 .des {
+    width: 90%;
+  }
+
+  .meliday-tertiary {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .meliday-tertiary-mb .line-1 {
+    width: 1px;
+    height: 15px;
+    margin: auto;
+    background-color: black;
+  }
+  .meliday-tertiary-mb p {
+    font-size: 15px;
+    line-height: 17.5px;
+    color: #000;
+    font-weight: 500;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    margin: 0 0 20px;
+  }
+  .meliday-tertiary-mb__list .item {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: 0.7px solid var(--color-minsk);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .meliday-tertiary-mb__list span {
+    font-size: 29.67px;
+    font-weight: 300;
+    color: #000;
+  }
+  .meliday-tertiary-mb__list p {
+    flex: 1 1;
+    font-size: 15px;
+    line-height: 17.5px;
+    margin: 0 0 0 20px;
+    color: #000;
+    text-align: justify;
+    -moz-text-align-last: right;
+    text-align-last: right;
+    font-weight: 400;
+  }
+  .meliday-tertiary-mb__bot {
+    display: flex;
+    gap: 20px;
+  }
+  .meliday-tertiary-mb__bot .left {
+    width: 66.66%;
+  }
+  .meliday-tertiary-mb__bot .right {
+    width: 33.33%;
+  }
+  .meliday-tertiary-mb__slide .swiper-slide {
+    transform: scale(0.8);
+  }
+  .meliday-tertiary-mb__slide .swiper-slide .box-2__content {
+    display: none;
+  }
+  .meliday-tertiary-mb__slide .swiper-slide.swiper-slide-active {
+    transform: scale(1);
+  }
+  .meliday-tertiary-mb__slide .swiper-slide.swiper-slide-active .box-2__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -200px;
+    margin-right: -200px;
+    margin-top: 30px;
+  }
+  .meliday-tertiary-mb .box-2__title span {
+    font-family: Frunchy;
+    font-size: 28px;
+    line-height: 26px;
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+    color: #101110;
+    -webkit-text-stroke: var(--frunchy-stroke-2x) currentColor;
+    margin-top: -3px;
+    display: block;
+    text-align: center;
+  }
+
+  .meliday-quaternary__line1 {
+    height: 40px;
+  }
+  .meliday-quaternary__top .heading-1 {
+    font-size: 42px;
+    line-height: 32px;
+  }
+  .meliday-quaternary__top .heading-2 {
+    font-size: 15px;
+    line-height: 17.5px;
+    letter-spacing: unset;
+    text-transform: uppercase;
+    margin: 5px;
+    text-align: center;
+  }
+  .meliday-quaternary__top .heading-3 {
+    font-size: 28px;
+    line-height: 23px;
+    letter-spacing: unset;
+  }
+  .meliday-quaternary__top .meliday-quaternary__video .MelidayTienich_ctaContainer__lg6lz {
+    flex-direction: column;
+  }
+  .meliday-quaternary__top .meliday-quaternary__video .MelidayTienich_ctaContainer__lg6lz span {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .meliday-quaternary__top .meliday-quaternary__video .MelidayTienich_ctaContainer__lg6lz svg {
+    width: 28px;
+    height: 28px;
+  }
+  .meliday-quaternary__bot-heading .heading-1 {
+    font-size: 38px;
+    line-height: 34px;
+  }
+  .meliday-quaternary__bot-content {
+    flex-direction: column;
+  }
+  .meliday-quaternary__bot .line-2 {
+    display: none;
+  }
+  .meliday-quaternary__bot-text p {
+    width: 100%;
+  }
+
+  .meliday-senary__heading {
+    font-size: 34px;
+  }
+  .meliday-senary__content {
+    flex-direction: column;
+  }
+  .meliday-senary .article-title {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+  .meliday-senary .article-des {
+    width: 45%;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: none;
   }
 
   /*------------------------------------------------------------- bo suu tap*/
@@ -2537,6 +2769,185 @@
   }
   .cate-1-quinary__container .btn-primary-level-1 {
     width: max(10vw, 150px);
+  }
+
+  /*------------------------------------------------------------- the meliday*/
+  .meliday-primary .image-wrapper {
+    padding-bottom: 155%;
+  }
+  .meliday-primary__content {
+    left: 0;
+    top: 15%;
+    width: 100%;
+  }
+  .meliday-primary__subHeading {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16.06px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .meliday-primary__heading {
+    font-family: Frunchy;
+    font-size: 41px;
+    line-height: 32.77px;
+    letter-spacing: -0.82px;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+  }
+  .meliday-primary__wave-inner {
+    width: 76px;
+  }
+
+  .meliday-secondary__box1 {
+    padding-top: 20px;
+    padding-bottom: 200px;
+  }
+  .meliday-secondary__line1 {
+    display: none;
+  }
+  .meliday-secondary__globe {
+    width: 88.2396%;
+  }
+  .meliday-secondary__box1 {
+    flex-direction: column;
+  }
+  .meliday-secondary__box1 .left {
+    width: 100%;
+  }
+  .meliday-secondary__box1 .left .heading-1 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  .meliday-secondary__box1 .left .heading-2 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+  .meliday-secondary__box1 .left .heading-3 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-left: auto;
+    justify-content: center;
+  }
+  .meliday-secondary__box1-btn {
+    justify-content: center;
+  }
+  .meliday-secondary__box1-btn .btn-quinary-level-1 {
+    width: 197px;
+  }
+  .meliday-secondary__box1-text {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  .meliday-secondary__box1-des {
+    margin-top: 15px;
+  }
+  .meliday-secondary__box1-strong {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 22.68px;
+    line-height: 32.26px;
+  }
+  .meliday-secondary__box1 .right .card-hong {
+    left: 115px;
+    top: 40px;
+  }
+  .meliday-secondary__box1 .right .card-xanh {
+    left: 67.8229%;
+    top: 69px;
+  }
+  .meliday-secondary__box1 .right .card-tim {
+    top: 183px;
+    left: 95%;
+    transform: rotate(6deg);
+  }
+  .meliday-secondary__box1 .right .card-tim__img {
+    width: 90%;
+  }
+  .meliday-secondary__box2 {
+    flex-direction: column;
+  }
+  .meliday-secondary__box2 .left {
+    width: 100%;
+    transform: translateX(-97px);
+    padding-bottom: 40px;
+  }
+  .meliday-secondary__box2 .right {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .meliday-secondary__box2 .right .inner {
+    width: 100%;
+  }
+  .meliday-secondary__box2 .right .des {
+    width: 100%;
+    margin-left: 0;
+  }
+  .meliday-secondary__box2 .right .heading .heading-1 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .meliday-secondary__box2 .right .heading .heading-3 {
+    font-size: 12px;
+    line-height: 16.06px;
+    letter-spacing: 2.88px;
+  }
+  .meliday-secondary__box2 .right .line {
+    display: block;
+    height: 20px;
+  }
+  .meliday-secondary__box3 .line-2 {
+    width: 68px;
+    height: 1px;
+    background-color: #e3ddda;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .meliday-secondary__box3 .heading-1 {
+    font-size: 40px;
+    line-height: 38px;
+    margin-top: 0;
+  }
+  .meliday-secondary__box3 .des {
+    font-size: 15px;
+    line-height: 17.5px;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    align-self: center;
+    font-weight: 200;
+  }
+
+  .meliday-tertiary-mb__slide .swiper-slide {
+    transform: scale(0.95);
+  }
+
+  .meliday-quaternary {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .meliday-quaternary__top .meliday-quaternary__video .video-wrapper {
+    padding-bottom: 118.507%;
+  }
+
+  .meliday-quinary-mb {
+    background-position: bottom;
+  }
+  .meliday-quinary-mb .btn-tertiary-level-1 {
+    width: max(10vw, 210px);
+  }
+
+  .meliday-senary__container {
+    height: 75vh;
   }
 
   /*------------------------------------------------------------- tin tuc*/

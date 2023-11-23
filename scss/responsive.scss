@@ -2,6 +2,21 @@
     .navbar {
         font-size: 15px;
     }
+    /*------------------------------------------------------------- the meliday*/
+    .meliday-secondary {
+        &__box1 {
+            .left {
+                .heading-1 {
+                    font-size: calc(
+                        var(--global-heading-scale) * 5.5rem * 0.75
+                    );
+                    line-height: calc(
+                        var(--global-heading-scale) * 5.5rem * 0.75
+                    );
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 2160px) {
     :root {
@@ -44,6 +59,19 @@
 @media screen and (max-width: 1750px) {
     :root {
         --h-scale: 0.88;
+    }
+    /*------------------------------------------------------------- the meliday*/
+    .meliday-secondary {
+        &__box1 {
+            .left {
+                .heading-1 {
+                    font-size: calc(var(--global-heading-scale) * 5rem * 0.75);
+                    line-height: calc(
+                        var(--global-heading-scale) * 5rem * 0.75
+                    );
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 1700px) {
@@ -1314,6 +1342,263 @@
         --heading-scale: 0.66;
     }
 
+    /*------------------------------------------------------------- the meliday*/
+    .meliday-primary {
+        &__heading1 {
+            width: 80%;
+        }
+    }
+    .meliday-secondary {
+        &__globe {
+            top: 10.2847%;
+        }
+        &__line1 {
+            height: 100px;
+        }
+        &__box1 {
+            padding-top: 100px;
+            padding-bottom: 10px;
+            .left {
+                .inner {
+                    width: 90%;
+                }
+                .heading-1 {
+                    font-size: calc(var(--global-heading-scale) * 4rem * 0.75);
+                    line-height: calc(
+                        var(--global-heading-scale) * 4rem * 0.75
+                    );
+                }
+                .heading-2 {
+                    font-size: calc(var(--global-heading-scale) * 6rem * 0.75);
+                    line-height: calc(
+                        var(--global-heading-scale) * 6rem * 0.75
+                    );
+                }
+                .heading-3 {
+                    font-size: calc(var(--global-heading-scale) * 4rem * 0.75);
+                    line-height: calc(
+                        var(--global-heading-scale) * 4rem * 0.75
+                    );
+                    margin-left: 15%;
+                }
+            }
+            .right {
+                .card-hong {
+                    left: -32px;
+                }
+                .card-tim {
+                    top: 72%;
+                    left: -20%;
+                    transform: rotate(37deg);
+                }
+            }
+        }
+
+        &__box2 {
+            padding: 30px 0;
+            .inner {
+                margin: auto;
+            }
+            .right {
+                .heading {
+                    .heading-1,
+                    .heading-2 {
+                        font-size: 30px;
+                        line-height: 34px;
+                    }
+                    .heading-3 {
+                        font-size: 12px;
+                        letter-spacing: unset;
+                        line-height: unset;
+                    }
+                }
+                .line {
+                    display: none;
+                }
+                .des {
+                    width: 130%;
+                    margin-left: -15%;
+                }
+            }
+        }
+        &__box3 {
+            .line {
+                height: 50px;
+            }
+            .des {
+                width: 90%;
+            }
+        }
+    }
+    .meliday-tertiary {
+        padding-top: 0;
+        padding-bottom: 20px;
+        &-mb {
+            .line-1 {
+                width: 1px;
+                height: 15px;
+                margin: auto;
+                background-color: black;
+            }
+            p {
+                font-size: 15px;
+                line-height: 17.5px;
+                color: #000;
+                font-weight: 500;
+                text-align: justify;
+                -moz-text-align-last: center;
+                text-align-last: center;
+                margin: 0 0 20px;
+            }
+            &__list {
+                .item {
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                    border-top: 0.7px solid var(--color-minsk);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                }
+                span {
+                    font-size: 29.67px;
+                    font-weight: 300;
+                    color: #000;
+                }
+                p {
+                    flex: 1 1;
+                    font-size: 15px;
+                    line-height: 17.5px;
+                    margin: 0 0 0 20px;
+                    color: #000;
+                    text-align: justify;
+                    -moz-text-align-last: right;
+                    text-align-last: right;
+                    font-weight: 400;
+                }
+            }
+            &__bot {
+                display: flex;
+                gap: 20px;
+                .left {
+                    width: 66.66%;
+                }
+                .right {
+                    width: 33.33%;
+                }
+            }
+            &__slide {
+                .swiper-slide {
+                    transform: scale(0.8);
+                    .box-2__content {
+                        display: none;
+                    }
+                    &.swiper-slide-active {
+                        transform: scale(1);
+                        .box-2__content {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: -200px;
+                            margin-right: -200px;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+            .box-2__title span {
+                font-family: Frunchy;
+                font-size: 28px;
+                line-height: 26px;
+                letter-spacing: -0.6px;
+                text-transform: uppercase;
+                color: #101110;
+                -webkit-text-stroke: var(--frunchy-stroke-2x) currentColor;
+                margin-top: -3px;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .meliday-quaternary {
+        &__line1 {
+            height: 40px;
+        }
+        &__top {
+            .heading-1 {
+                font-size: 42px;
+                line-height: 32px;
+            }
+            .heading-2 {
+                font-size: 15px;
+                line-height: 17.5px;
+                letter-spacing: unset;
+                text-transform: uppercase;
+                margin: 5px;
+                text-align: center;
+            }
+            .heading-3 {
+                font-size: 28px;
+                line-height: 23px;
+                letter-spacing: unset;
+            }
+            .meliday-quaternary__video {
+                .MelidayTienich_ctaContainer__lg6lz {
+                    flex-direction: column;
+                    span {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 17px;
+                    }
+                    svg {
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+
+        &__bot {
+            &-heading {
+                .heading-1 {
+                    font-size: 38px;
+                    line-height: 34px;
+                }
+            }
+            &-content {
+                flex-direction: column;
+            }
+            .line-2 {
+                display: none;
+            }
+            &-text {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .meliday-senary {
+        &__heading {
+            font-size: 34px;
+        }
+        &__content {
+            flex-direction: column;
+        }
+        .article-title {
+            font-size: 12px;
+            line-height: 14.4px;
+        }
+        .article-des {
+            width: 45%;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: none;
+        }
+    }
     /*------------------------------------------------------------- bo suu tap*/
     .colection-primary {
         --heading-scale: 0.66;
@@ -2851,6 +3136,207 @@
             .btn-primary-level-1 {
                 width: max(10vw, 150px);
             }
+        }
+    }
+    /*------------------------------------------------------------- the meliday*/
+    .meliday-primary {
+        .image-wrapper {
+            padding-bottom: 155%;
+        }
+        &__content {
+            left: 0;
+            top: 15%;
+            width: 100%;
+        }
+        &__subHeading {
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 16.06px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        &__heading {
+            font-family: Frunchy;
+            font-size: 41px;
+            line-height: 32.77px;
+            letter-spacing: -0.82px;
+            text-transform: uppercase;
+            color: #fff;
+            -webkit-text-stroke: var(--frunchy-stroke) currentColor;
+        }
+        &__wave-inner {
+            width: 76px;
+        }
+    }
+
+    .meliday-secondary {
+        &__box1 {
+            padding-top: 20px;
+            padding-bottom: 200px;
+        }
+        &__line1 {
+            display: none;
+        }
+        &__globe {
+            width: 88.2396%;
+        }
+        &__box1 {
+            flex-direction: column;
+            .left {
+                width: 100%;
+                .heading-1 {
+                    font-size: calc(2.4rem * 0.75);
+                    line-height: calc(2.4rem * 0.75);
+                }
+                .heading-2 {
+                    font-size: calc(3rem * 0.75);
+                    line-height: calc(3rem * 0.75);
+                }
+                .heading-3 {
+                    font-size: calc(2.4rem * 0.75);
+                    line-height: calc(2.4rem * 0.75);
+                    margin-left: auto;
+                    justify-content: center;
+                }
+            }
+            &-btn {
+                justify-content: center;
+                .btn-quinary-level-1 {
+                    width: 197px;
+                }
+            }
+            &-text {
+                font-size: calc(2.4rem * 0.75);
+                line-height: calc(2.4rem * 0.75);
+            }
+            &-des {
+                margin-top: 15px;
+            }
+            &-strong {
+                display: block;
+                color: #fff;
+                text-align: center;
+                font-weight: 400;
+                font-size: 22.68px;
+                line-height: 32.26px;
+            }
+            .right {
+                .card-hong {
+                    left: 115px;
+                    top: 40px;
+                }
+                .card-xanh {
+                    left: 67.8229%;
+                    top: 69px;
+                }
+                .card-tim {
+                    top: 183px;
+                    left: 95%;
+                    transform: rotate(6deg);
+                    &__img {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        &__box2 {
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+                transform: translateX(-97px);
+                padding-bottom: 40px;
+            }
+            .right {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                .inner {
+                    width: 100%;
+                }
+                .des {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .heading {
+                    .heading-1 {
+                        font-size: 42px;
+                        line-height: 42px;
+                    }
+                    .heading-3 {
+                        font-size: 12px;
+                        line-height: 16.06px;
+                        letter-spacing: 2.88px;
+                    }
+                }
+                .line {
+                    display: block;
+                    height: 20px;
+                }
+            }
+        }
+
+        &__box3 {
+            .line-2 {
+                width: 68px;
+                height: 1px;
+                background-color: #e3ddda;
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+            .heading-1 {
+                font-size: 40px;
+                line-height: 38px;
+                margin-top: 0;
+            }
+            .des {
+                font-size: 15px;
+                line-height: 17.5px;
+                color: #fff;
+                margin: 0;
+                width: 100%;
+                text-align: justify;
+                -moz-text-align-last: center;
+                text-align-last: center;
+                align-self: center;
+                font-weight: 200;
+            }
+        }
+    }
+    .meliday-tertiary {
+        &-mb {
+            &__slide {
+                .swiper-slide {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    .meliday-quaternary {
+        padding-left: 20px;
+        padding-right: 20px;
+        &__top {
+            .meliday-quaternary__video {
+                .video-wrapper {
+                    padding-bottom: 118.507%;
+                }
+            }
+        }
+    }
+    .meliday-quinary {
+        &-mb {
+            background-position: bottom;
+            .btn-tertiary-level-1 {
+                width: max(10vw, 210px);
+            }
+        }
+    }
+    .meliday-senary {
+        &__container {
+            height: 75vh;
         }
     }
     /*------------------------------------------------------------- tin tuc*/
