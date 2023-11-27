@@ -7083,7 +7083,7 @@ img {
 .cate-1-quaternary .row-1 .location-item:not(.active) .info {
   display: none;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(2) .icon-location {
+.cate-1-quaternary .row-1 .location-item--vandon .icon-location {
   position: absolute;
   left: 49.03%;
   top: 15.54%;
@@ -7091,7 +7091,7 @@ img {
   height: 8.25837%;
   transform: translate(-50%, -100%);
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(2) .hyphen {
+.cate-1-quaternary .row-1 .location-item--vandon .hyphen {
   position: absolute;
   top: 120.938px;
   left: 272px;
@@ -7099,7 +7099,7 @@ img {
   right: 30.6952%;
   overflow: hidden;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(2) .sapo {
+.cate-1-quaternary .row-1 .location-item--vandon .sapo {
   position: absolute;
   top: 120.938px;
   right: 30.6952%;
@@ -7112,7 +7112,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
   border-radius: 4px;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(3) .icon-location {
+.cate-1-quaternary .row-1 .location-item--nhatrang .icon-location {
   position: absolute;
   left: 63.04%;
   top: 69.21%;
@@ -7120,7 +7120,7 @@ img {
   height: 8.25837%;
   transform: translate(-50%, -100%);
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(3) .hyphen {
+.cate-1-quaternary .row-1 .location-item--nhatrang .hyphen {
   position: absolute;
   top: 538.641px;
   left: 349.719px;
@@ -7128,7 +7128,7 @@ img {
   right: 30.6952%;
   overflow: hidden;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(3) .sapo {
+.cate-1-quaternary .row-1 .location-item--nhatrang .sapo {
   position: absolute;
   top: 538.641px;
   right: 30.6952%;
@@ -7141,7 +7141,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
   border-radius: 4px;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(4) .icon-location {
+.cate-1-quaternary .row-1 .location-item--camranh .icon-location {
   position: absolute;
   left: 63.04%;
   top: 74.89%;
@@ -7149,7 +7149,7 @@ img {
   height: 8.25837%;
   transform: translate(-50%, -100%);
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(4) .hyphen {
+.cate-1-quaternary .row-1 .location-item--camranh .hyphen {
   position: absolute;
   top: 582.844px;
   left: 349.719px;
@@ -7157,7 +7157,7 @@ img {
   right: 30.6952%;
   overflow: hidden;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(4) .sapo {
+.cate-1-quaternary .row-1 .location-item--camranh .sapo {
   position: absolute;
   top: 582.844px;
   right: 30.6952%;
@@ -7170,7 +7170,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
   border-radius: 4px;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(5) .icon-location {
+.cate-1-quaternary .row-1 .location-item--ninhthuan .icon-location {
   position: absolute;
   left: 57.59%;
   top: 82.66%;
@@ -7178,7 +7178,7 @@ img {
   height: 8.25837%;
   transform: translate(-50%, -100%);
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(5) .hyphen {
+.cate-1-quaternary .row-1 .location-item--ninhthuan .hyphen {
   position: absolute;
   top: 643.312px;
   left: 319.484px;
@@ -7186,7 +7186,7 @@ img {
   right: 30.6952%;
   overflow: hidden;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(5) .sapo {
+.cate-1-quaternary .row-1 .location-item--ninhthuan .sapo {
   position: absolute;
   top: 643.312px;
   right: 30.6952%;
@@ -7199,7 +7199,7 @@ img {
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
   border-radius: 4px;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(6) .icon-location {
+.cate-1-quaternary .row-1 .location-item--dalat .icon-location {
   position: absolute;
   left: 55.42%;
   top: 78.34%;
@@ -7207,7 +7207,7 @@ img {
   height: 8.25837%;
   transform: translate(-50%, -100%);
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(6) .hyphen {
+.cate-1-quaternary .row-1 .location-item--dalat .hyphen {
   position: absolute;
   top: 609.703px;
   left: 307.438px;
@@ -7215,7 +7215,7 @@ img {
   right: 30.6952%;
   overflow: hidden;
 }
-.cate-1-quaternary .row-1 .location-item:nth-child(6) .sapo {
+.cate-1-quaternary .row-1 .location-item--dalat .sapo {
   position: absolute;
   top: 609.703px;
   right: 30.6952%;

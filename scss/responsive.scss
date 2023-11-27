@@ -1220,7 +1220,7 @@
                 width: 90%;
             }
             .location-item {
-                &:nth-child(2) {
+                &--vandon {
                     .hyphen {
                         position: absolute;
                         top: 65.0469px;
@@ -1243,7 +1243,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(3) {
+                &--nhatrang {
                     .hyphen {
                         position: absolute;
                         top: 289.734px;
@@ -1266,7 +1266,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(4) {
+                &--camranh {
                     .hyphen {
                         position: absolute;
                         top: 313.516px;
@@ -1289,7 +1289,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(5) {
+                &--ninhthuan {
                     .hyphen {
                         position: absolute;
                         top: 346.047px;
@@ -1312,7 +1312,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(6) {
+                &--dalat {
                     .hyphen {
                         position: absolute;
                         top: 327.953px;
@@ -2976,7 +2976,7 @@
                 line-height: calc(3rem * 0.75);
             }
             .location-item {
-                &:nth-child(2) {
+                &--vandon {
                     .hyphen {
                         position: absolute;
                         top: 72.0469px;
@@ -2999,7 +2999,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(3) {
+                &--nhatrang {
                     .hyphen {
                         position: absolute;
                         top: 320.891px;
@@ -3022,7 +3022,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(4) {
+                &--camranh {
                     .hyphen {
                         position: absolute;
                         top: 347.219px;
@@ -3045,7 +3045,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(5) {
+                &--ninhthuan {
                     .hyphen {
                         position: absolute;
                         top: 383.25px;
@@ -3068,7 +3068,7 @@
                         border-radius: 4px;
                     }
                 }
-                &:nth-child(6) {
+                &--dalat {
                     .hyphen {
                         position: absolute;
                         top: 363.219px;

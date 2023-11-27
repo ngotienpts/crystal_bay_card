@@ -1075,7 +1075,7 @@
   .cate-1-quaternary .row-1 .content {
     width: 90%;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(2) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--vandon .hyphen {
     position: absolute;
     top: 65.0469px;
     left: 146.297px;
@@ -1083,7 +1083,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(2) .sapo {
+  .cate-1-quaternary .row-1 .location-item--vandon .sapo {
     position: absolute;
     top: 65.0469px;
     right: 30.6952%;
@@ -1096,7 +1096,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(3) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--nhatrang .hyphen {
     position: absolute;
     top: 289.734px;
     left: 188.109px;
@@ -1104,7 +1104,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(3) .sapo {
+  .cate-1-quaternary .row-1 .location-item--nhatrang .sapo {
     position: absolute;
     top: 289.734px;
     right: 30.6952%;
@@ -1117,7 +1117,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(4) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--camranh .hyphen {
     position: absolute;
     top: 313.516px;
     left: 188.109px;
@@ -1125,7 +1125,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(4) .sapo {
+  .cate-1-quaternary .row-1 .location-item--camranh .sapo {
     position: absolute;
     top: 313.516px;
     right: 30.6952%;
@@ -1138,7 +1138,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(5) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--ninhthuan .hyphen {
     position: absolute;
     top: 346.047px;
     left: 171.844px;
@@ -1146,7 +1146,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(5) .sapo {
+  .cate-1-quaternary .row-1 .location-item--ninhthuan .sapo {
     position: absolute;
     top: 346.047px;
     right: 30.6952%;
@@ -1159,7 +1159,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(6) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--dalat .hyphen {
     position: absolute;
     top: 327.953px;
     left: 165.375px;
@@ -1167,7 +1167,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(6) .sapo {
+  .cate-1-quaternary .row-1 .location-item--dalat .sapo {
     position: absolute;
     top: 327.953px;
     right: 30.6952%;
@@ -2627,7 +2627,7 @@
     font-size: 2.4375rem;
     line-height: 2.25rem;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(2) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--vandon .hyphen {
     position: absolute;
     top: 72.0469px;
     left: 162.031px;
@@ -2635,7 +2635,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(2) .sapo {
+  .cate-1-quaternary .row-1 .location-item--vandon .sapo {
     position: absolute;
     top: 72.0469px;
     right: 30.6952%;
@@ -2648,7 +2648,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(3) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--nhatrang .hyphen {
     position: absolute;
     top: 320.891px;
     left: 208.344px;
@@ -2656,7 +2656,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(3) .sapo {
+  .cate-1-quaternary .row-1 .location-item--nhatrang .sapo {
     position: absolute;
     top: 320.891px;
     right: 30.6952%;
@@ -2669,7 +2669,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(4) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--camranh .hyphen {
     position: absolute;
     top: 347.219px;
     left: 208.344px;
@@ -2677,7 +2677,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(4) .sapo {
+  .cate-1-quaternary .row-1 .location-item--camranh .sapo {
     position: absolute;
     top: 347.219px;
     right: 30.6952%;
@@ -2690,7 +2690,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(5) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--ninhthuan .hyphen {
     position: absolute;
     top: 383.25px;
     left: 190.328px;
@@ -2698,7 +2698,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(5) .sapo {
+  .cate-1-quaternary .row-1 .location-item--ninhthuan .sapo {
     position: absolute;
     top: 383.25px;
     right: 30.6952%;
@@ -2711,7 +2711,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 58px 0px;
     border-radius: 4px;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(6) .hyphen {
+  .cate-1-quaternary .row-1 .location-item--dalat .hyphen {
     position: absolute;
     top: 363.219px;
     left: 183.156px;
@@ -2719,7 +2719,7 @@
     right: 30.6952%;
     overflow: hidden;
   }
-  .cate-1-quaternary .row-1 .location-item:nth-child(6) .sapo {
+  .cate-1-quaternary .row-1 .location-item--dalat .sapo {
     position: absolute;
     top: 363.219px;
     right: 30.6952%;
