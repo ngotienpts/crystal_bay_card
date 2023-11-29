@@ -1576,7 +1576,7 @@
             <!-- end intro quinary -->
 
             <!-- quaternary -->
-            <section class="section-quaternary js__changeTab">
+            <section class="section-quaternary">
                 <div class="w-wrapper relative z-20 section-quaternary__container">
                     <!-- heading -->
                     <div class="section-quaternary__heading d-2xl-flex items-center justify-between mb-20">
@@ -1590,7 +1590,7 @@
                             <h2 class="heading-primary__text fs-12 fw-700 uppercase ml-20 tracking-324">Bộ sưu tập điểm đến</h2>
                         </div>
                         <div class="section-quaternary__heading-number d-sm-none">
-                            <div class="ele-pane active js__numberCount">
+                            <div class="ele-pane active js__numberCount" id="count-one">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="71.163" height="46.971" viewBox="0 0 71.163 46.971">
                                     <g data-name="Group 308">
                                         <path data-name="Path 143" d="M67.792 31.831a9.645 9.645 0 0 1-3.453 4.974 10.1 10.1 0 0 1 3.453 5.094 9.908 9.908 0 0 1 3.371-5.094 9.473 9.473 0 0 1-3.371-4.974Z" fill="white"></path>
@@ -1604,7 +1604,7 @@
                                         <path data-name="Line 25" fill="none" stroke="white" stroke-miterlimit="10" stroke-width="0.709" d="M59.391.974 14.925 45.44"></path></g>
                                     </svg>
                             </div>
-                            <div class="ele-pane js__numberCount">
+                            <div class="ele-pane js__numberCount" id="count-two">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="71.163" height="46.971" viewBox="0 0 71.163 46.971">
                                     <g data-name="Group 308">
                                         <path data-name="Path 143" d="M67.792 31.831a9.645 9.645 0 0 1-3.453 4.974 10.1 10.1 0 0 1 3.453 5.094 9.908 9.908 0 0 1 3.371-5.094 9.473 9.473 0 0 1-3.371-4.974Z" fill="white"></path>
@@ -1644,7 +1644,7 @@
 
                     <!-- btn list -->
                     <div class="section-quaternary-btn-list btn-list d-2xl-flex d-lg-block items-center">
-                        <div class="section-quaternary-btn btn-tertiary pt-20 active js__tab">
+                        <div class="section-quaternary-btn btn-tertiary pt-20 active" id="tab-one" onclick="switchTab('tab-one', 'tab-one', 'tab-two')">
                             <div class="btn-tertiary-link">
                                 <div class="btn-tertiary-level-1">
                                     <div class="btn-tertiary-level-2">
@@ -1665,7 +1665,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section-quaternary-btn btn-tertiary pt-20 js__tab">
+                        <div class="section-quaternary-btn btn-tertiary pt-20" id="tab-two" onclick="switchTab('tab-two', 'tab-two', 'tab-one')">
                             <div class="btn-tertiary-link">
                                 <div class="btn-tertiary-level-1">
                                     <div class="btn-tertiary-level-2">
@@ -1692,7 +1692,7 @@
                 </div>
                 <div class="section-quaternary-panes">
                     <!-- pane -->
-                    <div class="js__pane ele-pane active">
+                    <div class="ele-pane active" id="pane-one">
                         <!-- slide -->
                         <div class="section-quaternary-slide">
                             <div class="section-quaternary-slide__inner relative js__swiperThreeItemsContainer w-full h-full">
@@ -1708,7 +1708,7 @@
                                                     </a>
                                                 </div> 
                                                 <div class="article-content flex-0 mx-10 text-white">
-                                                    <span class="article-number">04</span>
+                                                    <span class="article-number">01</span>
                                                     <a href="#">
                                                         <p class="article-text">Selectum Noa Resort Cam Ranh</p>
                                                     </a>
@@ -1726,7 +1726,7 @@
                                                     </a>
                                                 </div> 
                                                 <div class="article-content flex-0 mx-10 text-white">
-                                                    <span class="article-number">04</span>
+                                                    <span class="article-number">02</span>
                                                     <a href="#">
                                                         <p class="article-text">Selectum Noa Resort Cam Ranh</p>
                                                     </a>
@@ -1744,7 +1744,7 @@
                                                     </a>
                                                 </div> 
                                                 <div class="article-content flex-0 mx-10 text-white">
-                                                    <span class="article-number">04</span>
+                                                    <span class="article-number">03</span>
                                                     <a href="#">
                                                         <p class="article-text">Selectum Noa Resort Cam Ranh</p>
                                                     </a>
@@ -1779,10 +1779,10 @@
                     </div>
                     <!-- end pane -->
                     <!-- pane -->
-                    <div class="js__pane ele-pane">
+                    <div class="ele-pane" id="pane-two">
                         <!-- slide -->
                         <div class="section-quaternary-slide">
-                            <div class="section-quaternary-slide__inner relative js__swiperThreeItemsContainer w-full h-full">
+                            <div class="section-quaternary-slide__inner relative js__swiperThreeItemsContainer2 w-full h-full">
                                 <div class="swiper js__threeSlides">
                                     <div class="swiper-wrapper">
                                         <!-- slide -->
@@ -1795,7 +1795,7 @@
                                                     </a>
                                                 </div> 
                                                 <div class="article-content flex-0 mx-10 text-white">
-                                                    <span class="article-number">04</span>
+                                                    <span class="article-number">01</span>
                                                     <a href="#">
                                                         <p class="article-text">Selectum Noa Resort Cam Ranh</p>
                                                     </a>
@@ -1813,7 +1813,7 @@
                                                     </a>
                                                 </div> 
                                                 <div class="article-content flex-0 mx-10 text-white">
-                                                    <span class="article-number">04</span>
+                                                    <span class="article-number">02</span>
                                                     <a href="#">
                                                         <p class="article-text">Selectum Noa Resort Cam Ranh</p>
                                                     </a>
@@ -1831,7 +1831,7 @@
                                                     </a>
                                                 </div> 
                                                 <div class="article-content flex-0 mx-10 text-white">
-                                                    <span class="article-number">04</span>
+                                                    <span class="article-number">03</span>
                                                     <a href="#">
                                                         <p class="article-text">Selectum Noa Resort Cam Ranh</p>
                                                     </a>
@@ -2139,5 +2139,171 @@
         <script src="./lib/slick/slick-1.8.1/slick/slick.js"></script>
         <script src="./lib/swiper/swiper-bundle.min.js"></script>
         <script src="./js/main.js"></script>
+        <script>
+            var threeSlides = document.querySelector(
+                ".js__swiperThreeItemsContainer"
+            );
+            var threeSlides2 = document.querySelector(
+                ".js__swiperThreeItemsContainer2"
+            );
+         
+            
+            function sliderThreeItems() {
+                var slider = threeSlides.querySelector(".js__threeSlides");
+                var next = threeSlides.querySelector(".swiper-button-next");
+                var prev = threeSlides.querySelector(".swiper-button-prev");
+                var countOne = document.querySelector('#count-one')
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    slidesPerGroup: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev || null,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            centeredSlides: true,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                        },
+                    },
+                });
+
+                const activeCount = countOne.querySelector(
+                        ".js__counterActive"
+                    );  
+                const totalCount = countOne.querySelector(
+                        ".js__counterTotal"
+                    );
+                if (activeCount && totalCount) {
+                    updateSlideInfo_1(mySwiper, activeCount, totalCount);
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo_1(mySwiper, activeCount, totalCount);
+                    });
+                }
+                
+            }
+            
+            function sliderThreeItems2() {
+                var slider = threeSlides2.querySelector(".js__threeSlides");
+                var next = threeSlides2.querySelector(".swiper-button-next");
+                var prev = threeSlides2.querySelector(".swiper-button-prev");
+                var countTwo = document.querySelector('#count-two')
+                var mySwiper = new Swiper(slider, {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    slidesPerGroup: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    autoHeight: true,
+                    allowTouchMove: false,
+                    allowSlideClick: false,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: next,
+                        prevEl: prev || null,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            centeredSlides: true,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                        },
+                    },
+                });
+
+                const activeCount = countTwo.querySelector(
+                        ".js__counterActive"
+                    );
+                const totalCount = countTwo.querySelector(
+                        ".js__counterTotal"
+                    );
+                if (activeCount && totalCount) {
+                    updateSlideInfo_1(mySwiper, activeCount, totalCount);
+
+                    mySwiper.on("slideChange", function () {
+                        updateSlideInfo_1(mySwiper, activeCount, totalCount);
+                    });
+                }
+            }
+
+
+            function updateSlideInfo_1(swiper, activeCount, totalCount) {
+                const totalSlides = swiper.slides.length / 2 - 1;
+                let activeSlideIndex = swiper.realIndex;
+
+                if (swiper.params.loop) {
+                    activeSlideIndex =
+                        (activeSlideIndex + totalSlides) % totalSlides;
+                }
+                if (activeCount) {
+                    activeCount.textContent = String(
+                        activeSlideIndex + 1
+                    ).padStart(2, "0");
+                }
+
+                if (totalCount) {
+                    totalCount.textContent = String(totalSlides).padStart(
+                        2,
+                        "0"
+                    );
+                }
+            }
+
+          
+                
+            function switchTab(tabId, idOne, idTwo) {
+                document.getElementById(tabId).classList.add('active');
+                document.getElementById((tabId === idOne ? idTwo : idOne)).classList.remove('active');
+
+                document.getElementById('count-' + tabId.split('-')[1]).classList.add('active');
+                document.getElementById(('count-' + tabId.split('-')[1] === ('count-' + idOne.split('-')[1]) ?  ('count-' + idTwo.split('-')[1]) :  ('count-' + idOne.split('-')[1]))).classList.remove('active');
+                
+                document.getElementById('pane-' + tabId.split('-')[1]).classList.add('active');
+                document.getElementById(('pane-' + tabId.split('-')[1] === ('pane-' + idOne.split('-')[1]) ?  ('pane-' + idTwo.split('-')[1]) :  ('pane-' + idOne.split('-')[1]))).classList.remove('active');
+            }
+
+            sliderThreeItems()
+            sliderThreeItems2()
+
+        </script>
     </body>
 </html>
