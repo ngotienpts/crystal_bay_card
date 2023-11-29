@@ -2288,6 +2288,9 @@
   .section-quaternary .swiper-button-next {
     display: none;
   }
+  .section-quaternary .swiper-slide.swiper-slide-active {
+    margin-bottom: 50px;
+  }
   .section-quaternary .swiper-slide.swiper-slide-active .article-content {
     width: 100%;
     margin: 15px 0 40px;

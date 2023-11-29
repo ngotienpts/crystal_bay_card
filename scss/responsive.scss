@@ -2598,29 +2598,32 @@
             display: none;
         }
         .swiper-slide {
-            &.swiper-slide-active .article-content {
-                width: 100%;
-                margin: 15px 0 40px;
-                .article-number {
-                    text-align: center;
-                    font-family: Frunchy;
-                    font-size: calc(2.9166rem * 0.75);
-                    line-height: calc(1.67rem * 0.75);
-                    text-transform: uppercase;
-                    color: #fff;
-                    font-weight: 400;
-                    margin: 0;
-                    display: block;
-                }
-                p {
-                    font-weight: 700;
-                    font-size: calc(0.83rem * 0.75);
-                    text-transform: uppercase;
-                    color: #fff;
-                    text-align: center;
+            &.swiper-slide-active {
+                margin-bottom: 50px;
+                .article-content {
                     width: 100%;
-                    margin-bottom: 0;
-                    margin-top: 10px;
+                    margin: 15px 0 40px;
+                    .article-number {
+                        text-align: center;
+                        font-family: Frunchy;
+                        font-size: calc(2.9166rem * 0.75);
+                        line-height: calc(1.67rem * 0.75);
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-weight: 400;
+                        margin: 0;
+                        display: block;
+                    }
+                    p {
+                        font-weight: 700;
+                        font-size: calc(0.83rem * 0.75);
+                        text-transform: uppercase;
+                        color: #fff;
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 0;
+                        margin-top: 10px;
+                    }
                 }
             }
             .article {
