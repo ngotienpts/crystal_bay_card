@@ -4070,7 +4070,7 @@
 
                     <!-- btn list -->
                     <div class="btn-list d-2xl-flex items-center justify-center mt-10">
-                        <div class="btn-quaternary active" id="tab-3" onclick="switchTab('tab-3', 'tab-3', 'tab-4')">
+                        <div class="btn-quaternary active" id="tab-3">
                             <div class="btn-quaternary-link">
                                 <div class="btn-quaternary-level-1">
                                     <div class="btn-quaternary-level-2">
@@ -4091,7 +4091,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-quaternary" id="tab-4" onclick="switchTab('tab-4', 'tab-4', 'tab-3')">
+                        <div class="btn-quaternary" id="tab-4">
                             <div class="btn-quaternary-link">
                                 <div class="btn-quaternary-level-1">
                                     <div class="btn-quaternary-level-2">
@@ -5052,164 +5052,6 @@
         <script src="./lib/slick/slick-1.8.1/slick/slick.js"></script>
         <script src="./lib/swiper/swiper-bundle.min.js"></script>
         <script src="./js/main.js"></script>
-        <script>
-            var threeSlidesQuaternary = document.querySelector(
-                ".js__swiperThreeItemsContainerQuaternary"
-            );
-            var threeSlidesSenary = document.querySelector(
-                ".js__swiperThreeItemsContainerSenary"
-            );
-
-            function sliderThreeItemsQuaternary() {
-                var slider = threeSlidesQuaternary.querySelector(".js__threeSlides");
-                var next = threeSlidesQuaternary.querySelector(".swiper-button-next");
-                var prev = threeSlidesQuaternary.querySelector(".swiper-button-prev");
-                var countThree = document.querySelector('#count-3')
-                var mySwiper = new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    centeredSlides: true,
-                    loop: true,
-                    autoplay: {
-                        delay: 4000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
-                    mousewheel: true,
-                    keyboard: true,
-                    navigation: {
-                        nextEl: next,
-                        prevEl: prev,
-                    },
-                    breakpoints: {
-                        640: {
-                            slidesPerView: 2,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 2,
-                            spaceBetween: 30,
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                            spaceBetween: 50,
-                        },
-                    },
-                });
-                const activeCount = countThree.querySelector(
-                        ".js__counterActive"
-                    );
-                const totalCount = countThree.querySelector(
-                        ".js__counterTotal"
-                    );
-                if (activeCount && totalCount) {
-                    updateSlideInfo_2(mySwiper, activeCount, totalCount);
-
-                    mySwiper.on("slideChange", function () {
-                        updateSlideInfo_2(mySwiper, activeCount, totalCount);
-                    });
-                }
-            }
-
-            function sliderThreeItemsSenary() {
-                var slider = threeSlidesSenary.querySelector(".js__threeSlides");
-                var next = threeSlidesSenary.querySelector(".swiper-button-next");
-                var prev = threeSlidesSenary.querySelector(".swiper-button-prev");
-                var countFor = document.querySelector('#count-4')
-                var mySwiper = new Swiper(slider, {
-                    grabCursor: false,
-                    slidesPerView: 1,
-                    spaceBetween: 50,
-                    centeredSlides: true,
-                    autoHeight: true,
-                    effect: "coverflow",
-                    freeMode: false,
-                    coverflowEffect: {
-                        rotate: 20,
-                        stretch: 0,
-                        depth: 200,
-                        modifier: 1,
-                        slideShadows: true,
-                    },
-                    loop: true,
-                    autoplay: {
-                        delay: 4000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
-                    mousewheel: true,
-                    keyboard: true,
-                    navigation: {
-                        nextEl: next,
-                        prevEl: prev,
-                    },
-                    breakpoints: {
-                        640: {
-                            slidesPerView: 1,
-                        },
-                        768: {
-                            slidesPerView: 1,
-                        },
-                        1024: {
-                            slidesPerView: 1,
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                        },
-                    },
-                });
-                const activeCount = countFor.querySelector(
-                        ".js__counterActive"
-                    );
-                const totalCount = countFor.querySelector(
-                        ".js__counterTotal"
-                    );
-                if (activeCount && totalCount) {
-                    updateSlideInfo_2(mySwiper, activeCount, totalCount);
-
-                    mySwiper.on("slideChange", function () {
-                        updateSlideInfo_2(mySwiper, activeCount, totalCount);
-                    });
-                }
-                
-            }
-
-            function updateSlideInfo_2(swiper, activeCount, totalCount) {
-                let activeSlideIndex = swiper.realIndex + 1;
-                let totalSlides = swiper.slides.length - 4;
-
-                if (swiper.params.loop) {
-                    totalSlides -= 2;
-                    activeSlideIndex =
-                        ((activeSlideIndex % totalSlides) + totalSlides) %
-                        totalSlides;
-                    activeSlideIndex =
-                        activeSlideIndex === 0 ? totalSlides : activeSlideIndex;
-                }
-
-                activeCount.textContent = String(activeSlideIndex).padStart(
-                    2,
-                    "0"
-                );
-                totalCount.textContent = String(totalSlides).padStart(2, "0");
-            }
-                
-            function switchTab(tabId, idOne, idTwo) {
-                document.getElementById(tabId).classList.add('active');
-                document.getElementById((tabId === idOne ? idTwo : idOne)).classList.remove('active');
-
-                document.getElementById('count-' + tabId.split('-')[1]).classList.add('active');
-                document.getElementById(('count-' + tabId.split('-')[1] === ('count-' + idOne.split('-')[1]) ?  ('count-' + idTwo.split('-')[1]) :  ('count-' + idOne.split('-')[1]))).classList.remove('active');
-                
-                document.getElementById('pane-' + tabId.split('-')[1]).classList.add('active');
-                document.getElementById(('pane-' + tabId.split('-')[1] === ('pane-' + idOne.split('-')[1]) ?  ('pane-' + idTwo.split('-')[1]) :  ('pane-' + idOne.split('-')[1]))).classList.remove('active');
-            }
-
-
-            sliderThreeItemsQuaternary()
-            sliderThreeItemsSenary()
-        </script>
+      
     </body>
 </html>
