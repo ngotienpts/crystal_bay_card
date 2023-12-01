@@ -1332,6 +1332,11 @@
     --heading-scale: 0.66;
   }
 
+  /*------------------------------------------------------------- search*/
+  .search-primary__bg .image-wrapper {
+    padding-bottom: 34.9239%;
+  }
+
   /*------------------------------------------------------------- the meliday*/
   .meliday-primary__heading1 {
     width: 80%;
@@ -3045,6 +3050,38 @@
   }
   .cate-1-quinary__container .btn-primary-level-1 {
     width: max(10vw, 150px);
+  }
+
+  /*------------------------------------------------------------- search*/
+  .search-primary__bg .image-wrapper {
+    padding-bottom: 81.52%;
+  }
+  .search-primary__container .title {
+    font-size: 30px;
+    line-height: 24px;
+    letter-spacing: -0.9px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .search-primary__form {
+    padding: 20px;
+  }
+  .search-primary__form-field {
+    flex-direction: column;
+  }
+  .search-primary__form-btn {
+    margin-top: 20px;
+  }
+  .search-primary__form-btn .btn-primary-level-1 {
+    width: max(10vw, 160px);
+  }
+  .search-primary__form-btn .btn-primary-level-4 span {
+    font-size: 12px;
+    letter-spacing: 4.62px;
+  }
+
+  .search-secondary {
+    padding-top: 40px;
   }
 
   /*------------------------------------------------------------- the meliday*/

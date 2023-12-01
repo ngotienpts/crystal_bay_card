@@ -10680,6 +10680,100 @@ img {
   margin-top: 50px;
 }
 
+.search-primary {
+  position: relative;
+}
+.search-primary__bg .image-wrapper {
+  padding-bottom: 28.9239%;
+}
+.search-primary__container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -70px;
+}
+.search-primary__container .title {
+  font-family: Frunchy;
+  font-size: calc(var(--global-heading-scale) * 9.415rem * 0.75);
+  line-height: calc(var(--global-heading-scale) * 9.415rem * 0.75);
+  letter-spacing: -3.39px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+}
+.search-primary__form {
+  background-color: var(--color-green);
+  border-radius: 12px;
+  padding: 40px;
+}
+.search-primary__form-field {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-items: center;
+}
+.search-primary__form-group {
+  flex: 1 1;
+  margin-right: 20px;
+  position: relative;
+}
+.search-primary__form-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #fff;
+  padding: 10px 20px 10px 40px;
+  color: #fff;
+  background-color: transparent !important;
+  outline: none;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: Work Sans;
+}
+.search-primary__form-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  fill: #fff;
+}
+
+.search-secondary {
+  padding-top: 100px;
+}
+.search-secondary .result-item {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.search-secondary .result-item-text1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 20px 0 0;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+.search-secondary .result-item-text2 {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+.not-found {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
 #back-top {
   position: fixed;
   right: 10px;
