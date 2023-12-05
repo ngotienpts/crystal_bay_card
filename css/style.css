@@ -4982,6 +4982,7 @@ img {
   font-weight: 500;
   margin: 0 0 10px;
   text-align: left;
+  width: 100px;
 }
 .section-quaternary .swiper-button-next {
   top: auto;

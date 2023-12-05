@@ -630,13 +630,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     centeredSlides: true,
                     loop: true,
                     autoHeight: true,
-                    allowTouchMove: false,
-                    allowSlideClick: false,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
+                    // allowTouchMove: false,
+                    // allowSlideClick: false,
+                    // autoplay: {
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    //     pauseOnMouseEnter: true,
+                    // },
                     navigation: {
                         nextEl: next,
                         prevEl: prev || null,

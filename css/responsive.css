@@ -2444,7 +2444,8 @@
     margin-bottom: 50px;
   }
   .section-quaternary .swiper-slide.swiper-slide-active .article-content {
-    width: 100%;
+    width: max-content;
+    max-width: 100%;
     margin: 15px 0 40px;
   }
   .section-quaternary .swiper-slide.swiper-slide-active .article-content .article-number {
