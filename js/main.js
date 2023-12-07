@@ -813,13 +813,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         slideShadows: true,
                     },
                     loop: true,
-                    autoplay: {
-                        delay: 4000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    },
-                    mousewheel: true,
-                    keyboard: true,
+                    // autoplay: {
+                    //     delay: 4000,
+                    //     disableOnInteraction: false,
+                    //     pauseOnMouseEnter: true,
+                    // },
+                    // mousewheel: true,
+                    // keyboard: true,
                     navigation: {
                         nextEl: next,
                         prevEl: prev,
