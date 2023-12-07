@@ -1229,8 +1229,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     loop: true,
                     mousewheel: true,
                     keyboard: true,
-                    allowTouchMove: false,
-                    allowSlideClick: false,
+                    allowTouchMove: true,
+                    allowSlideClick: true,
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
@@ -1243,9 +1243,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     breakpoints: {
                         1024: {
                             slidesPerView: 1.5,
+                            allowTouchMove: false,
+                            allowSlideClick: false,
                         },
                         1200: {
                             slidesPerView: 2,
+                            allowTouchMove: false,
+                            allowSlideClick: false,
                         },
                     },
                 });
