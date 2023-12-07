@@ -1226,6 +1226,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 30,
                     slidesPerGroup: 1,
                     autoHeight: true,
+                    loop: true,
+                    mousewheel: true,
+                    keyboard: true,
                     allowTouchMove: false,
                     allowSlideClick: false,
                     autoplay: {
@@ -1259,11 +1262,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 function updateSlideInfo(swiper, activeCount, totalCount) {
-                    const totalSlides = swiper.slides.length - 1;
-                    const activeSlideIndex = swiper.activeIndex;
+                    let activeSlideIndex = swiper.realIndex + 1;
+                    let totalSlides = swiper.slides.length - 4;
 
-                    activeCount.textContent = "0" + (activeSlideIndex + 1);
-                    totalCount.textContent = "0" + totalSlides;
+                    activeCount.textContent = String(activeSlideIndex).padStart(
+                        2,
+                        "0"
+                    );
+                    totalCount.textContent = String(totalSlides).padStart(
+                        2,
+                        "0"
+                    );
                 }
             }
         },
