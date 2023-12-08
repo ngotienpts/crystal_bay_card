@@ -182,6 +182,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     : "pane-" + idOne.split("-")[1]
             )
             .classList.remove("active");
+
+        var videoIframes = document
+            .getElementById(
+                "pane-" + tabId.split("-")[1] === "pane-" + idOne.split("-")[1]
+                    ? "pane-" + idTwo.split("-")[1]
+                    : "pane-" + idOne.split("-")[1]
+            )
+            .querySelectorAll(".swiper-slide iframe");
+        if (videoIframes) {
+            videoIframes.forEach((videoIframe) => {
+                videoIframe.contentWindow.postMessage(
+                    '{"event":"command","func":"' +
+                        "stopVideo" +
+                        '","args":""}',
+                    "*"
+                );
+            });
+        }
     }
 
     const app = {
