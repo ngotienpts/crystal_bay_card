@@ -844,6 +844,26 @@
     padding: 15px;
   }
 
+  #pane-4 .swiper-button-prev,
+#pane-4 .swiper-rtl .swiper-button-next,
+#pane-4 .swiper-button-next,
+#pane-4 .swiper-rtl .swiper-button-prev {
+    display: flex;
+  }
+  #pane-4 .swiper-button-next,
+#pane-4 .swiper-rtl .swiper-button-prev {
+    right: 20px;
+    top: -38px;
+  }
+  #pane-4 .swiper-button-prev,
+#pane-4 .swiper-rtl .swiper-button-next {
+    right: 70px;
+    top: -38px;
+  }
+  #pane-4 iframe {
+    width: 100%;
+  }
+
   .section-octonary__left, .section-octonary__right {
     width: 100%;
   }

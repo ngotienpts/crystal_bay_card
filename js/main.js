@@ -813,13 +813,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         slideShadows: true,
                     },
                     loop: true,
-                    // autoplay: {
-                    //     delay: 4000,
-                    //     disableOnInteraction: false,
-                    //     pauseOnMouseEnter: true,
-                    // },
-                    // mousewheel: true,
-                    // keyboard: true,
                     navigation: {
                         nextEl: next,
                         prevEl: prev,
@@ -846,6 +839,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     updateSlideInfo_2(mySwiper, activeCount, totalCount);
 
                     mySwiper.on("slideChange", function () {
+                        var videoIframes = slider.querySelectorAll(
+                            ".swiper-slide iframe"
+                        );
+                        videoIframes.forEach((videoIframe) => {
+                            videoIframe.contentWindow.postMessage(
+                                '{"event":"command","func":"' +
+                                    "stopVideo" +
+                                    '","args":""}',
+                                "*"
+                            );
+                        });
+
                         updateSlideInfo_2(mySwiper, activeCount, totalCount);
                     });
                 }

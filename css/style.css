@@ -6321,6 +6321,16 @@ img {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 50%, transparent);
 }
 
+#pane-4 .swiper-slide::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: transparent;
+}
+#pane-4 .swiper-slide.swiper-slide-active::before {
+  content: none;
+}
+
 .intro-primary {
   position: relative;
 }

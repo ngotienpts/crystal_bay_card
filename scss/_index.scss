@@ -2143,3 +2143,19 @@
         transparent
     );
 }
+
+#pane-4 {
+    .swiper-slide {
+        &::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            background-color: transparent;
+        }
+        &.swiper-slide-active {
+            &::before {
+                content: none;
+            }
+        }
+    }
+}

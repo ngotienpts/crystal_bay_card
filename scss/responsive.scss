@@ -962,6 +962,28 @@
             }
         }
     }
+    #pane-4 {
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next,
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            display: flex;
+        }
+
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            right: 20px;
+            top: -38px;
+        }
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+            right: 70px;
+            top: -38px;
+        }
+        iframe {
+            width: 100%;
+        }
+    }
     .section-octonary {
         &__left,
         &__right {
