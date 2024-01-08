@@ -430,6 +430,9 @@
         video {
             height: 70vh;
         }
+        .image-wrapper {
+            padding-bottom: 70vh;
+        }
     }
     .cate-1-secondary {
         &__box2,
@@ -3114,6 +3117,9 @@
         min-height: 50vh;
         video {
             height: 50vh;
+        }
+        .image-wrapper {
+            padding-bottom: 50vh;
         }
     }
     .cate-1-secondary {

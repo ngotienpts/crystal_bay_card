@@ -358,6 +358,9 @@
   .cate-1-primary video {
     height: 70vh;
   }
+  .cate-1-primary .image-wrapper {
+    padding-bottom: 70vh;
+  }
 
   .cate-1-secondary__box2, .cate-1-secondary__box3 {
     display: block;
@@ -2746,6 +2749,9 @@
   }
   .cate-1-primary video {
     height: 50vh;
+  }
+  .cate-1-primary .image-wrapper {
+    padding-bottom: 50vh;
   }
 
   .cate-1-secondary {
