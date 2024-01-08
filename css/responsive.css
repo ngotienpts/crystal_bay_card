@@ -2633,10 +2633,10 @@
 
   /*------------------------------------------------------------- intro*/
   .intro-primary .swiper-slide .image-wrapper {
-    padding-bottom: 155%;
+    padding-bottom: 38vh;
   }
   .intro-primary__container {
-    top: 20%;
+    top: 30%;
     text-align: center;
   }
   .intro-primary .section-secondary__item-content {
@@ -2745,13 +2745,13 @@
   /*------------------------------------------------------------- cate*/
   .cate-1-primary {
     --heading-scale: 0.66;
-    min-height: 50vh;
+    min-height: auto;
   }
   .cate-1-primary video {
-    height: 50vh;
+    height: 38vh;
   }
   .cate-1-primary .image-wrapper {
-    padding-bottom: 50vh;
+    padding-bottom: 38vh;
   }
 
   .cate-1-secondary {

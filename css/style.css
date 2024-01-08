@@ -4099,10 +4099,6 @@ img {
 .navbar-item:hover .navbar-dropdown {
   display: block;
 }
-.navbar-item:last-child .navbar-dropdown {
-  right: 0;
-  left: auto;
-}
 .navbar-item__search {
   position: absolute;
   top: -4px;
@@ -6239,6 +6235,7 @@ img {
 }
 
 .mix-blend-2 {
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;

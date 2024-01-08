@@ -62,12 +62,12 @@
                 display: block;
             }
         }
-        &:last-child {
-            .navbar-dropdown {
-                right: 0;
-                left: auto;
-            }
-        }
+        // &:last-child {
+        //     .navbar-dropdown {
+        //         right: 0;
+        //         left: auto;
+        //     }
+        // }
 
         &__search {
             position: absolute;

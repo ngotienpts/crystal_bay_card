@@ -2987,11 +2987,13 @@
     .intro-primary {
         .swiper-slide {
             .image-wrapper {
-                padding-bottom: 155%;
+                // padding-bottom: 155%;
+                padding-bottom: 38vh;
             }
         }
         &__container {
-            top: 20%;
+            // top: 20%;
+            top: 30%;
             text-align: center;
         }
         .section-secondary__item-content {
@@ -3114,12 +3116,12 @@
     /*------------------------------------------------------------- cate*/
     .cate-1-primary {
         --heading-scale: 0.66;
-        min-height: 50vh;
+        min-height: auto;
         video {
-            height: 50vh;
+            height: 38vh;
         }
         .image-wrapper {
-            padding-bottom: 50vh;
+            padding-bottom: 38vh;
         }
     }
     .cate-1-secondary {
