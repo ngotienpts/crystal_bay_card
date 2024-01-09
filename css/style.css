@@ -6252,6 +6252,7 @@ img {
 }
 
 .mix-blend-3 {
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -6992,6 +6993,9 @@ img {
   height: 73px;
   background-color: #e8e2df;
 }
+.cate-1-tertiary__container .line-black {
+  background-color: #000;
+}
 .cate-1-tertiary__text {
   font-family: Frunchy;
   font-size: 2.925rem;
@@ -7016,6 +7020,9 @@ img {
   text-align-last: center;
   margin-top: 20px;
   margin-bottom: 12px;
+}
+.cate-1-tertiary--text-black {
+  color: #000;
 }
 
 .cate-1-quaternary {
