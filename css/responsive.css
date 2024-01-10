@@ -2440,6 +2440,9 @@
     min-height: auto;
     position: unset;
   }
+  .section-quaternary .coating {
+    background-image: linear-gradient(to bottom, #000, transparent);
+  }
   .section-quaternary .heading-icon {
     margin-top: 10px;
   }
@@ -2465,11 +2468,12 @@
   }
   .section-quaternary .swiper-slide.swiper-slide-active {
     margin-bottom: 50px;
+    width: 77% !important;
   }
   .section-quaternary .swiper-slide.swiper-slide-active .article-content {
     width: max-content;
     max-width: 100%;
-    margin: 15px 0 40px;
+    margin: 15px auto 40px;
   }
   .section-quaternary .swiper-slide.swiper-slide-active .article-content .article-number {
     text-align: center;

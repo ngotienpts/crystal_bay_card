@@ -2768,6 +2768,9 @@
             min-height: auto;
             position: unset;
         }
+        .coating {
+            background-image: linear-gradient(to bottom, #000, transparent);
+        }
         .heading-icon {
             margin-top: 10px;
         }
@@ -2794,11 +2797,12 @@
         .swiper-slide {
             &.swiper-slide-active {
                 margin-bottom: 50px;
+                width: 77% !important;
                 .article-content {
                     // width: 100%;
                     width: max-content;
                     max-width: 100%;
-                    margin: 15px 0 40px;
+                    margin: 15px auto 40px;
                     .article-number {
                         text-align: center;
                         font-family: Frunchy;

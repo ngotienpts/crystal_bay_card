@@ -642,8 +642,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 var prev = threeSlides.querySelector(".swiper-button-prev");
                 var countOne = document.querySelector("#count-one");
                 var mySwiper = new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+                    slidesPerView: 1.3,
+                    spaceBetween: 15,
                     slidesPerGroup: 1,
                     centeredSlides: true,
                     loop: true,
@@ -667,14 +667,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         768: {
                             slidesPerView: 3,
                             centeredSlides: false,
+                            spaceBetween: 20,
                         },
                         1024: {
                             slidesPerView: 3,
                             centeredSlides: false,
+                            spaceBetween: 20,
                         },
                         1200: {
                             slidesPerView: 3,
                             centeredSlides: false,
+                            spaceBetween: 20,
                         },
                     },
                 });
@@ -698,8 +701,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 var prev = threeSlides2.querySelector(".swiper-button-prev");
                 var countTwo = document.querySelector("#count-two");
                 var mySwiper = new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+                    slidesPerView: 1.3,
+                    spaceBetween: 15,
                     slidesPerGroup: 1,
                     centeredSlides: true,
                     loop: true,
@@ -719,18 +722,22 @@ document.addEventListener("DOMContentLoaded", function () {
                         640: {
                             slidesPerView: 2,
                             centeredSlides: true,
+                            spaceBetween: 20,
                         },
                         768: {
                             slidesPerView: 3,
                             centeredSlides: false,
+                            spaceBetween: 20,
                         },
                         1024: {
                             slidesPerView: 3,
                             centeredSlides: false,
+                            spaceBetween: 20,
                         },
                         1200: {
                             slidesPerView: 3,
                             centeredSlides: false,
+                            spaceBetween: 20,
                         },
                     },
                 });
